@@ -1,0 +1,27 @@
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\DAL\bin\Debug\DAL.dll
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\DAL\bin\Debug\DAL.pdb
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\DAL\bin\Debug\DTO.dll
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\DAL\bin\Debug\DTO.pdb
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\DAL\obj\Debug\DAL.dll
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\DAL\obj\Debug\DAL.pdb
+C:\Users\heoco\Desktop\QLKhachSan\DAL\bin\Debug\DAL.dll
+C:\Users\heoco\Desktop\QLKhachSan\DAL\bin\Debug\DAL.pdb
+C:\Users\heoco\Desktop\QLKhachSan\DAL\bin\Debug\DTO.dll
+C:\Users\heoco\Desktop\QLKhachSan\DAL\bin\Debug\DTO.pdb
+C:\Users\heoco\Desktop\QLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\heoco\Desktop\QLKhachSan\DAL\obj\Debug\DAL.dll
+C:\Users\heoco\Desktop\QLKhachSan\DAL\obj\Debug\DAL.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\bin\Debug\DAL.dll
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\bin\Debug\DAL.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\bin\Debug\DTO.dll
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\bin\Debug\mscorlib.dll
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\bin\Debug\DTO.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\bin\Debug\normidna.nlp
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\bin\Debug\normnfc.nlp
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\bin\Debug\normnfd.nlp
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\bin\Debug\normnfkc.nlp
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\bin\Debug\normnfkd.nlp
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\obj\Debug\DAL.dll
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,71 @@
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\bin\Debug\GUI.exe.config
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\bin\Debug\GUI.exe
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\bin\Debug\GUI.pdb
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\bin\Debug\BLL.dll
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\bin\Debug\DTO.dll
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\bin\Debug\BLL.pdb
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\bin\Debug\DTO.pdb
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.Properties.Resources.resources
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.exe
+c:\users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.pdb
+C:\Users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.frmChiTietHDV.resources
+C:\Users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.frmChiTietThucPham.resources
+C:\Users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.frmChiTietXe.resources
+C:\Users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.frmDatPhong.resources
+C:\Users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.frmKhachHang.resources
+C:\Users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.frmMain.resources
+C:\Users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.frmNhanVien.resources
+C:\Users\heoco\documents\visual studio 2015\Projects\QLKhachSan\GUI\obj\Debug\GUI.frmPhong.resources
+C:\Users\heoco\Desktop\QLKhachSan\GUI\bin\Debug\GUI.exe.config
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.exe
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.pdb
+C:\Users\heoco\Desktop\QLKhachSan\GUI\bin\Debug\GUI.exe
+C:\Users\heoco\Desktop\QLKhachSan\GUI\bin\Debug\GUI.pdb
+C:\Users\heoco\Desktop\QLKhachSan\GUI\bin\Debug\BLL.dll
+C:\Users\heoco\Desktop\QLKhachSan\GUI\bin\Debug\DTO.dll
+C:\Users\heoco\Desktop\QLKhachSan\GUI\bin\Debug\BLL.pdb
+C:\Users\heoco\Desktop\QLKhachSan\GUI\bin\Debug\DTO.pdb
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.frmChiTietHDV.resources
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.frmChiTietThucPham.resources
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.frmChiTietXe.resources
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.frmDatPhong.resources
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.frmKhachHang.resources
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.frmMain.resources
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.frmNhanVien.resources
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.frmPhong.resources
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\heoco\Desktop\QLKhachSan\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\GUI.exe.config
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.exe
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.frmThemKH.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.frmChiTietHDV.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.frmChiTietThucPham.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.frmChiTietXe.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.frmDatPhong.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.frmKhachHang.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.frmLoaiPhong.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.frmMain.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.frmNhanVien.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.frmPhong.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\GUI.exe
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\GUI.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\BLL.dll
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\DTO.dll
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\mscorlib.dll
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\BLL.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\DTO.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\normidna.nlp
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\normnfc.nlp
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\normnfd.nlp
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\normnfkc.nlp
+C:\Users\WIN\Desktop\github-QLKS\BTL-qlKhachSan\QLKhachSan\GUI\bin\Debug\normnfkd.nlp
+C:\Users\WIN\Desktop\git-QLKS\QLKhachSan\GUI\bin\Debug\GUI.exe.config
+C:\Users\WIN\Desktop\git-QLKS\QLKhachSan\GUI\obj\Debug\GUI.exe
+C:\Users\WIN\Desktop\git-QLKS\QLKhachSan\GUI\obj\Debug\GUI.pdb
