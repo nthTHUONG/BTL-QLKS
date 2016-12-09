@@ -15,5 +15,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void frmDichVuHDV_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("nhập mã kh xem thông tin sử dụng dịch vụ,chưa tạo code!!!");
+        }
     }
 }

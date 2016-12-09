@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDichVuHDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDichVuHDV.Designer.cs">
+      <DependentUpon>frmDichVuHDV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDichVuHDV.resx">
+      <DependentUpon>frmDichVuHDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoaiPhong.resx">
       <DependentUpon>frmLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
