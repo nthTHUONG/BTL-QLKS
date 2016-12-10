@@ -14,57 +14,57 @@ namespace GUI
 {
     public partial class frmThemKH : Form
     {
-
-        DataSet ds;
         string cnstr;
         SqlConnection cn;
+        DataSet ds;
         public frmThemKH()
         {
             InitializeComponent();
         }
-
         private void frmThemKH_Load(object sender, EventArgs e)
         {
             cnstr = ConfigurationManager.ConnectionStrings["cnstr"].ConnectionString;
             cn = new SqlConnection(cnstr);
         }
-       
-        private void btXacNhan_Click(object sender, EventArgs e)
-        {
-            SqlDataAdapter da = new SqlDataAdapter();
-            cn.Open();
-            string s = "INSERT INTO KhachHang(IDKhachHang, Ho, Ten, GioiTinh, DiaChi, SDT, Email, QuocTich) VALUES (@id, @ho, @ten, @gioitinh, @diachi, @sdt, @email, @quoctich)";
-            SqlCommand cmd = new SqlCommand(s, cn);
-            cmd.Parameters.Add("@id", SqlDbType.NChar, 10, "IDKhachHang");
-            cmd.Parameters.Add("@ho", SqlDbType.NVarChar, 50, "Ho");
-            cmd.Parameters.Add("@ten", SqlDbType.NVarChar, 50, "Ten");
-            cmd.Parameters.Add("@gioitinh", SqlDbType.NChar, 10, "GioiTinh");
-            cmd.Parameters.Add("@diachi", SqlDbType.NVarChar, 50, "DiaChi");
-            cmd.Parameters.Add("@sdt", SqlDbType.NVarChar, 50, "SDT");
-            cmd.Parameters.Add("@email", SqlDbType.NVarChar, 50, "Email");
-            cmd.Parameters.Add("@quoctich", SqlDbType.NVarChar, 50, "QuocTich");
-            //da.InsertCommand = cmd;
 
-            //da.Update(ds);
-           //set prameter
-            cmd.Parameters["@id"].Value = txtIDKhachHang.Text;
-            cmd.Parameters["@ho"].Value = txtTen.Text;
-            cmd.Parameters["@ten"].Value = txtTen.Text;
-            cmd.Parameters["@gioitinh"].Value = txtGioiTinh.Text;
-            cmd.Parameters["@diachi"].Value = txtDiaChi.Text;
-            cmd.Parameters["@sdt"].Value = txtSDT.Text;
-            cmd.Parameters["@email"].Value = txtEmail.Text;
-            cmd.Parameters["@quoctich"].Value = txtQuocTich.Text;
+        private void ThemKH(string idKH, string hoKH, string tenKH, string gioitinhKH, string sdtKH, string emailKH, string diachiKH, string quoctichKH)
+        {
             try
             {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("thành công!!");
+                SqlDataAdapter da = new SqlDataAdapter();
+                string add = "INSERT INTO KhachHang(IDKhachHang, Ho, Ten, GioiTinh, SDT, Email, DiaChi, QuocTich) VALUES (@idKhachHang, @ho, @ten, @gioitinh, @sdt, @email, @diachi, @quoctich)";
+                SqlCommand cmd = new SqlCommand(add, cn);
+                cmd.Parameters.AddWithValue("@idKhachHang", idKH);
+                cmd.Parameters.AddWithValue("@ho", hoKH);
+                cmd.Parameters.AddWithValue("@ten", tenKH);
+                cmd.Parameters.AddWithValue("@gioitinh", gioitinhKH);
+                cmd.Parameters.AddWithValue("@sdt", sdtKH);
+                cmd.Parameters.AddWithValue("@email", emailKH);
+                cmd.Parameters.AddWithValue("@diachi", diachiKH);
+                cmd.Parameters.AddWithValue("@quoctich", quoctichKH);
+                cn.Open();
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Thành công!", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Thất bại!", "Thông báo");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("lỗi: "+ ex.Message,"thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            cn.Close();
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private void btXacNhan_Click(object sender, EventArgs e)
+        {
+            ThemKH(txtIDKhachHang.Text, txtHo.Text, txtTen.Text, txtGioiTinh.Text, txtSDT.Text, txtEmail.Text, txtDiaChi.Text, txtQuocTich.Text);
         }
 
         private void btHuyBo_Click(object sender, EventArgs e)

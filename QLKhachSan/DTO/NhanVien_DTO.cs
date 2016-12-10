@@ -43,19 +43,12 @@ namespace DTO
             get { return _gioiTinh; }
             set { _gioiTinh = value; }
         }
-        private string _ngaySinh;
+        private DateTime _ngaySinh;
 
-        public string NgaySinh
+        public DateTime NgaySinh
         {
             get { return _ngaySinh; }
             set { _ngaySinh = value; }
-        }
-        private string _diaChi;
-
-        public string DiaChi
-        {
-            get { return _diaChi; }
-            set { _diaChi = value; }
         }
         private string _sDT;
 
@@ -63,6 +56,13 @@ namespace DTO
         {
             get { return _sDT; }
             set { _sDT = value; }
+        }
+        private string _diaChi;
+
+        public string DiaChi
+        {
+            get { return _diaChi; }
+            set { _diaChi = value; }
         }
     }
 }

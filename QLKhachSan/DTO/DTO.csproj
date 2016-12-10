@@ -31,7 +31,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,7 +43,9 @@
     <Compile Include="ChiTietHDV_DTO.cs" />
     <Compile Include="ChiTietThucPham_DTO.cs" />
     <Compile Include="ChiTietXe_DTO.cs" />
+    <Compile Include="CoSoVatChat_DTO.cs" />
     <Compile Include="DatPhong_DTO.cs" />
+    <Compile Include="HoaDonThucPham_DTO.cs" />
     <Compile Include="KhachHang_DTO.cs" />
     <Compile Include="LoaiPhong_DTO.cs" />
     <Compile Include="NhanVien_DTO.cs" />

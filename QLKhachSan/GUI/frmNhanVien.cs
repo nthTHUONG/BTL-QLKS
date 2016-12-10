@@ -80,9 +80,9 @@ namespace GUI
                 nv.Ten = dr["Ten"].ToString();
                 nv.ChucVu = dr["ChucVu"].ToString();
                 nv.GioiTinh = dr["GioiTinh"].ToString();
-                nv.NgaySinh = Convert.ToDateTime(dr["NgaySinh"]).ToString("dd/MM/yyyy");    // nv.NgaySinh = ((DateTime)dr["NgaySinh"]).ToString("dd/MM/yyyy");
-                nv.DiaChi = dr["DiaChi"].ToString();
+                nv.NgaySinh = Convert.ToDateTime(dr["NgaySinh"]);
                 nv.SDT = dr["SDT"].ToString();
+                nv.DiaChi = dr["DiaChi"].ToString();
                 lst.Add(nv);
             }
             cmd.Dispose();  // giai phong bien cmd
@@ -109,52 +109,58 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            Connection();
             try
             {
-                Connection();
-                string sql = "INSERT INTO NhanVien VALUES('" + txtIDNhanVien.Text + "', N'" + txtHo.Text + "', N'" + txtTen.Text + "', N'"
-                    + txtChucVu.Text + "', N'" + txtGioiTinh.Text + "', '" + txtNgaySinh.Text + "', '" + txtDiaChi.Text + "', N'" + txtSDT.Text + "')";
+                string sql = "INSERT INTO NhanVien VALUES('" + txtIDNhanVien.Text + "', N'" + txtHo.Text + "', N'" + txtTen.Text
+                    + "', N'" + txtChucVu.Text + "', N'" + txtGioiTinh.Text + "', '" + txtNgaySinh.Text + "', N'" + txtSDT.Text + "', '" + txtDiaChi.Text + "')";
                 SqlCommand cmd = new SqlCommand(sql, cnn);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 LoadData();
                 MessageBox.Show("Đã thêm thành công!");
-                Disconnection();
-
+                Init();
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
                 MessageBox.Show("Thêm khôg thành công! Trùng mã nhân viên.");
+            }
+            finally
+            {
+                Disconnection();
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            Connection();
             try
             {
-                Connection();
                 string sql = "UPDATE NhanVien SET Ho =  N'" + txtHo.Text + "', Ten = N'" + txtTen.Text
                     + "', ChucVu = N'" + txtChucVu.Text + "', GioiTinh = N'" + txtGioiTinh.Text + "', NgaySinh = N'" + txtNgaySinh.Text
-                    + "', DiaChi = N'" + txtDiaChi.Text + "', SDT = N'" + txtSDT.Text + "' WHERE IDNhanVien = N'" + txtIDNhanVien.Text + "'";
+                    + "', SDT = N'" + txtSDT.Text + "', DiaChi = N'" + txtDiaChi.Text + "'WHERE IDNhanVien = N'" + txtIDNhanVien.Text + "'";
                 SqlCommand cmd = new SqlCommand(sql, cnn);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 LoadData();
                 MessageBox.Show("Đã cập nhật thành công!");
-                Disconnection();
                 Init();
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
                 MessageBox.Show("Sửa không thành công! Trùng mã nhân viên.");
+            }
+            finally
+            {
+                Disconnection();
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            Connection();
             try
             {
-                Connection();
                 string sql = "DELETE FROM NhanVien WHERE IDNhanVien = N'" + txtIDNhanVien.Text + "'";
                 SqlCommand cmd = new SqlCommand(sql, cnn);
                 cmd.ExecuteNonQuery();
@@ -163,11 +169,14 @@ namespace GUI
                 MessageBox.Show("Đã xóa thành công!");
                 Disconnection();
                 Init();
-
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Disconnection();
             }
         }
 
@@ -215,8 +224,8 @@ namespace GUI
                 txtChucVu.Text = row.Cells[3].Value.ToString();
                 txtGioiTinh.Text = row.Cells[4].Value.ToString();
                 txtNgaySinh.Text = row.Cells[5].Value.ToString();
-                txtDiaChi.Text = row.Cells[6].Value.ToString();
                 txtSDT.Text = row.Cells[7].Value.ToString();
+                txtDiaChi.Text = row.Cells[6].Value.ToString();
             }
         }
     }

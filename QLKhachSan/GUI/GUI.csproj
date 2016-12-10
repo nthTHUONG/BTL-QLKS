@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,17 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmDichVuHDV.cs">
+    <Compile Include="frmCoSoVatChat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDichVuHDV.Designer.cs">
-      <DependentUpon>frmDichVuHDV.cs</DependentUpon>
+    <Compile Include="frmCoSoVatChat.designer.cs">
+      <DependentUpon>frmCoSoVatChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHoaDonThucPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHoaDonThucPham.Designer.cs">
+      <DependentUpon>frmHoaDonThucPham.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLoaiPhong.designer.cs">
       <DependentUpon>frmLoaiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThemKH.cs">
       <SubType>Form</SubType>
@@ -95,12 +107,6 @@
     <Compile Include="frmKhachHang.designer.cs">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +121,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmDichVuHDV.resx">
-      <DependentUpon>frmDichVuHDV.cs</DependentUpon>
+    <EmbeddedResource Include="frmCoSoVatChat.resx">
+      <DependentUpon>frmCoSoVatChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHoaDonThucPham.resx">
+      <DependentUpon>frmHoaDonThucPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoaiPhong.resx">
       <DependentUpon>frmLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemKH.resx">
       <DependentUpon>frmThemKH.cs</DependentUpon>
@@ -139,9 +151,6 @@
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,17 +159,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -179,6 +189,10 @@
       <Project>{71cc6d70-3341-418d-acd6-e839884ceb66}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

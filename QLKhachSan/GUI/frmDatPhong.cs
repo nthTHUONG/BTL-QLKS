@@ -84,11 +84,11 @@ namespace GUI
                 dp.MaLP = dr["MaLP"].ToString();
                 dp.MaKH = dr["MaKH"].ToString();
                 dp.MaNV = dr["MaNV"].ToString();
-                dp.NgayDat = Convert.ToDateTime(dr["NgayDat"]).ToString("dd/MM/yyyy");
-                dp.NgayNhan = Convert.ToDateTime(dr["NgayNhan"]).ToString("dd/MM/yyyy");
-                dp.NgayTra = Convert.ToDateTime(dr["NgayTra"]).ToString("dd/MM/yyyy");
-                dp.GiaPhong = Convert.ToDouble(dr["GiaPhong"]);
-                dp.TraTruoc = Convert.ToDouble(dr["TraTruoc"]);
+                dp.NgayDat = Convert.ToDateTime(dr["NgayDat"]);
+                dp.NgayNhan = Convert.ToDateTime(dr["NgayNhan"]);
+                dp.NgayTra = Convert.ToDateTime(dr["NgayTra"]);
+                dp.GiaPhong = Convert.ToDecimal(dr["GiaPhong"]);
+                dp.TraTruoc = Convert.ToDecimal(dr["TraTruoc"]);
                 dp.GhiChu = dr["GhiChu"].ToString();
                 lst.Add(dp);
             }

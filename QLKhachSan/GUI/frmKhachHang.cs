@@ -102,74 +102,81 @@ namespace GUI
             txtHo.Text = "";
             txtTen.Text = "";
             txtGioiTinh.Text = "";
-            txtDiaChi.Text = "";
             txtSDT.Text = "";
             txtEmail.Text = "";
+            txtDiaChi.Text = "";
             txtQuocTich.Text = "";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            Connection();
             try
             {
-                Connection();
                 string sql = "INSERT INTO KhachHang VALUES('" + txtIDKhachHang.Text + "', N'" + txtHo.Text + "', N'" + txtTen.Text + "', N'"
-                    + txtGioiTinh.Text + "', N'" + txtDiaChi.Text + "', '" + txtSDT.Text + "', '" + txtEmail.Text + "', N'" + txtQuocTich.Text + "')";
+                    + txtGioiTinh.Text + "', '" + txtSDT.Text + "', N'" + txtEmail.Text + "', N'" + txtDiaChi.Text + "', N'" + txtQuocTich.Text + "')";
                 SqlCommand cmd = new SqlCommand(sql, cnn);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 LoadData();
                 MessageBox.Show("Đã thêm thành công!");
-                Disconnection();
-
+                Init();
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
                 MessageBox.Show("Thêm không thành công! Trùng mã khách hàng.");
+            }
+            finally
+            {
+                Disconnection();
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            Connection();
             try
             {
-                Connection();
                 string sql = "UPDATE KhachHang SET Ho =  N'" + txtHo.Text + "', Ten = N'" + txtTen.Text
-                    + "', GioiTinh = N'" + txtGioiTinh.Text + "', DiaChi = N'" + txtDiaChi.Text
-                    + "', SDT = N'" + txtSDT.Text + "', Email = N'" + txtEmail.Text + "', QuocTich = N'"
-                    + txtQuocTich.Text + "' WHERE IDKhachHang = N'" + txtIDKhachHang.Text + "'";
+                    + "', GioiTinh = N'" + txtGioiTinh.Text + "', SDT = '" + txtSDT.Text + "', Email = N'" + txtEmail.Text
+                    + "', DiaChi = N'" + txtDiaChi.Text + "', QuocTich = N'" + txtQuocTich.Text + "'WHERE IDKhachHang = N'" + txtIDKhachHang.Text + "'";
                 SqlCommand cmd = new SqlCommand(sql, cnn);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 LoadData();
                 MessageBox.Show("Đã cập nhật thành công!");
-                Disconnection();
                 Init();
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
                 MessageBox.Show("Sửa không thành công! Trùng mã khách hàng.");
+            }
+            finally
+            {
+                Disconnection();
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            Connection();
             try
             {
-                Connection();
                 string sql = "DELETE FROM KhachHang WHERE IDKhachHang = N'" + txtIDKhachHang.Text + "'";
                 SqlCommand cmd = new SqlCommand(sql, cnn);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 LoadData();
                 MessageBox.Show("Đã xóa thành công!");
-                Disconnection();
                 Init();
-
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Disconnection();
             }
         }
 
@@ -215,9 +222,9 @@ namespace GUI
                 txtHo.Text = row.Cells[1].Value.ToString();
                 txtTen.Text = row.Cells[2].Value.ToString();
                 txtGioiTinh.Text = row.Cells[3].Value.ToString();
-                txtDiaChi.Text = row.Cells[4].Value.ToString();
                 txtSDT.Text = row.Cells[5].Value.ToString();
                 txtEmail.Text = row.Cells[6].Value.ToString();
+                txtDiaChi.Text = row.Cells[4].Value.ToString();
                 txtQuocTich.Text = row.Cells[7].Value.ToString();
             }
         }

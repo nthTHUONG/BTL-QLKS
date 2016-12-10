@@ -29,9 +29,9 @@ namespace DTO
             get { return _gioiTinh; }
             set { _gioiTinh = value; }
         }
-        private string _ngaySinh;
+        private DateTime _ngaySinh;
 
-        public string NgaySinh
+        public DateTime NgaySinh
         {
             get { return _ngaySinh; }
             set { _ngaySinh = value; }

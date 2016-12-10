@@ -25,7 +25,6 @@ namespace GUI
 
         private void frmChiTietHDV_Load(object sender, EventArgs e)
         {
-            
             cnn = new SqlConnection(cnStr);
             try
             {
@@ -82,7 +81,7 @@ namespace GUI
                 hdv.IDHDV = dr["IDHDV"].ToString();
                 hdv.Ten = dr["Ten"].ToString();
                 hdv.GioiTinh = dr["GioiTinh"].ToString();
-                hdv.NgaySinh = Convert.ToDateTime(dr["NgaySinh"]).ToString("dd/MM/yyyy");    // nv.NgaySinh = ((DateTime)dr["NgaySinh"]).ToString("dd/MM/yyyy");
+                hdv.NgaySinh = Convert.ToDateTime(dr["NgaySinh"]);
                 lst.Add(hdv);
             }
             cmd.Dispose();  //giai phong bien cmd

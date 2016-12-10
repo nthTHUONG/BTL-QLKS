@@ -36,13 +36,6 @@ namespace DTO
             get { return _gioiTinh; }
             set { _gioiTinh = value; }
         }
-        private string _diaChi;
-
-        public string DiaChi
-        {
-            get { return _diaChi; }
-            set { _diaChi = value; }
-        }
         private string _sDT;
 
         public string SDT
@@ -56,6 +49,13 @@ namespace DTO
         {
             get { return _email; }
             set { _email = value; }
+        }
+        private string _diaChi;
+
+        public string DiaChi
+        {
+            get { return _diaChi; }
+            set { _diaChi = value; }
         }
         private string _quocTich;
 

@@ -48,37 +48,37 @@ namespace DTO
             set { _maNV = value; }
         }
 
-        private string _ngayDat;
+        private DateTime _ngayDat;
 
-        public string NgayDat
+        public DateTime NgayDat
         {
             get { return _ngayDat; }
             set { _ngayDat = value; }
         }
-        private string _ngayNhan;
+        private DateTime _ngayNhan;
 
-        public string NgayNhan
+        public DateTime NgayNhan
         {
             get { return _ngayNhan; }
             set { _ngayNhan = value; }
         }
-        private string _ngayTra;
+        private DateTime _ngayTra;
 
-        public string NgayTra
+        public DateTime NgayTra
         {
             get { return _ngayTra; }
             set { _ngayTra = value; }
         }
-        private double _giaPhong;
+        private decimal _giaPhong;
 
-        public double GiaPhong
+        public decimal GiaPhong
         {
             get { return _giaPhong; }
             set { _giaPhong = value; }
         }
-        private double _traTruoc;
+        private decimal _traTruoc;
 
-        public double TraTruoc
+        public decimal TraTruoc
         {
             get { return _traTruoc; }
             set { _traTruoc = value; }

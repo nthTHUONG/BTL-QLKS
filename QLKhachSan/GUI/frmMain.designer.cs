@@ -42,7 +42,7 @@ namespace GUI
             this.pnDisplay = new System.Windows.Forms.Panel();
             this.rdTatCa = new System.Windows.Forms.RadioButton();
             this.rdTrong = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@ namespace GUI
             this.label1 = new System.Windows.Forms.Label();
             this.pnMain.SuspendLayout();
             this.pnDisplay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,7 +155,7 @@ namespace GUI
             this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnMain.Controls.Add(this.pnDisplay);
             this.pnMain.Controls.Add(this.btnDatPhong);
-            this.pnMain.Controls.Add(this.pictureBox1);
+            this.pnMain.Controls.Add(this.pictureBox);
             this.pnMain.Location = new System.Drawing.Point(0, 220);
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(872, 407);
@@ -199,17 +199,18 @@ namespace GUI
             this.rdTrong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdTrong.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pictureBox
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(868, 403);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox.Image = global::GUI.Properties.Resources.Background;
+            this.pictureBox.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(868, 403);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
             // 
             // label7
             // 
@@ -430,7 +431,7 @@ namespace GUI
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnMain.ResumeLayout(false);
             this.pnDisplay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -450,7 +451,7 @@ namespace GUI
         private System.Windows.Forms.Panel pnDisplay;
         private System.Windows.Forms.RadioButton rdTatCa;
         private System.Windows.Forms.RadioButton rdTrong;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
