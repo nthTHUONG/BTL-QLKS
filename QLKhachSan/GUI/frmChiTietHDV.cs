@@ -1,5 +1,6 @@
-﻿using System;
+﻿using BLL;
 using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -117,9 +118,9 @@ namespace GUI
                 Disconnection();
 
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
-                MessageBox.Show("Vui lòng nhập mã HDV khác!");
+                MessageBox.Show("Thêm thất bại! Trùng mã HDV.");
                 // throw;
             }
         }
@@ -149,18 +150,8 @@ namespace GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
             try
             {
-                /*Connection();
-                string sql = "DELETE FROM HuongDanVien WHERE IDHDV = N'" + txtIDHDV.Text + "' DELETE FROM DichVuHDV WHERE IDHDV = N'" + txtIDHDV.Text + "'";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-                LoadData();
-                MessageBox.Show("Đã xóa thành công!");
-                Disconnection();
-                Init();*/
                 Connection();
                 string sql = "DELETE FROM HuongDanVien WHERE IDHDV = N'" + txtIDHDV.Text + "'";
                 SqlCommand cmd = new SqlCommand(sql, cnn);
@@ -222,7 +213,6 @@ namespace GUI
                 txtTenHDV.Text = row.Cells[1].Value.ToString();
                 txtGioiTinh.Text = row.Cells[2].Value.ToString();
                 dtpNgaySinh.Text = row.Cells[3].Value.ToString();
-
             }
         }
     }

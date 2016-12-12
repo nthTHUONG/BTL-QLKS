@@ -36,12 +36,12 @@ namespace DTO
             get { return _gioiTinh; }
             set { _gioiTinh = value; }
         }
-        private string _sDT;
+        private string _sdt;
 
         public string SDT
         {
-            get { return _sDT; }
-            set { _sDT = value; }
+            get { return _sdt; }
+            set { _sdt = value; }
         }
         private string _email;
 
@@ -63,6 +63,18 @@ namespace DTO
         {
             get { return _quocTich; }
             set { _quocTich = value; }
+        }
+        public KhachHang_DTO() { }
+        public KhachHang_DTO(string idKhachHang, string ho, string ten, string gioiTinh, string sdt, string email, string diaChi, string quocTich)
+        {
+            _idKhachHang = idKhachHang;
+            _ho = ho;
+            _ten = ten;
+            _gioiTinh = gioiTinh;
+            _sdt = sdt;
+            _email = email;
+            _diaChi = diaChi;
+            _quocTich = quocTich;
         }
     }
 }

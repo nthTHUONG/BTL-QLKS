@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BLL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,7 @@ namespace GUI
 {
     public partial class frmNhanVien : Form
     {
-        string cnStr = @"server = (local); database = QLKhachSan; integrated security = true;";
-        SqlConnection cnn;
-        List<NhanVien_DTO> lst = new List<NhanVien_DTO>();
+        Business BUS;
         public frmNhanVien()
         {
             InitializeComponent();
@@ -24,208 +23,115 @@ namespace GUI
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-            cnn = new SqlConnection(cnStr);
-            try
-            {
-                Connection();
-                LoadData();
-                Disconnection();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            BUS = new Business();
+            dgvNhanVien.DataSource = BUS.GetDataNV();
         }
-        private void Connection()
+        
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            try
+            BUS = new Business();
+            NhanVien_DTO nv = new NhanVien_DTO(txtIDNhanVien.Text, txtHo.Text, txtTen.Text, txtChucVu.Text, txtGioiTinh.Text, dtpNgaySinh.Text, txtSDT.Text, txtDiaChi.Text);
+            Boolean status = BUS.ThemNV(nv);
+            if (status == true)
             {
-                if (cnn != null && cnn.State != ConnectionState.Open)
-                {
-                    cnn.Open();
-                }
+                MessageBox.Show("Thêm thành công!");
+                dgvNhanVien.DataSource = BUS.GetDataNV();
+                btnReset_Click(sender, e);
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Thêm thất bại! Chưa nhập hoặc nhập trùng mã nhân viên.");
             }
         }
 
-        private void Disconnection()
+        private void btnSua_Click(object sender, EventArgs e)
         {
-            try
+            BUS = new Business();
+            NhanVien_DTO nv = new NhanVien_DTO(txtIDNhanVien.Text, txtHo.Text, txtTen.Text, txtChucVu.Text, txtGioiTinh.Text, dtpNgaySinh.Text, txtSDT.Text, txtDiaChi.Text);
+            Boolean status = BUS.SuaNV(nv);
+            btnReset_Click(sender, e);
+            if (status == true)
             {
-                if (cnn != null && cnn.State != ConnectionState.Closed)
-                {
-                    cnn.Close();
-                }
+                MessageBox.Show("Sửa thành công!");
+                dgvNhanVien.DataSource = BUS.GetDataNV();
+                btnReset_Click(sender, e);
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Sửa thất bại!");
             }
         }
 
-        private void LoadData()
+        private void btnXoa_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * from NhanVien";
-            SqlCommand cmd = new SqlCommand(sql, cnn);  // sql + cnStr de ket noi du lieu
-            SqlDataReader dr = cmd.ExecuteReader();
-            lst.Clear();
-            while (dr.Read() == true)
+            BUS = new Business();
+            Boolean status = BUS.XoaDVhdv(txtIDNhanVien.Text);
+            btnReset_Click(sender, e);
+            if (status == true)
             {
-                NhanVien_DTO nv = new NhanVien_DTO();
-                nv.IDNhanVien = dr["IDNhanVien"].ToString();
-                nv.Ho = dr["Ho"].ToString();
-                nv.Ten = dr["Ten"].ToString();
-                nv.ChucVu = dr["ChucVu"].ToString();
-                nv.GioiTinh = dr["GioiTinh"].ToString();
-                nv.NgaySinh = Convert.ToDateTime(dr["NgaySinh"]);
-                nv.SDT = dr["SDT"].ToString();
-                nv.DiaChi = dr["DiaChi"].ToString();
-                lst.Add(nv);
+                MessageBox.Show("Xóa thành công!");
+                dgvNhanVien.DataSource = BUS.GetDataNV();
+                btnReset_Click(sender, e);
             }
-            cmd.Dispose();  // giai phong bien cmd
-            dr.Close();
-            if (dataGV.DataSource != null)
+            else
             {
-                dataGV.DataSource = null;
-                dataGV.DataSource = lst;
+                MessageBox.Show("Xóa thất bại! Mã nhân viên không tồn tại.");
             }
-            dataGV.DataSource = lst;
         }
 
-        private void Init()
+        private void btnReset_Click(object sender, EventArgs e)
         {
             txtIDNhanVien.Text = "";
             txtHo.Text = "";
             txtTen.Text = "";
             txtChucVu.Text = "";
             txtGioiTinh.Text = "";
-            txtNgaySinh.Text = "";
-            txtDiaChi.Text = "";
+            dtpNgaySinh.Text = "";
             txtSDT.Text = "";
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            Connection();
-            try
-            {
-                string sql = "INSERT INTO NhanVien VALUES('" + txtIDNhanVien.Text + "', N'" + txtHo.Text + "', N'" + txtTen.Text
-                    + "', N'" + txtChucVu.Text + "', N'" + txtGioiTinh.Text + "', '" + txtNgaySinh.Text + "', N'" + txtSDT.Text + "', '" + txtDiaChi.Text + "')";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-                LoadData();
-                MessageBox.Show("Đã thêm thành công!");
-                Init();
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Thêm khôg thành công! Trùng mã nhân viên.");
-            }
-            finally
-            {
-                Disconnection();
-            }
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            Connection();
-            try
-            {
-                string sql = "UPDATE NhanVien SET Ho =  N'" + txtHo.Text + "', Ten = N'" + txtTen.Text
-                    + "', ChucVu = N'" + txtChucVu.Text + "', GioiTinh = N'" + txtGioiTinh.Text + "', NgaySinh = N'" + txtNgaySinh.Text
-                    + "', SDT = N'" + txtSDT.Text + "', DiaChi = N'" + txtDiaChi.Text + "'WHERE IDNhanVien = N'" + txtIDNhanVien.Text + "'";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-                LoadData();
-                MessageBox.Show("Đã cập nhật thành công!");
-                Init();
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Sửa không thành công! Trùng mã nhân viên.");
-            }
-            finally
-            {
-                Disconnection();
-            }
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            Connection();
-            try
-            {
-                string sql = "DELETE FROM NhanVien WHERE IDNhanVien = N'" + txtIDNhanVien.Text + "'";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-                LoadData();
-                MessageBox.Show("Đã xóa thành công!");
-                Disconnection();
-                Init();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                Disconnection();
-            }
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            Init();
+            txtDiaChi.Text = "";
         }
 
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
         {
-            dataGV.CurrentCell = null;
+            dgvNhanVien.CurrentCell = null;
             if (txtTimKiem == null)
             {
-                for (int i = 0; i < dataGV.RowCount; i++)
+                for (int i = 0; i < dgvNhanVien.RowCount - 1; i++)
                 {
-                    dataGV.Rows[i].Visible = true;
+                    dgvNhanVien.Rows[i].Visible = true;
                 }
             }
             else
             {
-                for (int i = 0; i < dataGV.RowCount; i++)
+                for (int i = 0; i < dgvNhanVien.RowCount - 1; i++)
                 {
-                    if (dataGV.Rows[i].Cells["IDNhanVien"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                        || (dataGV.Rows[i].Cells["Ho"].Value.ToString() + " " + dataGV.Rows[i].Cells["Ten"].Value.ToString()).ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                        || dataGV.Rows[i].Cells["SDT"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
+                    if (dgvNhanVien.Rows[i].Cells["IDNhanVien"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
+                        || (dgvNhanVien.Rows[i].Cells["Ho"].Value.ToString() + " " + dgvNhanVien.Rows[i].Cells["Ten"].Value.ToString()).ToLower().Contains(txtTimKiem.Text.ToLower()) == true
+                        || dgvNhanVien.Rows[i].Cells["SDT"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
                     {
-                        dataGV.Rows[i].Visible = true;
+                        dgvNhanVien.Rows[i].Visible = true;
                     }
                     else
                     {
-                        dataGV.Rows[i].Visible = false;
+                        dgvNhanVien.Rows[i].Visible = false;
                     }
                 }
             }
         }
 
-        private void dataGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGV.Rows[e.RowIndex];
+                DataGridViewRow row = dgvNhanVien.Rows[e.RowIndex];
                 txtIDNhanVien.Text = row.Cells[0].Value.ToString();
                 txtHo.Text = row.Cells[1].Value.ToString();
                 txtTen.Text = row.Cells[2].Value.ToString();
                 txtChucVu.Text = row.Cells[3].Value.ToString();
                 txtGioiTinh.Text = row.Cells[4].Value.ToString();
-                txtNgaySinh.Text = row.Cells[5].Value.ToString();
-                txtSDT.Text = row.Cells[7].Value.ToString();
-                txtDiaChi.Text = row.Cells[6].Value.ToString();
+                dtpNgaySinh.Text = row.Cells[5].Value.ToString();
+                txtSDT.Text = row.Cells[6].Value.ToString();
+                txtDiaChi.Text = row.Cells[7].Value.ToString();
             }
         }
     }

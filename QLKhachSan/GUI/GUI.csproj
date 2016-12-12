@@ -34,7 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,8 +49,14 @@
     <Compile Include="frmCoSoVatChat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCoSoVatChat.designer.cs">
+    <Compile Include="frmCoSoVatChat.Designer.cs">
       <DependentUpon>frmCoSoVatChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDichVuHDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDichVuHDV.Designer.cs">
+      <DependentUpon>frmDichVuHDV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHoaDonThucPham.cs">
       <SubType>Form</SubType>
@@ -89,12 +94,6 @@
     <Compile Include="frmChiTietThucPham.designer.cs">
       <DependentUpon>frmChiTietThucPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChiTietXe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmChiTietXe.designer.cs">
-      <DependentUpon>frmChiTietXe.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +123,9 @@
     <EmbeddedResource Include="frmCoSoVatChat.resx">
       <DependentUpon>frmCoSoVatChat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDichVuHDV.resx">
+      <DependentUpon>frmDichVuHDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHoaDonThucPham.resx">
       <DependentUpon>frmHoaDonThucPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChiTietThucPham.resx">
       <DependentUpon>frmChiTietThucPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmChiTietXe.resx">
-      <DependentUpon>frmChiTietXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatPhong.resx">
       <DependentUpon>frmDatPhong.cs</DependentUpon>

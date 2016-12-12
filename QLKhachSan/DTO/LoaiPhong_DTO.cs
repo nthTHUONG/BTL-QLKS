@@ -43,10 +43,5 @@ namespace DTO
             get { return _ghiChu; }
             set { _ghiChu = value; }
         }
-
-
-
-   // }
-
     }
 }

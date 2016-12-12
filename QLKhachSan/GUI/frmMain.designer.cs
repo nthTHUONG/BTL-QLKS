@@ -338,9 +338,9 @@ namespace GUI
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(432, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 18);
+            this.label2.Size = new System.Drawing.Size(112, 18);
             this.label2.TabIndex = 92;
-            this.label2.Text = "Ngày trả phòng";
+            this.label2.Text = "Ngày trả phòng:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -349,9 +349,9 @@ namespace GUI
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(8, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 18);
+            this.label3.Size = new System.Drawing.Size(85, 18);
             this.label3.TabIndex = 94;
-            this.label3.Text = "Loại phòng";
+            this.label3.Text = "Loại phòng:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
@@ -396,9 +396,9 @@ namespace GUI
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(218, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 18);
+            this.label1.Size = new System.Drawing.Size(127, 18);
             this.label1.TabIndex = 93;
-            this.label1.Text = "Ngày nhận phòng";
+            this.label1.Text = "Ngày nhận phòng:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMain

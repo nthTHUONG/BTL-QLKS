@@ -29,6 +29,19 @@ namespace DTO
             set { _ghiChu = value; }
         }
         private int _trangThai;
+        private string p;
+        private string p_2;
+        private string p_3;
+        private string p_4;
+
+        public Phong_DTO(string p, string p_2, string p_3, string p_4)
+        {
+            // TODO: Complete member initialization
+            this.p = p;
+            this.p_2 = p_2;
+            this.p_3 = p_3;
+            this.p_4 = p_4;
+        }
 
         public int TrangThai
         {

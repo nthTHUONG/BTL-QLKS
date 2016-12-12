@@ -9,16 +9,12 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
 using DTO;
+using BLL;
 namespace GUI
 {
     public partial class frmDichVuHDV : Form
     {
-        string cnStr = @"server = (local); database = QLKhachSan; integrated security = true;";
-        SqlConnection cnn;
-        List<HDV_DTO> lst = new List<HDV_DTO>();
-        DataSet ds;
-        string cnstr;
-        SqlConnection cn;
+        Business BUS;
         public frmDichVuHDV()
         {
             InitializeComponent();
@@ -26,83 +22,78 @@ namespace GUI
 
         private void frmDichVuHDV_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("nhập mã kh xem thông tin sử dụng dịch vụ,chưa tạo code!!!");
-            cnn = new SqlConnection(cnStr);
-            try
-            {
-                Connection();
-                LoadData();
-                //dataGV_CellClick(sender, );
-                Disconnection();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            BUS = new Business();
+            dataV.DataSource = BUS.GetDataDVhdv();
+            //DataTable dtKH = new DataTable();
+            DataTable dtKH = null;
+            dtKH = BUS.GetDataKH();
+            cbbMaKH.DataSource = dtKH;
+            cbbMaKH.DisplayMember = "IDKhachHang";
+            DataTable dtHDV = null;
+            dtHDV = BUS.GetDataDVhdv();
+            cbbMaHDV.DataSource = dtHDV;
+            cbbMaHDV.DisplayMember = "MaHDV";
+          
         }
-        private void Connection()
+        private void btThem_Click(object sender, EventArgs e)
         {
-            try
+            BUS = new Business();
+            HDV_DTO hdv = new HDV_DTO(txtIDdvHDV.Text, cbbMaKH.Text, cbbMaHDV.Text, dtpNgayThue.Text, txtGiaThue.Text, txtGhiChu.Text);
+            Boolean status = BUS.ThemDVhdv(hdv);
+            if (status == true)
             {
-                if (cnn != null && cnn.State != ConnectionState.Open)
-                {
-                    cnn.Open();
-                }
+                MessageBox.Show("Thêm thành công!");
+                dataV.DataSource = BUS.GetDataDVhdv();
+                btReset_Click(sender, e);
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Thêm thất bại! Chưa nhập hoặc nhập trùng mã dịch vụ HDV.");
             }
         }
 
-        private void Disconnection()
-        {
-            try
-            {
-                if (cnn != null && cnn.State != ConnectionState.Closed)
-                {
-                    cnn.Close();
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void LoadData()
-        {
-            string sql = "select * from DichVuHDV";
-            SqlCommand cmd = new SqlCommand(sql, cnn);  //sql + cnStr de ket noi du lieu
-            SqlDataReader dr = cmd.ExecuteReader();
-            lst.Clear();
-            while (dr.Read() == true)
-            {
-                HDV_DTO hdv = new HDV_DTO();
-                hdv.IDDvHDV = dr["IDDvHDV"].ToString();
-                hdv.MaKH = dr["MaKH"].ToString();
-                hdv.MaHDV = dr["MaHDV"].ToString();
-                hdv.NgayThue = dr["NgayThue"].ToString();
-                hdv.GiaThue = dr["GiaThue"].ToString();
-                hdv.GhiChu = dr["GhiChu"].ToString();
-                lst.Add(hdv);
-            }
-            cmd.Dispose();  //giai phong bien cmd
-            dr.Close();
-            if (dataV.DataSource != null)
-            {
-                dataV.DataSource = null;
-                dataV.DataSource = lst;
-            }
-            dataV.DataSource = lst;
-        }
-        private void Init()
+        private void btReset_Click(object sender, EventArgs e)
         {
             txtIDdvHDV.Text = "";
-            txtMaKH.Text = "";
-            txtMaHDV.Text = "";
+            cbbMaKH.Text = "";
+            cbbMaHDV.Text = "";
             dtpNgayThue.Text = "";
             txtGiaThue.Text = "";
             txtGhiChu.Text = "";
+        }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+            BUS = new Business();
+            HDV_DTO hdv = new HDV_DTO(txtIDdvHDV.Text, cbbMaKH.Text, cbbMaHDV.Text, dtpNgayThue.Text, txtGiaThue.Text, txtGhiChu.Text);
+            Boolean status = BUS.SuaDVhdv(hdv);
+            btReset_Click(sender, e);
+            if (status == true)
+            {
+                MessageBox.Show("Sửa thành công!");
+                dataV.DataSource = BUS.GetDataDVhdv();
+                btReset_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại!");
+            }
+        }
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            BUS = new Business();
+            Boolean status = BUS.XoaDVhdv(txtIDdvHDV.Text);
+            btReset_Click(sender, e);
+            if (status == true)
+            {
+                MessageBox.Show("Xóa thành công!");
+                dataV.DataSource = BUS.GetDataDVhdv();
+                btReset_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại! Mã dịch vụ không tồn tại.");
+            }
         }
 
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
@@ -110,20 +101,19 @@ namespace GUI
             dataV.CurrentCell = null;
             if (txtTimKiem == null)
             {
-                for (int i = 0; i < dataV.RowCount; i++)
+                for (int i = 0; i < dataV.RowCount - 1; i++)
                 {
                     dataV.Rows[i].Visible = true;
                 }
             }
             else
             {
-                for (int i = 0; i < dataV.RowCount; i++)
+                for (int i = 0; i < dataV.RowCount - 1; i++)
                 {
                     if (dataV.Rows[i].Cells["IDDvHDV"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                        || dataV.Rows[i].Cells["MaKH"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                        || dataV.Rows[i].Cells["MaHDV"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                        || dataV.Rows[i].Cells["NgayThue"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                        || dataV.Rows[i].Cells["GiaThue"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
+                       || dataV.Rows[i].Cells["MaKH"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
+                       || dataV.Rows[i].Cells["MaHDV"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
+                       || dataV.Rows[i].Cells["GiaThue"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
                     {
                         dataV.Rows[i].Visible = true;
                     }
@@ -135,13 +125,18 @@ namespace GUI
             }
         }
 
-        private void btReset_Click(object sender, EventArgs e)
+        private void dataV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Init();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataV.Rows[e.RowIndex];
+                txtIDdvHDV.Text = row.Cells[0].Value.ToString();
+                cbbMaKH.Text = row.Cells[1].Value.ToString();
+                cbbMaHDV.Text = row.Cells[2].Value.ToString();
+                dtpNgayThue.Text = row.Cells[3].Value.ToString();
+                txtGiaThue.Text = row.Cells[4].Value.ToString();
+                txtGhiChu.Text = row.Cells[5].Value.ToString();
+            }
         }
-
-      
-      
-      
     }
 }

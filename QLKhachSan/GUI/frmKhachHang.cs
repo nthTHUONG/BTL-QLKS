@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BLL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,7 @@ namespace GUI
 {
     public partial class frmKhachHang : Form
     {
-        string cnStr = @"server = (local); database = QLKhachSan; integrated security = true;";
-        SqlConnection cnn;
-        List<KhachHang_DTO> lst = new List<KhachHang_DTO>();
+        Business BUS;
         public frmKhachHang()
         {
             InitializeComponent();
@@ -24,79 +23,61 @@ namespace GUI
 
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
-            cnn = new SqlConnection(cnStr);
-            try
-            {
-                Connection();
-                LoadData();
-                //dataGV_CellClick(sender, );
-                Disconnection();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            BUS = new Business();
+            dgvKhachHang.DataSource = BUS.GetDataKH();
         }
-        private void Connection()
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            try
+            BUS = new Business();
+            KhachHang_DTO kh = new KhachHang_DTO(txtIDKhachHang.Text, txtHo.Text, txtTen.Text, txtGioiTinh.Text, txtSDT.Text, txtEmail.Text, txtDiaChi.Text, txtQuocTich.Text);
+            Boolean status = BUS.ThemKH(kh);
+            if (status == true)
             {
-                if (cnn != null && cnn.State != ConnectionState.Open)
-                {
-                    cnn.Open();
-                }
+                MessageBox.Show("Thêm thành công!");
+                dgvKhachHang.DataSource = BUS.GetDataNV();
+                btnReset_Click(sender, e);
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Thêm thất bại! Chưa nhập hoặc nhập trùng mã khách hàng.");
             }
         }
 
-        private void Disconnection()
+        private void btnSua_Click(object sender, EventArgs e)
         {
-            try
+            BUS = new Business();
+            KhachHang_DTO kh = new KhachHang_DTO(txtIDKhachHang.Text, txtHo.Text, txtTen.Text, txtGioiTinh.Text, txtSDT.Text, txtEmail.Text, txtDiaChi.Text, txtQuocTich.Text);
+            Boolean status = BUS.SuaKH(kh);
+            if (status == true)
             {
-                if (cnn != null && cnn.State != ConnectionState.Closed)
-                {
-                    cnn.Close();
-                }
+                MessageBox.Show("Sửa thành công!");
+                dgvKhachHang.DataSource = BUS.GetDataKH();
+                btnReset_Click(sender, e);
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Sửa thất bại!");
             }
         }
 
-        private void LoadData()
+        private void btnXoa_Click(object sender, EventArgs e)
         {
-            string sql = "select * from KhachHang";
-            SqlCommand cmd = new SqlCommand(sql, cnn);  //sql + cnStr de ket noi du lieu
-            SqlDataReader dr = cmd.ExecuteReader();
-            lst.Clear();
-            while (dr.Read() == true)
+            BUS = new Business();
+            Boolean status = BUS.XoaKH(txtIDKhachHang.Text);
+            if (status == true)
             {
-                KhachHang_DTO kh = new KhachHang_DTO();
-                //kh.IDKhachHang = dr.GetString(0);
-                kh.IDKhachHang = dr["IDKhachHang"].ToString();
-                kh.Ho = dr["Ho"].ToString();
-                kh.Ten = dr["Ten"].ToString();
-                kh.GioiTinh = dr["GioiTinh"].ToString();
-                kh.DiaChi = dr["DiaChi"].ToString();
-                kh.SDT = dr["SDT"].ToString();
-                kh.Email = dr["Email"].ToString();
-                kh.QuocTich = dr["QuocTich"].ToString();
-                lst.Add(kh);
+                MessageBox.Show("Xóa thành công!");
+                dgvKhachHang.DataSource = BUS.GetDataKH();
+                btnReset_Click(sender, e);
             }
-            cmd.Dispose();  //giai phong bien cmd
-            dr.Close();
-            if (dataGV.DataSource != null)
+            else
             {
-                dataGV.DataSource = null;
-                dataGV.DataSource = lst;
+                MessageBox.Show("Xóa thất bại! Mã khách hàng không tồn tại.");
             }
-            dataGV.DataSource = lst;
         }
-        private void Init()
+
+        private void btnReset_Click(object sender, EventArgs e)
         {
             txtIDKhachHang.Text = "";
             txtHo.Text = "";
@@ -108,123 +89,46 @@ namespace GUI
             txtQuocTich.Text = "";
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            Connection();
-            try
-            {
-                string sql = "INSERT INTO KhachHang VALUES('" + txtIDKhachHang.Text + "', N'" + txtHo.Text + "', N'" + txtTen.Text + "', N'"
-                    + txtGioiTinh.Text + "', '" + txtSDT.Text + "', N'" + txtEmail.Text + "', N'" + txtDiaChi.Text + "', N'" + txtQuocTich.Text + "')";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-                LoadData();
-                MessageBox.Show("Đã thêm thành công!");
-                Init();
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Thêm không thành công! Trùng mã khách hàng.");
-            }
-            finally
-            {
-                Disconnection();
-            }
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            Connection();
-            try
-            {
-                string sql = "UPDATE KhachHang SET Ho =  N'" + txtHo.Text + "', Ten = N'" + txtTen.Text
-                    + "', GioiTinh = N'" + txtGioiTinh.Text + "', SDT = '" + txtSDT.Text + "', Email = N'" + txtEmail.Text
-                    + "', DiaChi = N'" + txtDiaChi.Text + "', QuocTich = N'" + txtQuocTich.Text + "'WHERE IDKhachHang = N'" + txtIDKhachHang.Text + "'";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-                LoadData();
-                MessageBox.Show("Đã cập nhật thành công!");
-                Init();
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Sửa không thành công! Trùng mã khách hàng.");
-            }
-            finally
-            {
-                Disconnection();
-            }
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            Connection();
-            try
-            {
-                string sql = "DELETE FROM KhachHang WHERE IDKhachHang = N'" + txtIDKhachHang.Text + "'";
-                SqlCommand cmd = new SqlCommand(sql, cnn);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-                LoadData();
-                MessageBox.Show("Đã xóa thành công!");
-                Init();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                Disconnection();
-            }
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            Init();
-        }
-
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
         {
-            dataGV.CurrentCell = null;
+            dgvKhachHang.CurrentCell = null;
             if (txtTimKiem == null)
             {
-                for (int i = 0; i < dataGV.RowCount; i++)
+                for (int i = 0; i < dgvKhachHang.RowCount - 1; i++)
                 {
-                    dataGV.Rows[i].Visible = true;
+                    dgvKhachHang.Rows[i].Visible = true;
                 }
             }
             else
             {
-                for (int i = 0; i < dataGV.RowCount; i++)
+                for (int i = 0; i < dgvKhachHang.RowCount - 1; i++)
                 {
-                    if (dataGV.Rows[i].Cells["IDKhachHang"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                        || (dataGV.Rows[i].Cells["Ho"].Value.ToString() + " " + dataGV.Rows[i].Cells["Ten"].Value.ToString()).ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                        || dataGV.Rows[i].Cells["SDT"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
+                    if (dgvKhachHang.Rows[i].Cells["IDKhachHang"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
+                        || (dgvKhachHang.Rows[i].Cells["Ho"].Value.ToString() + " " + dgvKhachHang.Rows[i].Cells["Ten"].Value.ToString()).ToLower().Contains(txtTimKiem.Text.ToLower()) == true
+                        || dgvKhachHang.Rows[i].Cells["SDT"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
                     {
-                        dataGV.Rows[i].Visible = true;
+                        dgvKhachHang.Rows[i].Visible = true;
                     }
                     else
                     {
-                        dataGV.Rows[i].Visible = false;
+                        dgvKhachHang.Rows[i].Visible = false;
                     }
                 }
             }
         }
 
-        private void dataGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGV.Rows[e.RowIndex];
+                DataGridViewRow row = dgvKhachHang.Rows[e.RowIndex];
                 txtIDKhachHang.Text = row.Cells[0].Value.ToString();
                 txtHo.Text = row.Cells[1].Value.ToString();
                 txtTen.Text = row.Cells[2].Value.ToString();
                 txtGioiTinh.Text = row.Cells[3].Value.ToString();
-                txtSDT.Text = row.Cells[5].Value.ToString();
-                txtEmail.Text = row.Cells[6].Value.ToString();
-                txtDiaChi.Text = row.Cells[4].Value.ToString();
+                txtSDT.Text = row.Cells[4].Value.ToString();
+                txtEmail.Text = row.Cells[5].Value.ToString();
+                txtDiaChi.Text = row.Cells[6].Value.ToString();
                 txtQuocTich.Text = row.Cells[7].Value.ToString();
             }
         }

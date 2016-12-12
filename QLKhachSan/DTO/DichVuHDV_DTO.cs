@@ -28,9 +28,9 @@ namespace DTO
             get { return _maHDV; }
             set { _maHDV = value; }
         }
-        private string _ngayThue;
+        private DateTime _ngayThue;
 
-        public string NgayThue
+        public DateTime NgayThue
         {
             get { return _ngayThue; }
             set { _ngayThue = value; }
@@ -48,6 +48,16 @@ namespace DTO
         {
             get { return _ghiChu; }
             set { _ghiChu = value; }
+        }
+        public HDV_DTO() { }
+        public HDV_DTO(string idDvHDV, string maKH, string maHDV, string ngayThue, string giaThue, string ghiChu)
+        {
+            _idDvHDV = idDvHDV;
+            _maKH = maKH;
+            _maHDV = maHDV;
+            _ngayThue = Convert.ToDateTime(ngayThue);
+            _giaThue = giaThue;
+            _ghiChu = ghiChu;
         }
     }
 }

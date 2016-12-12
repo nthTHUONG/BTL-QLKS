@@ -50,12 +50,12 @@ namespace DTO
             get { return _ngaySinh; }
             set { _ngaySinh = value; }
         }
-        private string _sDT;
+        private string _sdt;
 
         public string SDT
         {
-            get { return _sDT; }
-            set { _sDT = value; }
+            get { return _sdt; }
+            set { _sdt = value; }
         }
         private string _diaChi;
 
@@ -63,6 +63,18 @@ namespace DTO
         {
             get { return _diaChi; }
             set { _diaChi = value; }
+        }
+        public NhanVien_DTO() { }
+        public NhanVien_DTO(string idNhanVien, string ho, string ten, string chucVu, string gioiTinh, string ngaySinh, string sdt, string diaChi)
+        {
+            _idNhanVien = idNhanVien;
+            _ho = ho;
+            _ten = ten;
+            _chucVu = chucVu;
+            _gioiTinh = gioiTinh;
+            _ngaySinh = Convert.ToDateTime(ngaySinh);
+            _sdt = sdt;
+            _diaChi = diaChi;
         }
     }
 }
