@@ -25,3 +25,10 @@ C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DAL\bin\Debug\normnfkd.nlp
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DAL\obj\Debug\DAL.dll
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DAL\obj\Debug\DAL.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DAL\bin\Debug\DAL.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DAL\bin\Debug\DAL.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DAL\bin\Debug\DTO.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DAL\bin\Debug\DTO.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DAL\obj\Debug\DAL.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DAL\obj\Debug\DAL.pdb

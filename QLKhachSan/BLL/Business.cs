@@ -479,12 +479,40 @@ namespace BLL
         }
         #endregion
 
-        #region Xe
-
-        #endregion
 
         #region Thuê xe
 
         #endregion
+
+        #region Chi tiết xe
+        public DataTable getChiTietXe(string sql)
+        {
+            return new ChiTietXe_DAL().getChiTietXe(sql);
+        }
+        public Boolean Them_CTX(ChiTietXe_DTO ctx)
+        {
+            try
+            {
+                if (ctx.IDXe == "")
+                {
+                    throw new Exception("Nhập mã xe!");
+                }
+                return new ChiTietXe_DAL().Them_CTX(ctx);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public Boolean Xoa_CTX(ChiTietXe_DTO ctx)
+        {
+            return new ChiTietXe_DAL().Xoa_CTX(ctx);
+        }
+        public Boolean CapNhat_CTX(ChiTietXe_DTO ctx)
+        {
+            return new ChiTietXe_DAL().CapNhat_CTX(ctx);
+        }
+        #endregion
+
     }
 }

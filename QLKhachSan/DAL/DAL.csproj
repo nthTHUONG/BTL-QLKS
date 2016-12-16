@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietXe_DAL.cs" />
     <Compile Include="CoSoVatChat_DAL.cs" />
     <Compile Include="ThucPham_DAL.cs" />
     <Compile Include="ConnectDB.cs" />

@@ -76,3 +76,33 @@ C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.Propertie
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmThanhToanHDV.resources
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmThanhToanPhong.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\bin\Debug\GUI.exe.config
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.exe
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\bin\Debug\GUI.exe
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\bin\Debug\GUI.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\bin\Debug\BLL.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\bin\Debug\DTO.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\bin\Debug\DAL.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\bin\Debug\BLL.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\bin\Debug\DTO.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\bin\Debug\DAL.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmPhong.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmThanhToanHDV.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmThanhToanPhong.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmThucPham.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmCoSoVatChat.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmDatPhong.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmDichVuHDV.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmHoaDonTP.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmLoaiPhong.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmMain.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmThemKH.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmKhachHang.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmNhanVien.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmChiTietXe.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmThemThueXe.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmThueXe.resources

@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietXe_DTO.cs" />
     <Compile Include="CoSoVatChat_DTO.cs" />
     <Compile Include="ThucPham_DTO.cs" />
-    <Compile Include="Xe_DTO.cs" />
     <Compile Include="DatPhong_DTO.cs" />
     <Compile Include="DVhdv_DTO.cs" />
     <Compile Include="HoaDonTP_DTO.cs" />
@@ -51,6 +51,7 @@
     <Compile Include="NhanVien_DTO.cs" />
     <Compile Include="Phong_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThueXe_DTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

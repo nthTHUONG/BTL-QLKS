@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmChiTietXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietXe.designer.cs">
+      <DependentUpon>frmChiTietXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +70,12 @@
     </Compile>
     <Compile Include="frmThanhToanPhong.Designer.cs">
       <DependentUpon>frmThanhToanPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemThueXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemThueXe.designer.cs">
+      <DependentUpon>frmThemThueXe.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThucPham.cs">
       <SubType>Form</SubType>
@@ -124,8 +137,17 @@
     <Compile Include="frmNhanVien.designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThueXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThueXe.designer.cs">
+      <DependentUpon>frmThueXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmChiTietXe.resx">
+      <DependentUpon>frmChiTietXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPhong.resx">
       <DependentUpon>frmPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThanhToanPhong.resx">
       <DependentUpon>frmThanhToanPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemThueXe.resx">
+      <DependentUpon>frmThemThueXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThucPham.resx">
       <DependentUpon>frmThucPham.cs</DependentUpon>
@@ -164,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThueXe.resx">
+      <DependentUpon>frmThueXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
