@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmHoaDonThucPham
+    partial class frmHoaDonTP
     {
         /// <summary>
         /// Required designer variable.
@@ -37,9 +37,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lbDonGia = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbMaNV = new System.Windows.Forms.ComboBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
@@ -93,6 +93,7 @@
             this.cbbMaTP.Name = "cbbMaTP";
             this.cbbMaTP.Size = new System.Drawing.Size(121, 28);
             this.cbbMaTP.TabIndex = 102;
+            this.cbbMaTP.SelectedIndexChanged += new System.EventHandler(this.cbbMaTP_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -127,24 +128,26 @@
             this.label2.Text = "Số lượng:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(680, 164);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 28);
-            this.button1.TabIndex = 103;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(680, 164);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(62, 28);
+            this.btnAdd.TabIndex = 103;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button2
+            // btnThanhToan
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(633, 79);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 29);
-            this.button2.TabIndex = 103;
-            this.button2.Text = "Thanh Toán";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThanhToan.Location = new System.Drawing.Point(633, 79);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(109, 29);
+            this.btnThanhToan.TabIndex = 103;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // label3
             // 
@@ -165,7 +168,6 @@
             this.cbbMaNV.Name = "cbbMaNV";
             this.cbbMaNV.Size = new System.Drawing.Size(121, 28);
             this.cbbMaNV.TabIndex = 102;
-            this.cbbMaNV.Text = "Chọn Mã NV";
             // 
             // txtSoLuong
             // 
@@ -173,6 +175,7 @@
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(67, 26);
             this.txtSoLuong.TabIndex = 104;
+            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
             // label6
             // 
@@ -213,17 +216,17 @@
             // 
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick_1);
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // frmHoaDonThucPham
+            // frmHoaDonTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(757, 457);
             this.Controls.Add(this.txtSoLuong);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnThanhToan);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cbbMaNV);
             this.Controls.Add(this.cbbMaTP);
             this.Controls.Add(this.label7);
@@ -240,10 +243,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.Name = "frmHoaDonThucPham";
+            this.Name = "frmHoaDonTP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hóa Đơn Thực Phẩm";
-            this.Load += new System.EventHandler(this.frmHoaDonThucPham_Load);
+            this.Text = "Hóa đơn Thực phẩm";
+            this.Load += new System.EventHandler(this.frmHoaDonTP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -261,9 +264,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbDonGia;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.BindingSource bindingSource;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbbMaNV;
         private System.Windows.Forms.TextBox txtSoLuong;

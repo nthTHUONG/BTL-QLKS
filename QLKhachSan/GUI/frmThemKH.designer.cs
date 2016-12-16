@@ -299,7 +299,6 @@
             this.Name = "frmThemKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Khách Hàng";
-            this.Load += new System.EventHandler(this.frmThemKH_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

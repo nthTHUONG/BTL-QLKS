@@ -5,15 +5,16 @@ using System.Text;
 
 namespace DTO
 {
-    public class HDV_DTO
+    public class DVhdv_DTO
     {
-        private string _idDvHDV;
+        private string _idDVhdv;
 
-        public string IDDvHDV
+        public string IDDVhdv
         {
-            get { return _idDvHDV; }
-            set { _idDvHDV = value; }
+            get { return _idDVhdv; }
+            set { _idDVhdv = value; }
         }
+
         private string _maKH;
 
         public string MaKH
@@ -21,6 +22,7 @@ namespace DTO
             get { return _maKH; }
             set { _maKH = value; }
         }
+
         private string _maHDV;
 
         public string MaHDV
@@ -28,6 +30,7 @@ namespace DTO
             get { return _maHDV; }
             set { _maHDV = value; }
         }
+
         private DateTime _ngayThue;
 
         public DateTime NgayThue
@@ -35,13 +38,32 @@ namespace DTO
             get { return _ngayThue; }
             set { _ngayThue = value; }
         }
-        private string _giaThue;
 
-        public string GiaThue
+        private int _soNgayThue;
+
+        public int SoNgayThue
+        {
+            get { return _soNgayThue; }
+            set { _soNgayThue = value; }
+        }
+
+
+        private decimal _giaThue;
+
+        public decimal GiaThue
         {
             get { return _giaThue; }
             set { _giaThue = value; }
         }
+
+        private decimal _traTruoc;
+
+        public decimal TraTruoc
+        {
+            get { return _traTruoc; }
+            set { _traTruoc = value; }
+        }
+
         private string _ghiChu;
 
         public string GhiChu
@@ -49,14 +71,18 @@ namespace DTO
             get { return _ghiChu; }
             set { _ghiChu = value; }
         }
-        public HDV_DTO() { }
-        public HDV_DTO(string idDvHDV, string maKH, string maHDV, string ngayThue, string giaThue, string ghiChu)
+
+        public DVhdv_DTO() { }
+
+        public DVhdv_DTO(string idDVhdv, string maKH, string maHDV, string ngayThue, string soNgayThue, string giaThue, string traTruoc, string ghiChu)
         {
-            _idDvHDV = idDvHDV;
+            _idDVhdv = idDVhdv;
             _maKH = maKH;
             _maHDV = maHDV;
             _ngayThue = Convert.ToDateTime(ngayThue);
-            _giaThue = giaThue;
+            _soNgayThue = Convert.ToInt32(soNgayThue);
+            _giaThue = Convert.ToDecimal(giaThue);
+            _traTruoc = Convert.ToDecimal(traTruoc);
             _ghiChu = ghiChu;
         }
     }

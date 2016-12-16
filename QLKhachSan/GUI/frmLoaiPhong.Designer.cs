@@ -32,8 +32,8 @@
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtGiaLP = new System.Windows.Forms.TextBox();
-            this.txtTenLPhong = new System.Windows.Forms.TextBox();
-            this.txtMaLP = new System.Windows.Forms.TextBox();
+            this.txtIDLP = new System.Windows.Forms.TextBox();
+            this.txtTenLP = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,11 +41,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.dgvLoaiPhong = new System.Windows.Forms.DataGridView();
             this.btnReset = new System.Windows.Forms.Button();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.dataGV = new System.Windows.Forms.DataGridView();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -54,8 +56,8 @@
             this.groupBox1.Controls.Add(this.txtGhiChu);
             this.groupBox1.Controls.Add(this.txtSoLuong);
             this.groupBox1.Controls.Add(this.txtGiaLP);
-            this.groupBox1.Controls.Add(this.txtTenLPhong);
-            this.groupBox1.Controls.Add(this.txtMaLP);
+            this.groupBox1.Controls.Add(this.txtIDLP);
+            this.groupBox1.Controls.Add(this.txtTenLP);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
@@ -63,7 +65,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(19, 6);
+            this.groupBox1.Location = new System.Drawing.Point(49, 15);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(405, 248);
             this.groupBox1.TabIndex = 58;
@@ -97,23 +99,23 @@
             this.txtGiaLP.Size = new System.Drawing.Size(227, 33);
             this.txtGiaLP.TabIndex = 45;
             // 
-            // txtTenLPhong
+            // txtIDLP
             // 
-            this.txtTenLPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenLPhong.Location = new System.Drawing.Point(130, 78);
-            this.txtTenLPhong.Multiline = true;
-            this.txtTenLPhong.Name = "txtTenLPhong";
-            this.txtTenLPhong.Size = new System.Drawing.Size(227, 33);
-            this.txtTenLPhong.TabIndex = 45;
+            this.txtIDLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDLP.Location = new System.Drawing.Point(130, 37);
+            this.txtIDLP.Multiline = true;
+            this.txtIDLP.Name = "txtIDLP";
+            this.txtIDLP.Size = new System.Drawing.Size(227, 33);
+            this.txtIDLP.TabIndex = 45;
             // 
-            // txtMaLP
+            // txtTenLP
             // 
-            this.txtMaLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaLP.Location = new System.Drawing.Point(130, 37);
-            this.txtMaLP.Multiline = true;
-            this.txtMaLP.Name = "txtMaLP";
-            this.txtMaLP.Size = new System.Drawing.Size(227, 33);
-            this.txtMaLP.TabIndex = 46;
+            this.txtTenLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLP.Location = new System.Drawing.Point(130, 78);
+            this.txtTenLP.Multiline = true;
+            this.txtTenLP.Name = "txtTenLP";
+            this.txtTenLP.Size = new System.Drawing.Size(227, 33);
+            this.txtTenLP.TabIndex = 45;
             // 
             // label3
             // 
@@ -186,67 +188,95 @@
             this.txtTimKiem.TabIndex = 56;
             this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
+            // dgvLoaiPhong
+            // 
+            this.dgvLoaiPhong.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvLoaiPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLoaiPhong.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvLoaiPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoaiPhong.Location = new System.Drawing.Point(2, 318);
+            this.dgvLoaiPhong.Name = "dgvLoaiPhong";
+            this.dgvLoaiPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLoaiPhong.Size = new System.Drawing.Size(667, 165);
+            this.dgvLoaiPhong.TabIndex = 53;
+            this.dgvLoaiPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiPhong_CellClick);
+            // 
             // btnReset
             // 
-            this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnReset.BackColor = System.Drawing.Color.SandyBrown;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(469, 128);
+            this.btnReset.Location = new System.Drawing.Point(517, 209);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(138, 58);
-            this.btnReset.TabIndex = 54;
+            this.btnReset.Size = new System.Drawing.Size(98, 47);
+            this.btnReset.TabIndex = 62;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // btnCapNhat
+            // btnSua
             // 
-            this.btnCapNhat.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCapNhat.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.Location = new System.Drawing.Point(469, 63);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(138, 58);
-            this.btnCapNhat.TabIndex = 55;
-            this.btnCapNhat.Text = "Cập nhật";
-            this.btnCapNhat.UseVisualStyleBackColor = false;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSua.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(517, 81);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(98, 47);
+            this.btnSua.TabIndex = 61;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // dataGV
+            // btnXoa
             // 
-            this.dataGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGV.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGV.Location = new System.Drawing.Point(2, 318);
-            this.dataGV.Name = "dataGV";
-            this.dataGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGV.Size = new System.Drawing.Size(667, 165);
-            this.dataGV.TabIndex = 53;
-            this.dataGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGV_CellClick);
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoa.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(517, 147);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(98, 47);
+            this.btnXoa.TabIndex = 60;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThem.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(517, 15);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(98, 47);
+            this.btnThem.TabIndex = 59;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // frmLoaiPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 488);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.btnCapNhat);
-            this.Controls.Add(this.dataGV);
+            this.Controls.Add(this.dgvLoaiPhong);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLoaiPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Loại Phòng";
+            this.Text = "Loại phòng";
             this.Load += new System.EventHandler(this.frmLoaiPhong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,17 +288,19 @@
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.TextBox txtGiaLP;
-        private System.Windows.Forms.TextBox txtTenLPhong;
-        private System.Windows.Forms.TextBox txtMaLP;
+        private System.Windows.Forms.TextBox txtTenLP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.DataGridView dataGV;
+        private System.Windows.Forms.DataGridView dgvLoaiPhong;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtIDLP;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThem;
     }
 }

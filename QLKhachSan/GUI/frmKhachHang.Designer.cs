@@ -376,7 +376,7 @@
             this.MinimumSize = new System.Drawing.Size(888, 666);
             this.Name = "frmKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmKhachHang";
+            this.Text = "Khách hàng";
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

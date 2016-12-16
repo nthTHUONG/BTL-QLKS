@@ -25,15 +25,7 @@ namespace GUI
         {
             MessageBox.Show("xem lại coi có cần các chức năng:thêm sửa xóa hay ko!!!chức năng các nút ko có ngoài gd nhưng trong code vẫn đầy đủ.");
             BUS = new Business();
-            dataGV.DataSource = BUS.GetDataPhong();
-            //DataTable dtPhong = null;
-            //dtPhong = BUS.GetDataPhong();
-            //comboBox1.DataSource = dtPhong;
-            //comboBox1.DisplayMember = "IDPhong";
-            //DataTable dtMaLP = null;
-            //dtMaLP = BUS.GetDataPhong();
-            //comboBox1.DataSource = dtMaLP;
-            //comboBox1.DisplayMember = "MaLP";
+            dataGV.DataSource = BUS.GetDataPhong("SELECT * FROM Phong");
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -52,7 +44,7 @@ namespace GUI
             if (status == true)
             {
                 MessageBox.Show("Thêm thành công!");
-                dataGV.DataSource = BUS.GetDataPhong();
+                dataGV.DataSource = BUS.GetDataPhong("SELECT * FROM Phong");
                 btnReset_Click(sender, e);
             }
             else
@@ -71,7 +63,7 @@ namespace GUI
             if (status == true)
             {
                 MessageBox.Show("Sửa thành công!");
-                dataGV.DataSource = BUS.GetDataPhong();
+                dataGV.DataSource = BUS.GetDataPhong("SELECT * FROM Phong");
                 btnReset_Click(sender, e);
             }
             else
@@ -83,12 +75,12 @@ namespace GUI
         private void btnXoa_Click(object sender, EventArgs e)
         {
             BUS = new Business();
-            Boolean status = BUS.XoaCTTP(txtIDPhong.Text);
+            Boolean status = BUS.XoaPhong(txtIDPhong.Text);
             btnReset_Click(sender, e);
             if (status == true)
             {
                 MessageBox.Show("Xóa thành công!");
-                dataGV.DataSource = BUS.GetDataPhong();
+                dataGV.DataSource = BUS.GetDataPhong("SELECT * FROM Phong");
                 btnReset_Click(sender, e);
             }
             else

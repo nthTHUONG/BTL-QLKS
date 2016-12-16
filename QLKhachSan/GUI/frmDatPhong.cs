@@ -15,106 +15,75 @@ namespace GUI
 {
     public partial class frmDatPhong : Form
     {
-        string cnStr = @"server = (local); database = QLKhachSan; integrated security = true;";
-        SqlConnection cnn;
-        List<DatPhong_DTO> lst = new List<DatPhong_DTO>();
-        public frmDatPhong()
+        Business BUS;
+         public frmDatPhong()
         {
             InitializeComponent();
         }
 
         private void frmDatPhong_Load(object sender, EventArgs e)
         {
-            cnn = new SqlConnection(cnStr);
-            try
-            {
-                Connection();
-                LoadData();
-                Disconnection();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                //throw;
-            }
-        }
-        private void Connection()
-        {
-            try
-            {
-                if (cnn != null && cnn.State != ConnectionState.Open)
-                {
-                    cnn.Open();
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                // throw;
-            }
+            BUS = new Business();
+            LoadCombobox();
+            Init();
         }
 
-        private void Disconnection()
+        private void LoadCombobox()
         {
-            try
-            {
-                if (cnn != null && cnn.State != ConnectionState.Closed)
-                {
-                    cnn.Close();
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                // throw;
-            }
+            /*cbbMaNV.DataSource = BUS.GetDataNV("SELECT IDNhanVien FROM NhanVien");
+            cbbMaNV.DisplayMember = "IDNhanVien";
+
+            cbbMaKH.DataSource = BUS.GetDataKH("SELECT IDKhachHang FROM KhachHang");
+            cbbMaKH.DisplayMember = "IDKhachHang";
+
+            cbbMaPhong.DataSource = BUS.GetDataPhong("SELECT IDPhong FROM Phong");
+            cbbMaPhong.DisplayMember = "IDPhong";*/
         }
 
-        private void LoadData()
-        {
-            string sql = "select * from ChiTietDatPhong";
-            SqlCommand cmd = new SqlCommand(sql, cnn);  //sql + cnStr de ket noi du lieu
-            SqlDataReader dr = cmd.ExecuteReader();
-            lst.Clear();
-            while (dr.Read() == true)
-            {
-                DatPhong_DTO dp = new DatPhong_DTO();
-                //kh.IDKhachHang = dr.GetString(0);
-                dp.IDDatPhong = dr["IDDatPhong"].ToString();
-                dp.MaPhong = dr["MaPhong"].ToString();
-                dp.MaLP = dr["MaLP"].ToString();
-                dp.MaKH = dr["MaKH"].ToString();
-                dp.MaNV = dr["MaNV"].ToString();
-                dp.NgayDat = Convert.ToDateTime(dr["NgayDat"]);
-                dp.NgayNhan = Convert.ToDateTime(dr["NgayNhan"]);
-                dp.NgayTra = Convert.ToDateTime(dr["NgayTra"]);
-                dp.GiaPhong = Convert.ToDecimal(dr["GiaPhong"]);
-                dp.TraTruoc = Convert.ToDecimal(dr["TraTruoc"]);
-                dp.GhiChu = dr["GhiChu"].ToString();
-                lst.Add(dp);
-            }
-            cmd.Dispose();  //giai phong bien cmd
-            dr.Close();
-            if (dataGV.DataSource != null)
-            {
-                dataGV.DataSource = null;
-                dataGV.DataSource = lst;
-            }
-            dataGV.DataSource = lst;
-        }
         private void Init()
         {
-            txtIDDatPhong.Text = "";
-            txtMaKH.Text = "";
-            txtMaNV.Text = "";
-            txtMaPhong.Text = "";
-            txtMaLP.Text = "";
-            txtNgayDat.Text = "";
-            txtNgayNhan.Text = "";
-            txtNgayTra.Text = "";
-            txtGiaPhong.Text = "";
+            cbbMaNV.Text = "Chọn mã NV";
+            cbbMaKH.Text = "Chọn mã KH";
+            txtMaDP.Text = "";
+            cbbMaPhong.Text = "Chọn mã phòng";
+            lbTenLP.Text = "";
+            lbThanhTien.Text = "";
             txtTraTruoc.Text = "";
             txtGhiChu.Text = "";
+        }
+
+        private void ThanhTien()
+        {
+            try
+            {
+                /*decimal giaPhong = Convert.ToDecimal(BUS.GetDataLP("SELECT GiaLP FROM LoaiPhong WHERE IDLoaiPhong IN(SELECT MaLP FROM Phong WHERE IDPhong = N'" + cbbMaPhong.Text + "')").Rows[0][0]);
+                TimeSpan duration = Convert.ToDateTime(dtpNgayTra.Text).Subtract(Convert.ToDateTime(dtpNgayNhan.Text));
+                int time = Convert.ToInt32(duration.ToString("%d"));
+                lbThanhTien.Text = (time <= 0) ? giaPhong.ToString() : (giaPhong * time).ToString();*/
+            }
+            catch (Exception) { }
+        }
+
+        private void btnThemKH_Click(object sender, EventArgs e)
+        {
+            frmThemKH f = new frmThemKH();
+            f.ShowDialog();
+        }
+
+        private void cbbMaPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lbTenLP.Text = BUS.GetDataLP("SELECT TenLP FROM LoaiPhong WHERE IDLoaiPhong IN(SELECT MaLP FROM Phong WHERE IDPhong = N'" + cbbMaPhong.Text + "')").Rows[0][0].ToString();
+            ThanhTien();
+        }
+
+        private void DateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            ThanhTien();
+        }
+
+        private void btnDatPhong_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

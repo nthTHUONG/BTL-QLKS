@@ -15,6 +15,7 @@ namespace DTO
             get { return _idLoaiPhong; }
             set { _idLoaiPhong = value; }
         }
+
         private string _tenLP;
 
         public string TenLP
@@ -22,6 +23,7 @@ namespace DTO
             get { return _tenLP; }
             set { _tenLP = value; }
         }
+
         private decimal _giaLP;
 
         public decimal GiaLP
@@ -29,6 +31,7 @@ namespace DTO
             get { return _giaLP; }
             set { _giaLP = value; }
         }
+
         private int _soLuong;
 
         public int SoLuong
@@ -36,12 +39,30 @@ namespace DTO
             get { return _soLuong; }
             set { _soLuong = value; }
         }
+
         private string _ghiChu;
 
         public string GhiChu
         {
             get { return _ghiChu; }
             set { _ghiChu = value; }
+        }
+
+        public LoaiPhong_DTO() { }
+
+        public LoaiPhong_DTO(string idLoaiPhong, string tenLP, string giaLP, string soLuong, string ghiChu)
+        {
+            _idLoaiPhong = idLoaiPhong;
+            _tenLP = tenLP;
+            if (giaLP != "")
+            {
+                _giaLP = Convert.ToDecimal(giaLP);
+            }
+            if (soLuong != "")
+            {
+                _soLuong = Convert.ToInt32(soLuong);
+            }
+            _ghiChu = ghiChu;
         }
     }
 }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class HoaDonThucPham_DTO
+    public class HoaDonTP_DTO
     {
         private string _idHDTP;
 
-        public string MyProperty
+        public string IDHDTP
         {
             get { return _idHDTP; }
             set { _idHDTP = value; }

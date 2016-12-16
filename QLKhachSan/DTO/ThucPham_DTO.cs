@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ChiTietThucPham_DTO
+    public class ThucPham_DTO
     {
-        private string _idTP;
+        private string _idThucPham;
 
-        public string IDTP
+        public string IDThucPham
         {
-            get { return _idTP; }
-            set { _idTP = value; }
+            get { return _idThucPham; }
+            set { _idThucPham = value; }
         }
+
         private string _tenTP;
 
         public string TenTP
@@ -22,6 +23,7 @@ namespace DTO
             get { return _tenTP; }
             set { _tenTP = value; }
         }
+
         private string _nhaSX;
 
         public string NhaSX
@@ -29,6 +31,7 @@ namespace DTO
             get { return _nhaSX; }
             set { _nhaSX = value; }
         }
+
         private DateTime _ngaySX;
 
         public DateTime NgaySX
@@ -36,6 +39,7 @@ namespace DTO
             get { return _ngaySX; }
             set { _ngaySX = value; }
         }
+
         private DateTime _hanSD;
 
         public DateTime HanSD
@@ -43,6 +47,7 @@ namespace DTO
             get { return _hanSD; }
             set { _hanSD = value; }
         }
+
         private string _mieuTa;
 
         public string MieuTa
@@ -50,10 +55,11 @@ namespace DTO
             get { return _mieuTa; }
             set { _mieuTa = value; }
         }
-        public ChiTietThucPham_DTO() { }
-        public ChiTietThucPham_DTO(string idTP, string tenTP, string nhaSX, string ngaySX, string hanSD, string mieuTa)
+        public ThucPham_DTO() { }
+
+        public ThucPham_DTO(string idThucPham, string tenTP, string nhaSX, string ngaySX, string hanSD, string mieuTa)
         {
-            _idTP = idTP;
+            _idThucPham = idThucPham;
             _tenTP = tenTP;
             _nhaSX = nhaSX;
             _ngaySX = Convert.ToDateTime(ngaySX);

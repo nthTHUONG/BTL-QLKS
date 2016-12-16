@@ -16,22 +16,6 @@ namespace DTO
             set { _idDatPhong = value; }
         }
 
-        private string _maPhong;
-
-        public string MaPhong
-        {
-            get { return _maPhong; }
-            set { _maPhong = value; }
-        }
-
-        private string _maLP;
-
-        public string MaLP
-        {
-            get { return _maLP; }
-            set { _maLP = value; }
-        }
-
         private string _maKH;
 
         public string MaKH
@@ -46,6 +30,22 @@ namespace DTO
         {
             get { return _maNV; }
             set { _maNV = value; }
+        }
+
+        private string _maPhong;
+
+        public string MaPhong
+        {
+            get { return _maPhong; }
+            set { _maPhong = value; }
+        }
+
+        private string _tenLP;
+
+        public string TenLP
+        {
+            get { return _tenLP; }
+            set { _tenLP = value; }
         }
 
         private DateTime _ngayDat;
@@ -69,12 +69,12 @@ namespace DTO
             get { return _ngayTra; }
             set { _ngayTra = value; }
         }
-        private decimal _giaPhong;
+        private decimal _thanhTien;
 
-        public decimal GiaPhong
+        public decimal ThanhTien
         {
-            get { return _giaPhong; }
-            set { _giaPhong = value; }
+            get { return _thanhTien; }
+            set { _thanhTien = value; }
         }
         private decimal _traTruoc;
 
@@ -89,6 +89,23 @@ namespace DTO
         {
             get { return _ghiChu; }
             set { _ghiChu = value; }
+        }
+
+        public DatPhong_DTO() { }
+
+        public DatPhong_DTO(string idDatPhong, string maKH, string maNV, string maPhong, string tenLP, string ngayDat, string ngayNhan, string ngayTra, string thanhTien, string traTruoc, string ghiChu)
+        {
+            _idDatPhong = idDatPhong;
+            _maKH = maKH;
+            _maNV = MaNV;
+            _maPhong = maPhong;
+            _tenLP = tenLP;
+            _ngayDat = Convert.ToDateTime(ngayDat);
+            _ngayNhan = Convert.ToDateTime(ngayNhan);
+            _ngayTra = Convert.ToDateTime(ngayTra);
+            _thanhTien = Convert.ToDecimal(thanhTien);
+            _traTruoc = Convert.ToDecimal(traTruoc);
+            _ghiChu = ghiChu;
         }
     }
 }

@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class KhachHang_DAL
+    public class LoaiPhong_DAL
     {
-        public DataTable GetDataKH()
+        public DataTable GetDataLP()
         {
-            string sql = "SELECT * FROM KhachHang";
             SqlConnection conn = ConnectDB.ConnectData();
             ConnectDB.Open(conn);
             try
             {
+                string sql = "SELECT * FROM LoaiPhong";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 cmd.Dispose();
@@ -36,13 +36,13 @@ namespace DAL
             }
         }
 
-        public DataTable GetDataKH(string idKhachHang)
+        public DataTable GetDataLP_fromIDPhong(string idPhong)
         {
-            string sql = "SELECT * FROM KhachHang WHERE IDKhachHang = N'" + idKhachHang + "'";
             SqlConnection conn = ConnectDB.ConnectData();
             ConnectDB.Open(conn);
             try
             {
+                string sql = "SELECT * FROM LoaiPhong WHERE IDLoaiPhong IN(SELECT MaLP FROM Phong WHERE IDPhong = N'" + idPhong + "')";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 cmd.Dispose();
@@ -60,23 +60,22 @@ namespace DAL
                 conn.Dispose();
             }
         }
-
-        public Boolean ThemKH(KhachHang_DTO kh)
+       
+        public Boolean ThemLP(LoaiPhong_DTO lp)
         {
-            return new ExecuteDB().ExecuteData("INSERT INTO KhachHang(IDKhachHang, Ho, Ten, GioiTinh, SDT, Email, DiaChi, QuocTich) VALUES(N'" + kh.IDKhachHang
-                + "', N'" + kh.Ho + "', N'" + kh.Ten + "', N'" + kh.GioiTinh + "', '" + kh.SDT + "', '" + kh.Email + "', N'" + kh.DiaChi + "', N'" + kh.QuocTich + "')");
+            return new ExecuteDB().ExecuteData("INSERT INTO LoaiPhong VALUES(N'" + lp.IDLoaiPhong + "', N'" + lp.TenLP
+                + "', '" + lp.GiaLP + "', '" + lp.SoLuong + "', '" + lp.GhiChu + "')");
         }
 
-        public Boolean SuaKH(KhachHang_DTO kh)
+        public Boolean SuaLP(LoaiPhong_DTO lp)
         {
-            return new ExecuteDB().ExecuteData("UPDATE KhachHang SET Ho = N'" + kh.Ho + "', Ten = N'" + kh.Ten
-                + "', GioiTinh = N'" + kh.GioiTinh + "', SDT = '" + kh.SDT + "', Email = '" + kh.Email
-                + "', DiaChi = N'" + kh.DiaChi + "', QuocTich = N'" + kh.QuocTich + "'WHERE IDKhachHang = N'" + kh.IDKhachHang + "'");
+            return new ExecuteDB().ExecuteData("UPDATE LoaiPhong SET TenLP = N'" + lp.TenLP + "', GiaLP = '" + lp.GiaLP
+                + "', SoLuong = '" + lp.SoLuong + "', GhiChu = '" + lp.GhiChu + "'WHERE IDLoaiPhong = N'" + lp.IDLoaiPhong + "'");
         }
 
-        public Boolean XoaKH(string idKhachHang)
+        public Boolean XoaLP(string idLoaiPhong)
         {
-            return new ExecuteDB().ExecuteData("DELETE FROM KhachHang WHERE IDKhachHang = N'" + idKhachHang + "'");
+            return new ExecuteDB().ExecuteData("DELETE FROM LoaiPhong WHERE IDLoaiPhong = N'" + idLoaiPhong + "'");
         }
     }
 }

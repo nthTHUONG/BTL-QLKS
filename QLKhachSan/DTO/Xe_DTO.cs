@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ChiTietXe_DTO
+    public class Xe_DTO
     {
+
     }
 }

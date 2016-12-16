@@ -11,14 +11,14 @@ namespace DAL
 {
     public class NhanVien_DAL
     {
-        SqlConnection conn = ConnectDB.ConnectionDB();
-
         public DataTable GetDataNV()
         {
+            string sql = "SELECT * FROM NhanVien";
+            SqlConnection conn = ConnectDB.ConnectData();
             ConnectDB.Open(conn);
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", conn);
+                SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 cmd.Dispose();
                 DataTable dt = new DataTable();
@@ -32,96 +32,26 @@ namespace DAL
             finally
             {
                 ConnectDB.Close(conn);
+                conn.Dispose();
             }
         }
-
-        private Boolean ExecuteDataNV(string sql)
-        {
-            ConnectDB.Open(conn);
-            try
-            {
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            finally
-            {
-                ConnectDB.Close(conn);
-            }
-        }
-
+        
         public Boolean ThemNV(NhanVien_DTO nv)
         {
-            ConnectDB.Open(conn);
-            try
-            {
-                string sql = "INSERT INTO NhanVien(IDNhanVien, Ho, Ten, ChucVu, GioiTinh, NgaySinh, SDT, DiaChi) VALUES(@idNhanVien, @ho, @ten, @chucvu, @gioitinh, @ngaysinh, @sdt, @diachi)";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                if (nv.IDNhanVien == "")
-                {
-                    throw new Exception("Field \"IDNhanVien\" không thể để trống!");
-                }
-                cmd.Parameters.AddWithValue("@idNhanVien", nv.IDNhanVien);
-                cmd.Parameters.AddWithValue("@ho", nv.Ho);
-                cmd.Parameters.AddWithValue("@ten", nv.Ten);
-                cmd.Parameters.AddWithValue("@chucvu", nv.ChucVu);
-                cmd.Parameters.AddWithValue("@gioitinh", nv.GioiTinh);
-                cmd.Parameters.AddWithValue("@ngaysinh", nv.NgaySinh);
-                cmd.Parameters.AddWithValue("@sdt", nv.SDT);
-                cmd.Parameters.AddWithValue("@diachi", nv.DiaChi);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            finally
-            {
-                ConnectDB.Close(conn);
-            }
+            return new ExecuteDB().ExecuteData("INSERT INTO NhanVien(IDNhanVien, Ho, Ten, ChucVu, GioiTinh, NgaySinh, SDT, DiaChi) VALUES(N'" + nv.IDNhanVien
+                + "', N'" + nv.Ho + "', N'" + nv.Ten + "', N'" + nv.ChucVu + "', N'" + nv.GioiTinh + "', '" + nv.NgaySinh.ToString("yyyy-MM-dd") + "', '" + nv.SDT + "', N'" + nv.DiaChi + "')");
         }
 
         public Boolean SuaNV(NhanVien_DTO nv)
         {
-            ConnectDB.Open(conn);
-            try
-            {
-                return ExecuteDataNV("UPDATE NhanVien SET Ho = N'" + nv.Ho + "', Ten = N'" + nv.Ten
-                    + "', ChucVu = N'" + nv.ChucVu + "', GioiTinh = N'" + nv.GioiTinh + "', NgaySinh = '" + nv.NgaySinh
-                    + "', SDT = N'" + nv.SDT + "', DiaChi = N'" + nv.DiaChi + "'WHERE IDNhanVien = N'" + nv.IDNhanVien + "'");
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            finally
-            {
-                ConnectDB.Close(conn);
-            }
+            return new ExecuteDB().ExecuteData("UPDATE NhanVien SET Ho = N'" + nv.Ho + "', Ten = N'" + nv.Ten
+                + "', ChucVu = N'" + nv.ChucVu + "', GioiTinh = N'" + nv.GioiTinh + "', NgaySinh = '" + nv.NgaySinh.ToString("yyyy-MM-dd")
+                + "', SDT = '" + nv.SDT + "', DiaChi = N'" + nv.DiaChi + "'WHERE IDNhanVien = N'" + nv.IDNhanVien + "'");
         }
 
         public Boolean XoaNV(string idNhanVien)
         {
-            ConnectDB.Open(conn);
-            try
-            {
-                return ExecuteDataNV("DELETE FROM NhanVien WHERE IDNhanVien = N'" + idNhanVien + "'");
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            finally
-            {
-                ConnectDB.Close(conn);
-            }
+            return new ExecuteDB().ExecuteData("DELETE FROM NhanVien WHERE IDNhanVien = N'" + idNhanVien + "'");
         }
     }
 }

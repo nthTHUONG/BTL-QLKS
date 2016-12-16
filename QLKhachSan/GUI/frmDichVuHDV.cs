@@ -23,119 +23,136 @@ namespace GUI
         private void frmDichVuHDV_Load(object sender, EventArgs e)
         {
             BUS = new Business();
-            dataV.DataSource = BUS.GetDataDVhdv();
-            //DataTable dtKH = new DataTable();
-            DataTable dtKH = null;
-            dtKH = BUS.GetDataKH();
-            cbbMaKH.DataSource = dtKH;
-            cbbMaKH.DisplayMember = "IDKhachHang";
-            DataTable dtHDV = null;
-            dtHDV = BUS.GetDataDVhdv();
-            cbbMaHDV.DataSource = dtHDV;
-            cbbMaHDV.DisplayMember = "MaHDV";
-          
+            dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
+            LoadComBoBox();
+            Init();
         }
+
+        private void LoadComBoBox()
+        {
+            cbbMaKH.DataSource = BUS.GetDataKH();
+            cbbMaKH.DisplayMember = "IDKhachHang";
+
+            cbbMaHDV.DataSource = BUS.GetDataDVhdv("SELECT IDHDV FROM HuongDanVien");
+            cbbMaHDV.DisplayMember = "IDHDV";
+
+        }
+
+        private void Init()
+        {
+            txtIDDVhdv.Text = "";
+            cbbMaKH.Text = "Chọn mã khách hàng";
+            cbbMaHDV.Text = "Chọn mã hướng dẫn viên";
+            txtSoNgayThue.Text = "";
+            txtGiaThue.Text = "";
+            txtTraTruoc.Text = "";
+            txtGhiChu.Text = "";
+        }
+
         private void btThem_Click(object sender, EventArgs e)
         {
-            BUS = new Business();
-            HDV_DTO hdv = new HDV_DTO(txtIDdvHDV.Text, cbbMaKH.Text, cbbMaHDV.Text, dtpNgayThue.Text, txtGiaThue.Text, txtGhiChu.Text);
-            Boolean status = BUS.ThemDVhdv(hdv);
-            if (status == true)
+            DVhdv_DTO DVhdv = new DVhdv_DTO(txtIDDVhdv.Text, cbbMaKH.Text, cbbMaHDV.Text, dtpNgayThue.Text, txtSoNgayThue.Text, txtGiaThue.Text, txtTraTruoc.Text, txtGhiChu.Text);
+            try
             {
-                MessageBox.Show("Thêm thành công!");
-                dataV.DataSource = BUS.GetDataDVhdv();
-                btReset_Click(sender, e);
+                if (MessageBox.Show("Thêm dịch vụ hướng dẫn viên?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUS.ThemDVhdv(DVhdv);
+                    MessageBox.Show("Thêm thành công!");
+                    dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
+                    Init();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Thêm thất bại! Chưa nhập hoặc nhập trùng mã dịch vụ HDV.");
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DVhdv_DTO DVhdv = new DVhdv_DTO(txtIDDVhdv.Text, cbbMaKH.Text, cbbMaHDV.Text, dtpNgayThue.Text, txtSoNgayThue.Text, txtGiaThue.Text, txtTraTruoc.Text, txtGhiChu.Text);
+                if (MessageBox.Show("Lưu sửa đổi?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUS.SuaDVhdv(DVhdv);
+                    MessageBox.Show("Sửa thành công!");
+                    dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
+                    Init();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Xóa dịch vụ hướng dẫn viên?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUS.XoaDVhdv(txtIDDVhdv.Text);
+                    MessageBox.Show("Xóa thành công!");
+                    dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
+                    Init();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void btReset_Click(object sender, EventArgs e)
         {
-            txtIDdvHDV.Text = "";
-            cbbMaKH.Text = "";
-            cbbMaHDV.Text = "";
-            dtpNgayThue.Text = "";
-            txtGiaThue.Text = "";
-            txtGhiChu.Text = "";
-        }
-
-        private void btSua_Click(object sender, EventArgs e)
-        {
-            BUS = new Business();
-            HDV_DTO hdv = new HDV_DTO(txtIDdvHDV.Text, cbbMaKH.Text, cbbMaHDV.Text, dtpNgayThue.Text, txtGiaThue.Text, txtGhiChu.Text);
-            Boolean status = BUS.SuaDVhdv(hdv);
-            btReset_Click(sender, e);
-            if (status == true)
+            if (MessageBox.Show("Reset?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show("Sửa thành công!");
-                dataV.DataSource = BUS.GetDataDVhdv();
-                btReset_Click(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("Sửa thất bại!");
-            }
-        }
-        private void btXoa_Click(object sender, EventArgs e)
-        {
-            BUS = new Business();
-            Boolean status = BUS.XoaDVhdv(txtIDdvHDV.Text);
-            btReset_Click(sender, e);
-            if (status == true)
-            {
-                MessageBox.Show("Xóa thành công!");
-                dataV.DataSource = BUS.GetDataDVhdv();
-                btReset_Click(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("Xóa thất bại! Mã dịch vụ không tồn tại.");
+                Init();
             }
         }
 
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
         {
-            dataV.CurrentCell = null;
+            dgvDVhdv.CurrentCell = null;
             if (txtTimKiem == null)
             {
-                for (int i = 0; i < dataV.RowCount - 1; i++)
+                for (int i = 0; i < dgvDVhdv.RowCount - 1; i++)
                 {
-                    dataV.Rows[i].Visible = true;
+                    dgvDVhdv.Rows[i].Visible = true;
                 }
             }
             else
             {
-                for (int i = 0; i < dataV.RowCount - 1; i++)
+                for (int i = 0; i < dgvDVhdv.RowCount - 1; i++)
                 {
-                    if (dataV.Rows[i].Cells["IDDvHDV"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                       || dataV.Rows[i].Cells["MaKH"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                       || dataV.Rows[i].Cells["MaHDV"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
-                       || dataV.Rows[i].Cells["GiaThue"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
+                    if (dgvDVhdv.Rows[i].Cells["IDDVhdv"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
+                       || dgvDVhdv.Rows[i].Cells["MaKH"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
+                       || dgvDVhdv.Rows[i].Cells["MaHDV"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
                     {
-                        dataV.Rows[i].Visible = true;
+                        dgvDVhdv.Rows[i].Visible = true;
                     }
                     else
                     {
-                        dataV.Rows[i].Visible = false;
+                        dgvDVhdv.Rows[i].Visible = false;
                     }
                 }
             }
         }
 
-        private void dataV_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDVhdv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataV.Rows[e.RowIndex];
-                txtIDdvHDV.Text = row.Cells[0].Value.ToString();
+                DataGridViewRow row = dgvDVhdv.Rows[e.RowIndex];
+                txtIDDVhdv.Text = row.Cells[0].Value.ToString();
                 cbbMaKH.Text = row.Cells[1].Value.ToString();
                 cbbMaHDV.Text = row.Cells[2].Value.ToString();
                 dtpNgayThue.Text = row.Cells[3].Value.ToString();
-                txtGiaThue.Text = row.Cells[4].Value.ToString();
-                txtGhiChu.Text = row.Cells[5].Value.ToString();
+                txtSoNgayThue.Text = row.Cells[4].Value.ToString();
+                txtGiaThue.Text = row.Cells[5].Value.ToString();
+                txtTraTruoc.Text = row.Cells[6].Value.ToString();
+                txtGhiChu.Text = row.Cells[7].Value.ToString();
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmChiTietThucPham
+    partial class frmThucPham
     {
         /// <summary>
         /// Required designer variable.
@@ -47,14 +47,15 @@
             this.txtTenTP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMieuTa = new System.Windows.Forms.TextBox();
-            this.dataGV = new System.Windows.Forms.DataGridView();
+            this.dgvThucPham = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThucPham)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.dtHanSD);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtTimKiem);
@@ -135,7 +136,7 @@
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnReset.BackColor = System.Drawing.Color.IndianRed;
+            this.btnReset.BackColor = System.Drawing.Color.Gray;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(645, 100);
             this.btnReset.Name = "btnReset";
@@ -148,7 +149,7 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.BackColor = System.Drawing.Color.IndianRed;
+            this.btnXoa.BackColor = System.Drawing.Color.Gray;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(746, 100);
             this.btnXoa.Name = "btnXoa";
@@ -214,7 +215,7 @@
             // btnSua
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSua.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSua.BackColor = System.Drawing.Color.Gray;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(746, 31);
             this.btnSua.Name = "btnSua";
@@ -238,7 +239,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThem.BackColor = System.Drawing.Color.IndianRed;
+            this.btnThem.BackColor = System.Drawing.Color.Gray;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(645, 31);
             this.btnThem.Name = "btnThem";
@@ -286,37 +287,37 @@
             this.txtMieuTa.Size = new System.Drawing.Size(269, 29);
             this.txtMieuTa.TabIndex = 5;
             // 
-            // dataGV
+            // dgvThucPham
             // 
-            this.dataGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGV.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGV.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGV.Location = new System.Drawing.Point(0, 243);
-            this.dataGV.Name = "dataGV";
-            this.dataGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGV.Size = new System.Drawing.Size(869, 237);
-            this.dataGV.TabIndex = 89;
-            this.dataGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGV_CellClick);
+            this.dgvThucPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThucPham.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvThucPham.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvThucPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThucPham.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvThucPham.Location = new System.Drawing.Point(0, 243);
+            this.dgvThucPham.Name = "dgvThucPham";
+            this.dgvThucPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvThucPham.Size = new System.Drawing.Size(869, 237);
+            this.dgvThucPham.TabIndex = 89;
+            this.dgvThucPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucPham_CellClick);
             // 
-            // frmChiTietThucPham
+            // frmThucPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCoral;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(869, 480);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGV);
+            this.Controls.Add(this.dgvThucPham);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmChiTietThucPham";
+            this.Name = "frmThucPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chi Tiết Thực Phẩm";
-            this.Load += new System.EventHandler(this.frmChiTietThucPham_Load);
+            this.Text = "Thực Phẩm";
+            this.Load += new System.EventHandler(this.frmThucPham_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThucPham)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,7 +341,7 @@
         private System.Windows.Forms.TextBox txtMieuTa;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGV;
+        private System.Windows.Forms.DataGridView dgvThucPham;
         private System.Windows.Forms.DateTimePicker dtHanSD;
         private System.Windows.Forms.DateTimePicker dtNgaySX;
     }
