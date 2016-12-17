@@ -15,6 +15,7 @@ namespace DTO
             get { return _idNhanVien; }
             set { _idNhanVien = value; }
         }
+
         private string _ho;
 
         public string Ho
@@ -22,6 +23,7 @@ namespace DTO
             get { return _ho; }
             set { _ho = value; }
         }
+
         private string _ten;
 
         public string Ten
@@ -29,6 +31,7 @@ namespace DTO
             get { return _ten; }
             set { _ten = value; }
         }
+
         private string _chucVu;
 
         public string ChucVu
@@ -36,6 +39,7 @@ namespace DTO
             get { return _chucVu; }
             set { _chucVu = value; }
         }
+
         private string _gioiTinh;
 
         public string GioiTinh
@@ -43,6 +47,7 @@ namespace DTO
             get { return _gioiTinh; }
             set { _gioiTinh = value; }
         }
+
         private DateTime _ngaySinh;
 
         public DateTime NgaySinh
@@ -50,6 +55,7 @@ namespace DTO
             get { return _ngaySinh; }
             set { _ngaySinh = value; }
         }
+
         private string _sdt;
 
         public string SDT
@@ -57,6 +63,7 @@ namespace DTO
             get { return _sdt; }
             set { _sdt = value; }
         }
+
         private string _diaChi;
 
         public string DiaChi
@@ -64,7 +71,9 @@ namespace DTO
             get { return _diaChi; }
             set { _diaChi = value; }
         }
+
         public NhanVien_DTO() { }
+
         public NhanVien_DTO(string idNhanVien, string ho, string ten, string chucVu, string gioiTinh, string ngaySinh, string sdt, string diaChi)
         {
             _idNhanVien = idNhanVien;

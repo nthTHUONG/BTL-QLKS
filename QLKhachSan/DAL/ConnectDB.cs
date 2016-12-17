@@ -11,7 +11,7 @@ namespace DAL
 {
     public static class ConnectDB
     {
-        public static SqlConnection ConnectionDB()
+        public static SqlConnection ConnectData()
         {
             string cnstr = ConfigurationManager.ConnectionStrings["cnstr"].ConnectionString;
             SqlConnection conn = new SqlConnection(cnstr);

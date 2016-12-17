@@ -14,13 +14,15 @@ namespace DTO
             get { return _idPhong; }
             set { _idPhong = value; }
         }
-        private string _idLoaiPhong;
+
+        private string _maLP;
 
         public string MaLP
         {
-            get { return _idLoaiPhong; }
-            set { _idLoaiPhong = value; }
+            get { return _maLP; }
+            set { _maLP = value; }
         }
+
         private string _ghiChu;
 
         public string GhiChu
@@ -28,25 +30,23 @@ namespace DTO
             get { return _ghiChu; }
             set { _ghiChu = value; }
         }
-        private int _trangThai;
-        private string p;
-        private string p_2;
-        private string p_3;
-        private string p_4;
 
-        public Phong_DTO(string p, string p_2, string p_3, string p_4)
-        {
-            // TODO: Complete member initialization
-            this.p = p;
-            this.p_2 = p_2;
-            this.p_3 = p_3;
-            this.p_4 = p_4;
-        }
+        private bool _trangThai;
 
-        public int TrangThai
+        public bool TrangThai
         {
             get { return _trangThai; }
             set { _trangThai = value; }
+        }
+
+        public Phong_DTO() { }
+
+        public Phong_DTO(string idPhong, string maLP, string ghiChu, string trangThai)
+        {
+            _idPhong = idPhong;
+            _maLP = maLP;
+            _ghiChu = ghiChu;
+            _trangThai = Convert.ToBoolean(trangThai);
         }
     }
 }

@@ -18,23 +18,35 @@ namespace GUI
         {
             InitializeComponent();
         }
-        private void frmThemKH_Load(object sender, EventArgs e)
+
+        private void Init()
         {
-            MessageBox.Show("nút HỦY chưa dùng được!");
+            txtIDKhachHang.Text = "";
+            txtHo.Text = "";
+            txtTen.Text = "";
+            txtGioiTinh.Text = "";
+            txtSDT.Text = "";
+            txtEmail.Text = "";
+            txtDiaChi.Text = "";
+            txtQuocTich.Text = "";
         }
 
         private void btXacNhan_Click(object sender, EventArgs e)
         {
             BUS = new Business();
-            KhachHang_DTO kh = new KhachHang_DTO(txtIDKhachHang.Text, txtHo.Text, txtTen.Text, txtGioiTinh.Text, txtSDT.Text, txtEmail.Text, txtDiaChi.Text, txtQuocTich.Text);
-            Boolean status = BUS.ThemKH(kh);
-            if (status == true)
+            try
             {
-                MessageBox.Show("Thêm thành công!");
+                KhachHang_DTO kh = new KhachHang_DTO(txtIDKhachHang.Text, txtHo.Text, txtTen.Text, txtGioiTinh.Text, txtSDT.Text, txtEmail.Text, txtDiaChi.Text, txtQuocTich.Text);
+                if (MessageBox.Show("Thêm khách hàng?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUS.ThemKH(kh);
+                    MessageBox.Show("Thêm thành công!");
+                    Init();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Thêm thất bại! Chưa nhập hoặc nhập trùng mã khách hàng.");
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

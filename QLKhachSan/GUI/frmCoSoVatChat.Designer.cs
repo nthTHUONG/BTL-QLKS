@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGV = new System.Windows.Forms.DataGridView();
+            this.dgvCSVC = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtMaCSVC = new System.Windows.Forms.TextBox();
+            this.txtIDCSVC = new System.Windows.Forms.TextBox();
             this.txtTenCSVC = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtMaLP = new System.Windows.Forms.TextBox();
@@ -48,21 +48,21 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCSVC)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGV
+            // dgvCSVC
             // 
-            this.dataGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGV.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGV.Location = new System.Drawing.Point(0, 341);
-            this.dataGV.Name = "dataGV";
-            this.dataGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGV.Size = new System.Drawing.Size(775, 164);
-            this.dataGV.TabIndex = 0;
-            this.dataGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGV_CellClick);
+            this.dgvCSVC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCSVC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCSVC.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvCSVC.Location = new System.Drawing.Point(0, 341);
+            this.dgvCSVC.Name = "dgvCSVC";
+            this.dgvCSVC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCSVC.Size = new System.Drawing.Size(775, 164);
+            this.dgvCSVC.TabIndex = 0;
+            this.dgvCSVC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCSVC_CellClick);
             // 
             // label1
             // 
@@ -91,7 +91,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 27);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Số lượng:";
+            this.label3.Text = "Mã LP:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
@@ -101,7 +101,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 27);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Mã LP:";
+            this.label4.Text = "Số lượng:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
@@ -124,13 +124,13 @@
             this.label6.Text = "Ghi chú:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtMaCSVC
+            // txtIDCSVC
             // 
-            this.txtMaCSVC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMaCSVC.Location = new System.Drawing.Point(190, 32);
-            this.txtMaCSVC.Name = "txtMaCSVC";
-            this.txtMaCSVC.Size = new System.Drawing.Size(224, 26);
-            this.txtMaCSVC.TabIndex = 0;
+            this.txtIDCSVC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIDCSVC.Location = new System.Drawing.Point(190, 32);
+            this.txtIDCSVC.Name = "txtIDCSVC";
+            this.txtIDCSVC.Size = new System.Drawing.Size(224, 26);
+            this.txtIDCSVC.TabIndex = 0;
             // 
             // txtTenCSVC
             // 
@@ -143,7 +143,7 @@
             // txtSoLuong
             // 
             this.txtSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSoLuong.Location = new System.Drawing.Point(190, 109);
+            this.txtSoLuong.Location = new System.Drawing.Point(190, 148);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(224, 26);
             this.txtSoLuong.TabIndex = 2;
@@ -151,7 +151,7 @@
             // txtMaLP
             // 
             this.txtMaLP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMaLP.Location = new System.Drawing.Point(190, 150);
+            this.txtMaLP.Location = new System.Drawing.Point(190, 110);
             this.txtMaLP.Name = "txtMaLP";
             this.txtMaLP.Size = new System.Drawing.Size(224, 26);
             this.txtMaLP.TabIndex = 3;
@@ -190,7 +190,7 @@
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXoa.BackColor = System.Drawing.Color.LightBlue;
-            this.btnXoa.Location = new System.Drawing.Point(565, 112);
+            this.btnXoa.Location = new System.Drawing.Point(565, 156);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(184, 38);
             this.btnXoa.TabIndex = 1;
@@ -203,7 +203,7 @@
             this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCapNhat.BackColor = System.Drawing.Color.LightBlue;
-            this.btnCapNhat.Location = new System.Drawing.Point(565, 156);
+            this.btnCapNhat.Location = new System.Drawing.Point(565, 112);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(184, 38);
             this.btnCapNhat.TabIndex = 2;
@@ -231,7 +231,7 @@
             this.groupBox1.Controls.Add(this.txtTinhTrang);
             this.groupBox1.Controls.Add(this.txtMaLP);
             this.groupBox1.Controls.Add(this.txtTenCSVC);
-            this.groupBox1.Controls.Add(this.txtMaCSVC);
+            this.groupBox1.Controls.Add(this.txtIDCSVC);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
@@ -279,7 +279,7 @@
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGV);
+            this.Controls.Add(this.dgvCSVC);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnXoa);
@@ -292,7 +292,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cơ Sở Vật Chất";
             this.Load += new System.EventHandler(this.frmCoSoVatChat_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCSVC)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -302,14 +302,14 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGV;
+        private System.Windows.Forms.DataGridView dgvCSVC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtMaCSVC;
+        private System.Windows.Forms.TextBox txtIDCSVC;
         private System.Windows.Forms.TextBox txtTenCSVC;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.TextBox txtMaLP;

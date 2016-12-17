@@ -27,57 +27,7 @@ namespace GUI
             dgvKhachHang.DataSource = BUS.GetDataKH();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            BUS = new Business();
-            KhachHang_DTO kh = new KhachHang_DTO(txtIDKhachHang.Text, txtHo.Text, txtTen.Text, txtGioiTinh.Text, txtSDT.Text, txtEmail.Text, txtDiaChi.Text, txtQuocTich.Text);
-            Boolean status = BUS.ThemKH(kh);
-            if (status == true)
-            {
-                MessageBox.Show("Thêm thành công!");
-                dgvKhachHang.DataSource = BUS.GetDataNV();
-                btnReset_Click(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("Thêm thất bại! Chưa nhập hoặc nhập trùng mã khách hàng.");
-            }
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            BUS = new Business();
-            KhachHang_DTO kh = new KhachHang_DTO(txtIDKhachHang.Text, txtHo.Text, txtTen.Text, txtGioiTinh.Text, txtSDT.Text, txtEmail.Text, txtDiaChi.Text, txtQuocTich.Text);
-            Boolean status = BUS.SuaKH(kh);
-            if (status == true)
-            {
-                MessageBox.Show("Sửa thành công!");
-                dgvKhachHang.DataSource = BUS.GetDataKH();
-                btnReset_Click(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("Sửa thất bại!");
-            }
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            BUS = new Business();
-            Boolean status = BUS.XoaKH(txtIDKhachHang.Text);
-            if (status == true)
-            {
-                MessageBox.Show("Xóa thành công!");
-                dgvKhachHang.DataSource = BUS.GetDataKH();
-                btnReset_Click(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("Xóa thất bại! Mã khách hàng không tồn tại.");
-            }
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
+        private void Init()
         {
             txtIDKhachHang.Text = "";
             txtHo.Text = "";
@@ -87,6 +37,70 @@ namespace GUI
             txtEmail.Text = "";
             txtDiaChi.Text = "";
             txtQuocTich.Text = "";
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                KhachHang_DTO kh = new KhachHang_DTO(txtIDKhachHang.Text, txtHo.Text, txtTen.Text, txtGioiTinh.Text, txtSDT.Text, txtEmail.Text, txtDiaChi.Text, txtQuocTich.Text);
+                if (MessageBox.Show("Thêm khách hàng?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUS.ThemKH(kh);
+                    MessageBox.Show("Thêm thành công!");
+                    dgvKhachHang.DataSource = BUS.GetDataKH();
+                    Init();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                KhachHang_DTO kh = new KhachHang_DTO(txtIDKhachHang.Text, txtHo.Text, txtTen.Text, txtGioiTinh.Text, txtSDT.Text, txtEmail.Text, txtDiaChi.Text, txtQuocTich.Text);
+                if (MessageBox.Show("Lưu sửa đổi?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUS.SuaKH(kh);
+                    MessageBox.Show("Sửa thành công!");
+                    dgvKhachHang.DataSource = BUS.GetDataKH();
+                    Init();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Xóa khách hàng?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUS.XoaKH(txtIDKhachHang.Text);
+                    MessageBox.Show("Xóa thành công!");
+                    dgvKhachHang.DataSource = BUS.GetDataKH();
+                    Init();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Reset?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Init();
+            }
         }
 
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)

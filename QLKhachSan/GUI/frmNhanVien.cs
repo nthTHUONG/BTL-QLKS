@@ -26,69 +26,80 @@ namespace GUI
             BUS = new Business();
             dgvNhanVien.DataSource = BUS.GetDataNV();
         }
-        
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            BUS = new Business();
-            NhanVien_DTO nv = new NhanVien_DTO(txtIDNhanVien.Text, txtHo.Text, txtTen.Text, txtChucVu.Text, txtGioiTinh.Text, dtpNgaySinh.Text, txtSDT.Text, txtDiaChi.Text);
-            Boolean status = BUS.ThemNV(nv);
-            if (status == true)
-            {
-                MessageBox.Show("Thêm thành công!");
-                dgvNhanVien.DataSource = BUS.GetDataNV();
-                btnReset_Click(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("Thêm thất bại! Chưa nhập hoặc nhập trùng mã nhân viên.");
-            }
-        }
 
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            BUS = new Business();
-            NhanVien_DTO nv = new NhanVien_DTO(txtIDNhanVien.Text, txtHo.Text, txtTen.Text, txtChucVu.Text, txtGioiTinh.Text, dtpNgaySinh.Text, txtSDT.Text, txtDiaChi.Text);
-            Boolean status = BUS.SuaNV(nv);
-            btnReset_Click(sender, e);
-            if (status == true)
-            {
-                MessageBox.Show("Sửa thành công!");
-                dgvNhanVien.DataSource = BUS.GetDataNV();
-                btnReset_Click(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("Sửa thất bại!");
-            }
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            BUS = new Business();
-            Boolean status = BUS.XoaDVhdv(txtIDNhanVien.Text);
-            btnReset_Click(sender, e);
-            if (status == true)
-            {
-                MessageBox.Show("Xóa thành công!");
-                dgvNhanVien.DataSource = BUS.GetDataNV();
-                btnReset_Click(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("Xóa thất bại! Mã nhân viên không tồn tại.");
-            }
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
+        private void Init()
         {
             txtIDNhanVien.Text = "";
             txtHo.Text = "";
             txtTen.Text = "";
             txtChucVu.Text = "";
             txtGioiTinh.Text = "";
-            dtpNgaySinh.Text = "";
             txtSDT.Text = "";
             txtDiaChi.Text = "";
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                NhanVien_DTO nv = new NhanVien_DTO(txtIDNhanVien.Text, txtHo.Text, txtTen.Text, txtChucVu.Text, txtGioiTinh.Text, dtpNgaySinh.Text, txtSDT.Text, txtDiaChi.Text);
+                if (MessageBox.Show("Thêm nhân viên?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUS.ThemNV(nv);
+                    MessageBox.Show("Thêm thành công!");
+                    dgvNhanVien.DataSource = BUS.GetDataNV();
+                    Init();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                NhanVien_DTO nv = new NhanVien_DTO(txtIDNhanVien.Text, txtHo.Text, txtTen.Text, txtChucVu.Text, txtGioiTinh.Text, dtpNgaySinh.Text, txtSDT.Text, txtDiaChi.Text);
+                if (MessageBox.Show("Lưu sửa đổi?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUS.SuaNV(nv);
+                    MessageBox.Show("Sửa thành công!");
+                    dgvNhanVien.DataSource = BUS.GetDataNV();
+                    Init();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Xóa nhân viên?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUS.XoaNV(txtIDNhanVien.Text);
+                    MessageBox.Show("Xóa thành công!");
+                    dgvNhanVien.DataSource = BUS.GetDataNV();
+                    Init();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Reset?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Init();
+            }
         }
 
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
@@ -124,14 +135,14 @@ namespace GUI
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvNhanVien.Rows[e.RowIndex];
-                txtIDNhanVien.Text = row.Cells[0].Value.ToString();
-                txtHo.Text = row.Cells[1].Value.ToString();
-                txtTen.Text = row.Cells[2].Value.ToString();
-                txtChucVu.Text = row.Cells[3].Value.ToString();
-                txtGioiTinh.Text = row.Cells[4].Value.ToString();
-                dtpNgaySinh.Text = row.Cells[5].Value.ToString();
-                txtSDT.Text = row.Cells[6].Value.ToString();
-                txtDiaChi.Text = row.Cells[7].Value.ToString();
+                txtIDNhanVien.Text = row.Cells["IDNhanVien"].Value.ToString();
+                txtHo.Text = row.Cells["Ho"].Value.ToString();
+                txtTen.Text = row.Cells["Ten"].Value.ToString();
+                txtChucVu.Text = row.Cells["ChucVu"].Value.ToString();
+                txtGioiTinh.Text = row.Cells["GioiTinh"].Value.ToString();
+                dtpNgaySinh.Text = row.Cells["NgaySinh"].Value.ToString();
+                txtSDT.Text = row.Cells["SDT"].Value.ToString();
+                txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
             }
         }
     }

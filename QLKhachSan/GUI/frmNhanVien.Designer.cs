@@ -178,6 +178,7 @@
             this.txtIDNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDNhanVien.Location = new System.Drawing.Point(95, 5);
             this.txtIDNhanVien.Name = "txtIDNhanVien";
+            this.txtIDNhanVien.ReadOnly = true;
             this.txtIDNhanVien.Size = new System.Drawing.Size(344, 26);
             this.txtIDNhanVien.TabIndex = 0;
             // 
@@ -386,7 +387,8 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(888, 666);
             this.Name = "frmNhanVien";
-            this.Text = "frmNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nhân viên";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

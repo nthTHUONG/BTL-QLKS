@@ -15,6 +15,7 @@ namespace DTO
             get { return _idKhachHang; }
             set { _idKhachHang = value; }
         }
+
         private string _ho;
 
         public string Ho
@@ -22,6 +23,7 @@ namespace DTO
             get { return _ho; }
             set { _ho = value; }
         }
+
         private string _ten;
 
         public string Ten
@@ -29,6 +31,7 @@ namespace DTO
             get { return _ten; }
             set { _ten = value; }
         }
+
         private string _gioiTinh;
 
         public string GioiTinh
@@ -36,6 +39,7 @@ namespace DTO
             get { return _gioiTinh; }
             set { _gioiTinh = value; }
         }
+
         private string _sdt;
 
         public string SDT
@@ -43,6 +47,7 @@ namespace DTO
             get { return _sdt; }
             set { _sdt = value; }
         }
+
         private string _email;
 
         public string Email
@@ -50,6 +55,7 @@ namespace DTO
             get { return _email; }
             set { _email = value; }
         }
+
         private string _diaChi;
 
         public string DiaChi
@@ -57,6 +63,7 @@ namespace DTO
             get { return _diaChi; }
             set { _diaChi = value; }
         }
+
         private string _quocTich;
 
         public string QuocTich
@@ -64,7 +71,9 @@ namespace DTO
             get { return _quocTich; }
             set { _quocTich = value; }
         }
+
         public KhachHang_DTO() { }
+
         public KhachHang_DTO(string idKhachHang, string ho, string ten, string gioiTinh, string sdt, string email, string diaChi, string quocTich)
         {
             _idKhachHang = idKhachHang;

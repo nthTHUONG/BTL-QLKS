@@ -7,13 +7,3 @@ C:\Users\heoco\Desktop\QLKhachSan\DTO\bin\Debug\DTO.dll
 C:\Users\heoco\Desktop\QLKhachSan\DTO\bin\Debug\DTO.pdb
 C:\Users\heoco\Desktop\QLKhachSan\DTO\obj\Debug\DTO.dll
 C:\Users\heoco\Desktop\QLKhachSan\DTO\obj\Debug\DTO.pdb
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\DTO.dll
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\DTO.pdb
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\mscorlib.dll
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\normidna.nlp
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\normnfc.nlp
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\normnfd.nlp
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\normnfkc.nlp
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\normnfkd.nlp
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\obj\Debug\DTO.dll
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\obj\Debug\DTO.pdb

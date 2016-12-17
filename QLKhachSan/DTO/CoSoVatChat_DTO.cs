@@ -15,13 +15,23 @@ namespace DTO
             get { return _idCSVC; }
             set { _idCSVC = value; }
         }
-        private string _ten;
+
+        private string _tenCSVC;
 
         public string TenCSVC
         {
-            get { return _ten; }
-            set { _ten = value; }
+            get { return _tenCSVC; }
+            set { _tenCSVC = value; }
         }
+
+        private string _maLP;
+
+        public string MaLP
+        {
+            get { return _maLP; }
+            set { _maLP = value; }
+        }
+
         private int _soLuong;
 
         public int SoLuong
@@ -29,26 +39,33 @@ namespace DTO
             get { return _soLuong; }
             set { _soLuong = value; }
         }
-        private string _idLoaiPhong;
 
-        public string MaLP
-        {
-            get { return _idLoaiPhong; }
-            set { _idLoaiPhong = value; }
-        }
-        private bool _tinhTrang;
+        private string _tinhTrang;
 
-        public bool TinhTrang
+        public string TinhTrang
         {
             get { return _tinhTrang; }
             set { _tinhTrang = value; }
         }
+
         private string _ghiChu;
 
         public string GhiChu
         {
             get { return _ghiChu; }
             set { _ghiChu = value; }
+        }
+
+        public CoSoVatChat_DTO() { }
+
+        public CoSoVatChat_DTO(string idCSVC, string tenCSVC, string maLP, string soLuong, string tinhTrang, string ghiChu)
+        {
+            _idCSVC = idCSVC;
+            _tenCSVC = tenCSVC;
+            _maLP = maLP;
+            _soLuong = Convert.ToInt32(soLuong);
+            _tinhTrang = tinhTrang;
+            _ghiChu = ghiChu;
         }
     }
 }
