@@ -37,8 +37,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtIDCSVC = new System.Windows.Forms.TextBox();
             this.txtTenCSVC = new System.Windows.Forms.TextBox();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtMaLP = new System.Windows.Forms.TextBox();
             this.txtTinhTrang = new System.Windows.Forms.TextBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
@@ -48,6 +46,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.cbbMaLP = new System.Windows.Forms.ComboBox();
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             ((System.ComponentModel.ISupportInitialize)(this.dgvCSVC)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +60,11 @@
             this.dgvCSVC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCSVC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCSVC.Dock = System.Windows.Forms.DockStyle.Bottom;
+<<<<<<< HEAD
             this.dgvCSVC.Location = new System.Drawing.Point(0, 341);
+=======
+            this.dgvCSVC.Location = new System.Drawing.Point(0, 342);
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             this.dgvCSVC.Name = "dgvCSVC";
             this.dgvCSVC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCSVC.Size = new System.Drawing.Size(775, 164);
@@ -77,7 +84,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.label2.Location = new System.Drawing.Point(96, 72);
+            this.label2.Location = new System.Drawing.Point(96, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 27);
             this.label2.TabIndex = 1;
@@ -87,7 +94,7 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.label3.Location = new System.Drawing.Point(96, 109);
+            this.label3.Location = new System.Drawing.Point(96, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 27);
             this.label3.TabIndex = 1;
@@ -97,7 +104,7 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.label4.Location = new System.Drawing.Point(96, 150);
+            this.label4.Location = new System.Drawing.Point(96, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 27);
             this.label4.TabIndex = 1;
@@ -107,7 +114,7 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.label5.Location = new System.Drawing.Point(96, 190);
+            this.label5.Location = new System.Drawing.Point(96, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 27);
             this.label5.TabIndex = 1;
@@ -127,19 +134,26 @@
             // txtIDCSVC
             // 
             this.txtIDCSVC.Anchor = System.Windows.Forms.AnchorStyles.None;
+<<<<<<< HEAD
             this.txtIDCSVC.Location = new System.Drawing.Point(190, 32);
             this.txtIDCSVC.Name = "txtIDCSVC";
             this.txtIDCSVC.Size = new System.Drawing.Size(224, 26);
+=======
+            this.txtIDCSVC.Location = new System.Drawing.Point(191, 34);
+            this.txtIDCSVC.Name = "txtIDCSVC";
+            this.txtIDCSVC.Size = new System.Drawing.Size(222, 26);
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             this.txtIDCSVC.TabIndex = 0;
             // 
             // txtTenCSVC
             // 
             this.txtTenCSVC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTenCSVC.Location = new System.Drawing.Point(190, 71);
+            this.txtTenCSVC.Location = new System.Drawing.Point(191, 72);
             this.txtTenCSVC.Name = "txtTenCSVC";
-            this.txtTenCSVC.Size = new System.Drawing.Size(224, 26);
+            this.txtTenCSVC.Size = new System.Drawing.Size(222, 26);
             this.txtTenCSVC.TabIndex = 1;
             // 
+<<<<<<< HEAD
             // txtSoLuong
             // 
             this.txtSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -156,26 +170,28 @@
             this.txtMaLP.Size = new System.Drawing.Size(224, 26);
             this.txtMaLP.TabIndex = 3;
             // 
+=======
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             // txtTinhTrang
             // 
             this.txtTinhTrang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTinhTrang.Location = new System.Drawing.Point(190, 189);
+            this.txtTinhTrang.Location = new System.Drawing.Point(191, 188);
             this.txtTinhTrang.Name = "txtTinhTrang";
-            this.txtTinhTrang.Size = new System.Drawing.Size(224, 26);
+            this.txtTinhTrang.Size = new System.Drawing.Size(222, 26);
             this.txtTinhTrang.TabIndex = 4;
             // 
             // txtGhiChu
             // 
             this.txtGhiChu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtGhiChu.Location = new System.Drawing.Point(190, 227);
+            this.txtGhiChu.Location = new System.Drawing.Point(191, 226);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(224, 26);
+            this.txtGhiChu.Size = new System.Drawing.Size(222, 26);
             this.txtGhiChu.TabIndex = 5;
             // 
             // btnThem
             // 
-            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThem.BackColor = System.Drawing.Color.LightBlue;
             this.btnThem.Location = new System.Drawing.Point(565, 68);
             this.btnThem.Name = "btnThem";
@@ -187,8 +203,8 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXoa.BackColor = System.Drawing.Color.LightBlue;
             this.btnXoa.Location = new System.Drawing.Point(565, 156);
             this.btnXoa.Name = "btnXoa";
@@ -200,8 +216,8 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCapNhat.BackColor = System.Drawing.Color.LightBlue;
             this.btnCapNhat.Location = new System.Drawing.Point(565, 112);
             this.btnCapNhat.Name = "btnCapNhat";
@@ -213,8 +229,8 @@
             // 
             // btnReset
             // 
-            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReset.BackColor = System.Drawing.Color.LightBlue;
             this.btnReset.Location = new System.Drawing.Point(565, 200);
             this.btnReset.Name = "btnReset";
@@ -226,10 +242,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbbMaLP);
             this.groupBox1.Controls.Add(this.txtGhiChu);
             this.groupBox1.Controls.Add(this.txtSoLuong);
             this.groupBox1.Controls.Add(this.txtTinhTrang);
-            this.groupBox1.Controls.Add(this.txtMaLP);
             this.groupBox1.Controls.Add(this.txtTenCSVC);
             this.groupBox1.Controls.Add(this.txtIDCSVC);
             this.groupBox1.Controls.Add(this.label6);
@@ -241,14 +257,14 @@
             this.groupBox1.Location = new System.Drawing.Point(26, 14);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(510, 276);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Cơ Sở Vật Chất";
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTimKiem.Location = new System.Drawing.Point(126, 302);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(314, 26);
@@ -260,8 +276,8 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.BackColor = System.Drawing.Color.Cyan;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(26, 301);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 27);
@@ -269,13 +285,29 @@
             this.label7.Text = "Tìm kiếm:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSoLuong.Location = new System.Drawing.Point(191, 150);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(222, 26);
+            this.txtSoLuong.TabIndex = 3;
+            // 
+            // cbbMaLP
+            // 
+            this.cbbMaLP.FormattingEnabled = true;
+            this.cbbMaLP.Location = new System.Drawing.Point(191, 110);
+            this.cbbMaLP.Name = "cbbMaLP";
+            this.cbbMaLP.Size = new System.Drawing.Size(222, 28);
+            this.cbbMaLP.TabIndex = 2;
+            // 
             // frmCoSoVatChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.ClientSize = new System.Drawing.Size(775, 505);
+            this.ClientSize = new System.Drawing.Size(775, 506);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
@@ -311,8 +343,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtIDCSVC;
         private System.Windows.Forms.TextBox txtTenCSVC;
-        private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.TextBox txtMaLP;
         private System.Windows.Forms.TextBox txtTinhTrang;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Button btnThem;
@@ -322,5 +352,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbbMaLP;
+        private System.Windows.Forms.TextBox txtSoLuong;
     }
 }

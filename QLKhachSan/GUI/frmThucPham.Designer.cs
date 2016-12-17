@@ -55,6 +55,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.dtHanSD);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtTimKiem);
@@ -135,7 +136,7 @@
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnReset.BackColor = System.Drawing.Color.IndianRed;
+            this.btnReset.BackColor = System.Drawing.Color.Gray;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(645, 100);
             this.btnReset.Name = "btnReset";
@@ -148,7 +149,7 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.BackColor = System.Drawing.Color.IndianRed;
+            this.btnXoa.BackColor = System.Drawing.Color.Gray;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(746, 100);
             this.btnXoa.Name = "btnXoa";
@@ -214,7 +215,7 @@
             // btnSua
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSua.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSua.BackColor = System.Drawing.Color.Gray;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(746, 31);
             this.btnSua.Name = "btnSua";
@@ -238,7 +239,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThem.BackColor = System.Drawing.Color.IndianRed;
+            this.btnThem.BackColor = System.Drawing.Color.Gray;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(645, 31);
             this.btnThem.Name = "btnThem";
@@ -300,17 +301,17 @@
             this.dgvThucPham.TabIndex = 89;
             this.dgvThucPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucPham_CellClick);
             // 
-            // frmChiTietThucPham
+            // frmThucPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCoral;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(869, 480);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvThucPham);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmChiTietThucPham";
+            this.Name = "frmThucPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thực Phẩm";
             this.Load += new System.EventHandler(this.frmThucPham_Load);

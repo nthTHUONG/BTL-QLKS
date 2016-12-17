@@ -41,12 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Xe_DAL.cs" />
     <Compile Include="CoSoVatChat_DAL.cs" />
     <Compile Include="DatPhong_DAL.cs" />
     <Compile Include="Phong_DAL.cs" />
     <Compile Include="ThucPham_DAL.cs" />
     <Compile Include="ConnectDB.cs" />
+=======
+    <Compile Include="ChiTietXe_DAL.cs" />
+    <Compile Include="CoSoVatChat_DAL.cs" />
+    <Compile Include="ThucPham_DAL.cs" />
+    <Compile Include="ConnectDB.cs" />
+    <Compile Include="DatPhong_DAL.cs" />
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
     <Compile Include="ExecuteDB.cs" />
     <Compile Include="DVhdv_DAL.cs" />
     <Compile Include="KhachHang_DAL.cs" />

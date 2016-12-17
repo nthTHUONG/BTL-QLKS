@@ -16,8 +16,12 @@ namespace GUI
     public partial class frmDatPhong : Form
     {
         Business BUS;
+<<<<<<< HEAD
         decimal giaPhong;
         public frmDatPhong()
+=======
+         public frmDatPhong()
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         {
             InitializeComponent();
         }
@@ -31,6 +35,7 @@ namespace GUI
 
         private void LoadCombobox()
         {
+<<<<<<< HEAD
             cbbMaNV.DataSource = BUS.GetDataNV();
             cbbMaNV.DisplayMember = "IDNhanVien";
 
@@ -42,6 +47,31 @@ namespace GUI
         }
 
         private void Init()
+=======
+            /*cbbMaNV.DataSource = BUS.GetDataNV("SELECT IDNhanVien FROM NhanVien");
+            cbbMaNV.DisplayMember = "IDNhanVien";
+
+            cbbMaKH.DataSource = BUS.GetDataKH("SELECT IDKhachHang FROM KhachHang");
+            cbbMaKH.DisplayMember = "IDKhachHang";
+
+            cbbMaPhong.DataSource = BUS.GetDataPhong("SELECT IDPhong FROM Phong");
+            cbbMaPhong.DisplayMember = "IDPhong";*/
+        }
+
+        private void Init()
+        {
+            cbbMaNV.Text = "Chọn mã NV";
+            cbbMaKH.Text = "Chọn mã KH";
+            txtMaDP.Text = "";
+            cbbMaPhong.Text = "Chọn mã phòng";
+            lbTenLP.Text = "";
+            lbThanhTien.Text = "";
+            txtTraTruoc.Text = "";
+            txtGhiChu.Text = "";
+        }
+
+        private void ThanhTien()
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         {
             cbbMaNV.Text = "Chọn mã NV";
             cbbMaKH.Text = "Chọn mã KH";
@@ -75,6 +105,7 @@ namespace GUI
             DataTable dt = BUS.GetDataLP_fromIDPhong(cbbMaPhong.Text);
             if (dt.Rows.Count > 0)
             {
+<<<<<<< HEAD
                 txtTenLP.Text = dt.Rows[0]["TenLP"].ToString();
                 giaPhong = Convert.ToDecimal(dt.Rows[0]["GiaLP"]);
             }
@@ -88,9 +119,17 @@ namespace GUI
             if (dtpNgayNhan.Value > dtpNgayTra.Value)
             {
                 dtpNgayTra.Value = dtpNgayNhan.Value;
+=======
+                /*decimal giaPhong = Convert.ToDecimal(BUS.GetDataLP("SELECT GiaLP FROM LoaiPhong WHERE IDLoaiPhong IN(SELECT MaLP FROM Phong WHERE IDPhong = N'" + cbbMaPhong.Text + "')").Rows[0][0]);
+                TimeSpan duration = Convert.ToDateTime(dtpNgayTra.Text).Subtract(Convert.ToDateTime(dtpNgayNhan.Text));
+                int time = Convert.ToInt32(duration.ToString("%d"));
+                lbThanhTien.Text = (time <= 0) ? giaPhong.ToString() : (giaPhong * time).ToString();*/
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             }
+            catch (Exception) { }
         }
 
+<<<<<<< HEAD
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
             try
@@ -105,6 +144,28 @@ namespace GUI
             {
                 MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+=======
+        private void btnThemKH_Click(object sender, EventArgs e)
+        {
+            frmThemKH f = new frmThemKH();
+            f.ShowDialog();
+        }
+
+        private void cbbMaPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lbTenLP.Text = BUS.GetDataLP("SELECT TenLP FROM LoaiPhong WHERE IDLoaiPhong IN(SELECT MaLP FROM Phong WHERE IDPhong = N'" + cbbMaPhong.Text + "')").Rows[0][0].ToString();
+            ThanhTien();
+        }
+
+        private void DateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            ThanhTien();
+        }
+
+        private void btnDatPhong_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
     }
 }

@@ -47,6 +47,10 @@ namespace GUI
             catch (Exception )
             {
                 MessageBox.Show("Load dữ liệu không thành công!");
+<<<<<<< HEAD
+=======
+                //throw;
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             }
             
         }
@@ -76,6 +80,10 @@ namespace GUI
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+<<<<<<< HEAD
+=======
+                //throw;
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             }
             disconnect();
             return strMa;
@@ -96,6 +104,7 @@ namespace GUI
                 for (int i = 0; i < dgvThemThueXe.RowCount - 1; i++)
                 {
                     if (dgvThemThueXe.Rows[i].Cells["LoaiXe"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
+<<<<<<< HEAD
                     {
                         dgvThemThueXe.Rows[i].Visible = true;
                     }
@@ -103,6 +112,12 @@ namespace GUI
                     {
                         dgvThemThueXe.Rows[i].Visible = false;
                     }
+=======
+                        
+                             dgvThemThueXe.Rows[i].Visible = true;
+                    else
+                             dgvThemThueXe.Rows[i].Visible = false;
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                 }
             }
         }
@@ -119,13 +134,21 @@ namespace GUI
             try
             {
                 if (cnn != null && cnn.State != ConnectionState.Open)
+<<<<<<< HEAD
                 {
                     cnn.Open();
                 }
+=======
+                    cnn.Open();
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+<<<<<<< HEAD
+=======
+                //throw;
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             }
             
         }
@@ -134,13 +157,21 @@ namespace GUI
             try
             {
                 if (cnn != null && cnn.State != ConnectionState.Closed)
+<<<<<<< HEAD
                 {
                     cnn.Close();
                 }
+=======
+                    cnn.Close();
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+<<<<<<< HEAD
+=======
+                //throw;
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             }
 
         }
@@ -160,6 +191,10 @@ namespace GUI
             catch (Exception)
             {
                 MessageBox.Show("Xin nhập đầy đủ thông tin!");
+<<<<<<< HEAD
+=======
+               // throw;
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             }
             disconnect();   
             LoadXe();

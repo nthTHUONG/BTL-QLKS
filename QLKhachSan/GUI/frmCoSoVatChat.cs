@@ -25,13 +25,28 @@ namespace GUI
         {
             BUS = new Business();
             dgvCSVC.DataSource = BUS.GetDataCSVC();
+<<<<<<< HEAD
         }
 
+=======
+            LoadComBoBox();
+            Init();
+        }
+        private void LoadComBoBox()
+        {
+            cbbMaLP.DataSource = BUS.GetDataLP();
+            cbbMaLP.DisplayMember = "IDLoaiPhong";
+        }
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         private void Init()
         {
             txtIDCSVC.Text = "";
             txtTenCSVC.Text = "";
+<<<<<<< HEAD
             txtMaLP.Text = "";
+=======
+            cbbMaLP.Text = "Chọn mã loại phòng";
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             txtSoLuong.Text = "";
             txtTinhTrang.Text = "";
             txtGhiChu.Text = "";
@@ -41,7 +56,11 @@ namespace GUI
         {
             try
             {
+<<<<<<< HEAD
                 CoSoVatChat_DTO csvc = new CoSoVatChat_DTO(txtIDCSVC.Text, txtTenCSVC.Text, txtMaLP.Text, txtSoLuong.Text, txtTinhTrang.Text, txtGhiChu.Text);
+=======
+                CoSoVatChat_DTO csvc = new CoSoVatChat_DTO(txtIDCSVC.Text, txtTenCSVC.Text, cbbMaLP.Text, txtSoLuong.Text ,txtTinhTrang.Text, txtGhiChu.Text);
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                 if (MessageBox.Show("Thêm cơ sở vật chất?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     BUS.ThemCSVC(csvc);
@@ -60,7 +79,11 @@ namespace GUI
         {
             try
             {
+<<<<<<< HEAD
                 CoSoVatChat_DTO csvc = new CoSoVatChat_DTO(txtIDCSVC.Text, txtTenCSVC.Text, txtMaLP.Text, txtSoLuong.Text, txtTinhTrang.Text, txtGhiChu.Text);
+=======
+                CoSoVatChat_DTO csvc = new CoSoVatChat_DTO(txtIDCSVC.Text, txtTenCSVC.Text,cbbMaLP.Text, txtSoLuong.Text, txtTinhTrang.Text, txtGhiChu.Text);
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                 if (MessageBox.Show("Lưu sửa đổi?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     BUS.SuaCSVC(csvc);
@@ -95,7 +118,25 @@ namespace GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            Init();
+        }
+
+        private void dgvCSVC_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvCSVC.Rows[e.RowIndex];
+                txtIDCSVC.Text = row.Cells[0].Value.ToString();
+                txtTenCSVC.Text = row.Cells[1].Value.ToString();
+                cbbMaLP.Text = row.Cells[2].Value.ToString();
+                txtSoLuong.Text = row.Cells[3].Value.ToString();
+                txtTinhTrang.Text = row.Cells[4].Value.ToString();
+                txtGhiChu.Text = row.Cells[5].Value.ToString();
+            }
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)

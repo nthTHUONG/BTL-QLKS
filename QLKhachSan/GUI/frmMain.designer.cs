@@ -336,6 +336,10 @@ namespace GUI
             this.thựcPhẩmToolStripMenuItem1.Name = "thựcPhẩmToolStripMenuItem1";
             this.thựcPhẩmToolStripMenuItem1.Size = new System.Drawing.Size(189, 24);
             this.thựcPhẩmToolStripMenuItem1.Text = "Thực phẩm";
+<<<<<<< HEAD
+=======
+            this.thựcPhẩmToolStripMenuItem1.Click += new System.EventHandler(this.thựcPhẩmToolStripMenuItem1_Click);
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             // 
             // thuêXeToolStripMenuItem
             // 

@@ -33,7 +33,11 @@ namespace GUI
             cbbMaNV.DataSource = BUS.GetDataNV();
             cbbMaNV.DisplayMember = "IDNhanVien";
 
+<<<<<<< HEAD
             cbbMaTP.DataSource = BUS.GetDataTP();
+=======
+            cbbMaTP.DataSource = BUS.GetDataTP("SELECT IDThucPham FROM ThucPham");
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             cbbMaTP.DisplayMember = "IDThucPham";
         }
 
@@ -52,12 +56,20 @@ namespace GUI
 
         private void cbbMaTP_SelectedIndexChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             lbDonGia.Text = BUS.GetDataTP(cbbMaTP.Text).ToString();
+=======
+            lbDonGia.Text = BUS.GetDataTP("SELECT DonGia FROM HoaDonThucPham WHERE MaTP = N'" + cbbMaTP.Text + "'").ToString();
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             lbDonGia.Text = (Convert.ToDecimal(BUS.GetDataTP(cbbMaTP.Text)) * Convert.ToInt32(txtSoLuong)).ToString();
+=======
+            lbDonGia.Text = (Convert.ToDecimal(BUS.GetDataTP("SELECT DonGia FROM HoaDonThucPham WHERE MaTP = N'" + cbbMaTP.Text + "'")) * Convert.ToInt32(txtSoLuong)).ToString();
+>>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
