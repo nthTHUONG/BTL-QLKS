@@ -24,20 +24,20 @@ namespace DTO
             set { _tenCSVC = value; }
         }
 
-        private string _maLP;
-
-        public string MaLP
-        {
-            get { return _maLP; }
-            set { _maLP = value; }
-        }
-
+        
         private int _soLuong;
 
         public int SoLuong
         {
             get { return _soLuong; }
             set { _soLuong = value; }
+        }
+        private string _maLP;
+
+        public string MaLP
+        {
+            get { return _maLP; }
+            set { _maLP = value; }
         }
 
         private string _tinhTrang;
@@ -58,12 +58,12 @@ namespace DTO
 
         public CoSoVatChat_DTO() { }
 
-        public CoSoVatChat_DTO(string idCSVC, string tenCSVC, string maLP, string soLuong, string tinhTrang, string ghiChu)
+        public CoSoVatChat_DTO(string idCSVC, string tenCSVC,  string soLuong, string maLP, string tinhTrang, string ghiChu)
         {
             _idCSVC = idCSVC;
             _tenCSVC = tenCSVC;
-            _maLP = maLP;
             _soLuong = Convert.ToInt32(soLuong);
+            _maLP = maLP;
             _tinhTrang = tinhTrang;
             _ghiChu = ghiChu;
         }

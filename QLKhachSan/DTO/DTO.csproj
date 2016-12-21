@@ -40,16 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Xe_DTO.cs" />
-=======
     <Compile Include="ChiTietXe_DTO.cs" />
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
     <Compile Include="CoSoVatChat_DTO.cs" />
     <Compile Include="ThucPham_DTO.cs" />
     <Compile Include="DatPhong_DTO.cs" />
     <Compile Include="DVhdv_DTO.cs" />
-    <Compile Include="HoaDonTP_DTO.cs" />
     <Compile Include="KhachHang_DTO.cs" />
     <Compile Include="LoaiPhong_DTO.cs" />
     <Compile Include="NhanVien_DTO.cs" />

@@ -73,15 +73,8 @@ namespace GUI
        
         private void thanhToánPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            
             frmThanhToanPhong frmTTP = new frmThanhToanPhong();
             frmTTP.Show();
-            
-=======
-            frmThanhToanPhong frmTTP = new frmThanhToanPhong();
-            frmTTP.Show();
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         private void thanhToánThuêXeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,15 +84,8 @@ namespace GUI
 
         private void thanhToánDVHướngDẫnViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            
             frmThanhToanHDV frmTThdv = new frmThanhToanHDV();
             frmTThdv.Show();
-            
-=======
-            frmThanhToanHDV frmTThdv = new frmThanhToanHDV();
-            frmTThdv.Show();
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         private void loạiPhòngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -128,8 +114,8 @@ namespace GUI
 
         private void thanhToánThựcPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHoaDonTP frmHD = new frmHoaDonTP();
-            frmHD.Show();
+           // frmHoaDonTP frmHD = new frmHoaDonTP();
+            //frmHD.Show();
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,12 +130,6 @@ namespace GUI
                 e.Cancel = true;
         }
 
-<<<<<<< HEAD
-        private void thuêXeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmThueXe frmThueXe = new frmThueXe();
-            frmThueXe.Show();
-=======
         private void thựcPhẩmToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmThucPham frmTP = new frmThucPham();
@@ -159,7 +139,6 @@ namespace GUI
         private void thuêXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(" chưa có ");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
 

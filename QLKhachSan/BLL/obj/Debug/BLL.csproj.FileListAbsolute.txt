@@ -16,8 +16,6 @@ C:\Users\heoco\Desktop\QLKhachSan\BLL\bin\Debug\DAL.dll
 C:\Users\heoco\Desktop\QLKhachSan\BLL\bin\Debug\DTO.dll
 C:\Users\heoco\Desktop\QLKhachSan\BLL\bin\Debug\DAL.pdb
 C:\Users\heoco\Desktop\QLKhachSan\BLL\bin\Debug\DTO.pdb
-<<<<<<< HEAD
-=======
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BLL\bin\Debug\BLL.dll
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BLL\bin\Debug\BLL.pdb
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BLL\bin\Debug\DAL.dll
@@ -42,4 +40,12 @@ C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\BL
 C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.dll
 C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.pdb
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\BLL\bin\Debug\BLL.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\BLL\bin\Debug\BLL.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\BLL\bin\Debug\DAL.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\BLL\bin\Debug\DTO.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\BLL\bin\Debug\DAL.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\BLL\bin\Debug\DTO.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.pdb

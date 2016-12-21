@@ -14,7 +14,9 @@ namespace GUI
 {
     public partial class frmDichVuHDV : Form
     {
-        Business BUS;
+        SqlConnection cnn;
+        DataSet ds;
+        string cnstr;
         public frmDichVuHDV()
         {
             InitializeComponent();
@@ -22,140 +24,79 @@ namespace GUI
 
         private void frmDichVuHDV_Load(object sender, EventArgs e)
         {
-            BUS = new Business();
-<<<<<<< HEAD
-            dgvDVhdv.DataSource = BUS.GetDataDVhdv();
-=======
-            dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
-            LoadComBoBox();
-            Init();
+            cnstr = ConfigurationManager.ConnectionStrings["cnstr"].ConnectionString;
+            cnn = new SqlConnection(cnstr);
+            getDichVuHDV();
         }
 
-        private void LoadComBoBox()
-        {
-            cbbMaKH.DataSource = BUS.GetDataKH();
-            cbbMaKH.DisplayMember = "IDKhachHang";
-<<<<<<< HEAD
-        }
+        //private void LoadComBoBox()
+        //{
+        //    cbbMaKH.DataSource = ("SELECT IDKhachHang FROM KhachHang");
+        //    cbbMaKH.DisplayMember = "IDKhachHang";
+
+        //    cbbMaHDV.DataSource = ("SELECT IDHDV FROM HuongDanVien");
+        //    cbbMaHDV.DisplayMember = "IDHDV";   
+
+        //}
 
         private void Init()
         {
             txtIDDVhdv.Text = "";
-            cbbMaKH.Text = "Chọn mã khách hàng";
-            cbbMaHDV.Text = "Chọn mã hướng dẫn viên";
-            txtSoNgayThue.Text = "";
+            txtMaKH.Text = "";
+            txtMaHDV.Text = "";
+            dtpNgayThue.Text = "";
             txtGiaThue.Text = "";
-            txtTraTruoc.Text = "";
             txtGhiChu.Text = "";
         }
-
-=======
-
-            cbbMaHDV.DataSource = BUS.GetDataDVhdv("SELECT IDHDV FROM HuongDanVien");
-            cbbMaHDV.DisplayMember = "IDHDV";
-
-        }
-
-        private void Init()
+        private void getDichVuHDV()
         {
-            txtIDDVhdv.Text = "";
-            cbbMaKH.Text = "Chọn mã khách hàng";
-            cbbMaHDV.Text = "Chọn mã hướng dẫn viên";
-            txtSoNgayThue.Text = "";
-            txtGiaThue.Text = "";
-            txtTraTruoc.Text = "";
-            txtGhiChu.Text = "";
+            try
+            {
+                string sql = "select * from DichVuHDV where GhiChu = N'Chưa thanh toán'";
+                SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+                ds = new DataSet();
+                da.Fill(ds, "DichVuHDV");
+                dgvDVhdv.DataSource = ds.Tables["DichVuHDV"];
+                MessageBox.Show("Load thành công!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Load fail!");
+               // throw;
+            }
+           
         }
-
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
+        private void connect()
+        {
+            try
+            {
+                if (cnn != null && cnn.State != ConnectionState.Open)
+                    cnn.Open();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                // throw;
+            }
+        }
+        private void disconnect()
+        {
+            try
+            {
+                if (cnn != null && cnn.State != ConnectionState.Closed)
+                    cnn.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                // throw;
+            }
+        }
         private void btThem_Click(object sender, EventArgs e)
         {
-            DVhdv_DTO DVhdv = new DVhdv_DTO(txtIDDVhdv.Text, cbbMaKH.Text, cbbMaHDV.Text, dtpNgayThue.Text, txtSoNgayThue.Text, txtGiaThue.Text, txtTraTruoc.Text, txtGhiChu.Text);
-            try
-            {
-                if (MessageBox.Show("Thêm dịch vụ hướng dẫn viên?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    BUS.ThemDVhdv(DVhdv);
-                    MessageBox.Show("Thêm thành công!");
-<<<<<<< HEAD
-                    dgvDVhdv.DataSource = BUS.GetDataDVhdv();
-=======
-                    dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
-                    Init();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            frmThanhToanHDV frm = new frmThanhToanHDV();
+            frm.ShowDialog();
         }
-
-        private void btSua_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DVhdv_DTO DVhdv = new DVhdv_DTO(txtIDDVhdv.Text, cbbMaKH.Text, cbbMaHDV.Text, dtpNgayThue.Text, txtSoNgayThue.Text, txtGiaThue.Text, txtTraTruoc.Text, txtGhiChu.Text);
-                if (MessageBox.Show("Lưu sửa đổi?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    BUS.SuaDVhdv(DVhdv);
-                    MessageBox.Show("Sửa thành công!");
-<<<<<<< HEAD
-                    dgvDVhdv.DataSource = BUS.GetDataDVhdv();
-=======
-                    dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
-                    Init();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-        private void btXoa_Click(object sender, EventArgs e)
-        {
-            try
-<<<<<<< HEAD
-            {
-                if (MessageBox.Show("Xóa dịch vụ hướng dẫn viên?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    BUS.XoaDVhdv(txtIDDVhdv.Text);
-                    MessageBox.Show("Xóa thành công!");
-                    dgvDVhdv.DataSource = BUS.GetDataDVhdv();
-                    Init();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-=======
-            {
-                if (MessageBox.Show("Xóa dịch vụ hướng dẫn viên?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    BUS.XoaDVhdv(txtIDDVhdv.Text);
-                    MessageBox.Show("Xóa thành công!");
-                    dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
-                    Init();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
-        }
-
-        private void btReset_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Reset?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Init();
-            }
-        }
-
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
         {
             dgvDVhdv.CurrentCell = null;
@@ -184,20 +125,39 @@ namespace GUI
             }
         }
 
-        private void dgvDVhdv_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDVhdv_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvDVhdv.Rows[e.RowIndex];
-                txtIDDVhdv.Text = row.Cells[0].Value.ToString();
-                cbbMaKH.Text = row.Cells[1].Value.ToString();
-                cbbMaHDV.Text = row.Cells[2].Value.ToString();
-                dtpNgayThue.Text = row.Cells[3].Value.ToString();
-                txtSoNgayThue.Text = row.Cells[4].Value.ToString();
-                txtGiaThue.Text = row.Cells[5].Value.ToString();
-                txtTraTruoc.Text = row.Cells[6].Value.ToString();
-                txtGhiChu.Text = row.Cells[7].Value.ToString();
+                txtIDDVhdv.Text = row.Cells["IDDvHDV"].Value.ToString();
+                txtMaKH.Text = row.Cells["MaKH"].Value.ToString();
+                txtMaHDV.Text = row.Cells["MaHDV"].Value.ToString();
+                dtpNgayThue.Text = row.Cells["NgayThue"].Value.ToString();
+                txtGiaThue.Text = row.Cells["GiaThue"].Value.ToString();
+                txtGhiChu.Text = row.Cells["GhiChu"].Value.ToString();
             }
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            connect();
+            try
+            {
+                string sql = "update DichVuHDV set GhiChu = N'Đã thanh toán' where IDDvHDV = N'" + txtIDDVhdv.Text + "'";
+                SqlCommand cmd = new SqlCommand(sql, cnn);
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                MessageBox.Show("Đã thanh toán thành công!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thanh toán không thành công!");
+                //throw;
+            }
+            getDichVuHDV();
+            disconnect();
+            
         }
     }
 }

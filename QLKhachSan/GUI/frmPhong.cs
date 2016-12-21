@@ -25,11 +25,7 @@ namespace GUI
         {
             MessageBox.Show("xem lại coi có cần các chức năng:thêm sửa xóa hay ko!!!chức năng các nút ko có ngoài gd nhưng trong code vẫn đầy đủ.");
             BUS = new Business();
-<<<<<<< HEAD
-            dataGV.DataSource = BUS.GetDataPhong();
-=======
             dataGV.DataSource = BUS.GetDataPhong("SELECT * FROM Phong");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         private void btnReset_Click(object sender, EventArgs e)

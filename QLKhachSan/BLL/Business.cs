@@ -128,15 +128,9 @@ namespace BLL
         #endregion
 
         #region Phòng
-<<<<<<< HEAD
-        public DataTable GetDataPhong()
-        {
-            return new Phong_DAL().GetDataPhong();
-=======
         public DataTable GetDataPhong(string sql)
         {
             return new Phong_DAL().GetDataPhong(sql);
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         public Boolean ThemPhong(Phong_DTO p)
@@ -194,36 +188,6 @@ namespace BLL
             return new LoaiPhong_DAL().GetDataLP();
         }
 
-<<<<<<< HEAD
-        public DataTable GetDataLP_IDLP(string idLoaiPhong)
-        {
-            return new LoaiPhong_DAL().GetDataLP_IDLP(idLoaiPhong);
-        }
-
-        public DataTable GetDataLP_fromIDPhong(string idPhong)
-        {
-            return new LoaiPhong_DAL().GetDataLP_fromIDPhong(idPhong);
-        }
-
-        public Boolean ThemLP(LoaiPhong_DTO lp)
-        {
-            try
-            {
-                if (lp.IDLoaiPhong == "")
-                {
-                    throw new Exception("Field \"IDLoaiPhong\" không thể trống.");
-                }
-                return new LoaiPhong_DAL().ThemLP(lp);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public Boolean SuaLP(LoaiPhong_DTO lp)
-        {
-=======
         public DataTable GetDataLP_fromIDPhong(string idPhong)
         {
             return new LoaiPhong_DAL().GetDataLP_fromIDPhong(idPhong);
@@ -247,7 +211,6 @@ namespace BLL
 
         public Boolean SuaLP(LoaiPhong_DTO lp)
         {
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             try
             {
                 if (lp.IDLoaiPhong == "")
@@ -285,51 +248,6 @@ namespace BLL
             return new DatPhong_DAL().GetDataDP();
         }
 
-<<<<<<< HEAD
-        public DataTable GetDataDP(string idDatPhong)
-        {
-            return new DatPhong_DAL().GetDataDP(idDatPhong);
-        }
-
-        public DataTable GetDataDP_fromMaKH(string maKH)
-        {
-            return new DatPhong_DAL().GetDataDP_fromMaKH(maKH);
-        }
-
-        public Boolean ThemDP(DatPhong_DTO dp)
-        {
-            try
-            {
-                if (dp.MaNV == "Chọn mã NV")
-                {
-                    throw new Exception("Chưa chọn mã nhân viên.");
-                }
-                else if (dp.MaKH == "Chọn mã KH")
-                {
-                    throw new Exception("Chưa chọn mã khách hàng.");
-                }
-                else if (dp.MaPhong == "Chọn mã phòng")
-                {
-                    throw new Exception("Chưa chọn mã phòng.");
-                }
-                bool status = new DatPhong_DAL().ThemDP(dp);
-                if (status == false)
-                {
-                    throw new Exception("Phòng đã được đặt.");
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public Boolean SuaDP(DatPhong_DTO dp)
-        {
-            try
-            {
-=======
         public DataTable GetDataDP(string MaKH)
         {
             return new DatPhong_DAL().GetDataDP(MaKH);
@@ -359,7 +277,6 @@ namespace BLL
                 {
                     throw new Exception("Field \"IDDatPhong\" không thể trống.");
                 }
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                 return new DatPhong_DAL().SuaDP(dp);
             }
             catch (Exception ex)
@@ -372,13 +289,10 @@ namespace BLL
         {
             try
             {
-<<<<<<< HEAD
-=======
                 if (idDatPhong == "")
                 {
                     throw new Exception("Field \"IDDatPhong\" không thể trống.");
                 }
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                 return new DatPhong_DAL().XoaDP(idDatPhong);
             }
             catch (Exception ex)
@@ -448,20 +362,9 @@ namespace BLL
         #endregion
 
         #region Thực phẩm
-<<<<<<< HEAD
-        public DataTable GetDataTP()
-        {
-            return new ThucPham_DAL().GetDataTP();
-        }
-
-        public DataTable GetDataTP(string idThucPham)
-        {
-            return new ThucPham_DAL().GetDataTP(idThucPham);
-=======
         public DataTable GetDataTP(string sql)
         {
             return new ThucPham_DAL().GetDataTP(sql);
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         public Boolean ThemTP(ThucPham_DTO tp)
@@ -513,20 +416,11 @@ namespace BLL
         }
         #endregion
 
-        #region Hóa đơn thực phẩm
-
-        #endregion
-
         #region Hướng dẫn viên
 
         #endregion
 
         #region Dịch vụ HDV
-<<<<<<< HEAD
-        public DataTable GetDataDVhdv()
-        {
-            return new DVhdv_DAL().GetDataDVhdv();
-=======
         public DataTable GetDataDVhdv(string sql)
         {
             return new DVhdv_DAL().GetDataDVhdv(sql);
@@ -613,115 +507,7 @@ namespace BLL
         public Boolean CapNhat_CTX(ChiTietXe_DTO ctx)
         {
             return new ChiTietXe_DAL().CapNhat_CTX(ctx);
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
-
-        public Boolean ThemDVhdv(DVhdv_DTO DVhdv)
-        {
-            try
-            {
-                if (DVhdv.IDDVhdv == "")
-                {
-                    throw new Exception("Field \"IDDVhdv\" không thể trống.");
-                }
-                return new DVhdv_DAL().ThemDVhdv(DVhdv);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public Boolean SuaDVhdv(DVhdv_DTO DVhdv)
-        {
-            try
-            {
-                if (DVhdv.IDDVhdv == "")
-                {
-                    throw new Exception("Field \"IDDVhdv\" không thể trống.");
-                }
-                return new DVhdv_DAL().SuaDVhdv(DVhdv);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public Boolean XoaDVhdv(string idDVhdv)
-        {
-            try
-            {
-                if (idDVhdv == "")
-                {
-                    throw new Exception("Field \"IDDVhdv\" không thể trống.");
-                }
-                return new DVhdv_DAL().XoaDVhdv(idDVhdv);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        #endregion
-
-        #region Xe
-        public DataTable GetDataXe()
-        {
-            return new Xe_DAL().GetDataXe();
-        }
-
-        public Boolean ThemXe(Xe_DTO xe)
-        {
-            try
-            {
-                if (xe.IDXe == "")
-                {
-                    throw new Exception("Field \"IDXe\" không thể trống.");
-                }
-                return new Xe_DAL().ThemXe(xe);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public Boolean SuaXe(Xe_DTO xe)
-        {
-            try
-            {
-                if (xe.IDXe == "")
-                {
-                    throw new Exception("Field \"IDXe\" không thể trống.");
-                }
-                return new Xe_DAL().SuaXe(xe);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public Boolean XoaXe(string idXe)
-        {
-            try
-            {
-                if (idXe == "")
-                {
-                    throw new Exception("Field \"IDXe\" không thể trống.");
-                }
-                return new Xe_DAL().XoaXe(idXe);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        #endregion
-
-        #region Thuê xe
-
         #endregion
 
     }

@@ -7,8 +7,6 @@ C:\Users\heoco\Desktop\QLKhachSan\DTO\bin\Debug\DTO.dll
 C:\Users\heoco\Desktop\QLKhachSan\DTO\bin\Debug\DTO.pdb
 C:\Users\heoco\Desktop\QLKhachSan\DTO\obj\Debug\DTO.dll
 C:\Users\heoco\Desktop\QLKhachSan\DTO\obj\Debug\DTO.pdb
-<<<<<<< HEAD
-=======
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\DTO.dll
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\DTO.pdb
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\mscorlib.dll
@@ -24,4 +22,7 @@ C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DT
 C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DTO\obj\Debug\DTO.dll
 C:\Users\Administrator.MAYTINH-25KUREH\Desktop\New folder\BTL-QLKS\QLKhachSan\DTO\obj\Debug\DTO.pdb
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\DTO.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\DTO\bin\Debug\DTO.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\DTO\obj\Debug\DTO.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\QLKS\BTL-QLKS\QLKhachSan\DTO\obj\Debug\DTO.pdb

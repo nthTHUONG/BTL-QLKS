@@ -89,6 +89,7 @@
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Khách hàng";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // panel1
             // 
@@ -364,7 +365,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(872, 627);
+            this.ClientSize = new System.Drawing.Size(872, 628);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);

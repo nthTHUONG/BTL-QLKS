@@ -163,9 +163,9 @@ namespace GUI
             // 
             // pnMain
             // 
-            this.pnMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnMain.BackColor = System.Drawing.SystemColors.Control;
             this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnMain.Controls.Add(this.pnDisplay);
@@ -216,9 +216,9 @@ namespace GUI
             // 
             // pictureBox
             // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox.Image = global::GUI.Properties.Resources.Background;
             this.pictureBox.Location = new System.Drawing.Point(0, 0);
             this.pictureBox.Name = "pictureBox";
@@ -336,10 +336,7 @@ namespace GUI
             this.thựcPhẩmToolStripMenuItem1.Name = "thựcPhẩmToolStripMenuItem1";
             this.thựcPhẩmToolStripMenuItem1.Size = new System.Drawing.Size(189, 24);
             this.thựcPhẩmToolStripMenuItem1.Text = "Thực phẩm";
-<<<<<<< HEAD
-=======
             this.thựcPhẩmToolStripMenuItem1.Click += new System.EventHandler(this.thựcPhẩmToolStripMenuItem1_Click);
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             // 
             // thuêXeToolStripMenuItem
             // 
@@ -563,7 +560,7 @@ namespace GUI
             this.MinimumSize = new System.Drawing.Size(888, 666);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMain";
+            this.Text = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnMain.ResumeLayout(false);
