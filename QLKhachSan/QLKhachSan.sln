@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{BC8DAB66-4320-490B-8952-EA98E43B72E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{BC8DAB66-4320-490B-8952-EA98E43B72E7}.Release|Mixed Platforms.Build.0 = Release|x86
 		{BC8DAB66-4320-490B-8952-EA98E43B72E7}.Release|x86.ActiveCfg = Release|x86
 		{BC8DAB66-4320-490B-8952-EA98E43B72E7}.Release|x86.Build.0 = Release|x86
+		{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,3 +6,4 @@ C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.exe
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.pdb
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BIN\GUI.exe
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BIN\GUI.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.csprojResolveAssemblyReference.cache

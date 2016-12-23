@@ -1,0 +1,4 @@
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BIN\DTO.dll
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BIN\DTO.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\obj\Debug\DTO.dll
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DTO\obj\Debug\DTO.pdb

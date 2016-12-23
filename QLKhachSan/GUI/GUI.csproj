@@ -68,6 +68,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{E67FCB04-5D6F-476D-BFAD-CD172A29D6B1}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{0CF5B74A-0C0D-4503-9030-E19B80028E6B}</Project>
       <Name>DTO</Name>
