@@ -46,6 +46,8 @@
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbMaLP = new System.Windows.Forms.ComboBox();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCSVC)).BeginInit();
@@ -57,7 +59,11 @@
             this.dgvCSVC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCSVC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCSVC.Dock = System.Windows.Forms.DockStyle.Bottom;
+<<<<<<< HEAD
             this.dgvCSVC.Location = new System.Drawing.Point(0, 341);
+=======
+            this.dgvCSVC.Location = new System.Drawing.Point(0, 342);
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.dgvCSVC.Name = "dgvCSVC";
             this.dgvCSVC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCSVC.Size = new System.Drawing.Size(775, 164);
@@ -66,7 +72,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.label1.BackColor = System.Drawing.Color.Gold;
             this.label1.Location = new System.Drawing.Point(96, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 27);
@@ -76,8 +82,13 @@
             // 
             // label2
             // 
+<<<<<<< HEAD
             this.label2.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.label2.Location = new System.Drawing.Point(96, 72);
+=======
+            this.label2.BackColor = System.Drawing.Color.Gold;
+            this.label2.Location = new System.Drawing.Point(96, 71);
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 27);
             this.label2.TabIndex = 1;
@@ -86,28 +97,43 @@
             // 
             // label3
             // 
+<<<<<<< HEAD
             this.label3.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.label3.Location = new System.Drawing.Point(96, 109);
+=======
+            this.label3.BackColor = System.Drawing.Color.Gold;
+            this.label3.Location = new System.Drawing.Point(96, 149);
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 27);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Mã LP:";
+            this.label3.Text = "Số lượng:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
+<<<<<<< HEAD
             this.label4.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.label4.Location = new System.Drawing.Point(96, 150);
+=======
+            this.label4.BackColor = System.Drawing.Color.Gold;
+            this.label4.Location = new System.Drawing.Point(96, 110);
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 27);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Số lượng:";
+            this.label4.Text = "Mã LP:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
+<<<<<<< HEAD
             this.label5.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.label5.Location = new System.Drawing.Point(96, 190);
+=======
+            this.label5.BackColor = System.Drawing.Color.Gold;
+            this.label5.Location = new System.Drawing.Point(96, 188);
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 27);
             this.label5.TabIndex = 1;
@@ -116,7 +142,7 @@
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.label6.BackColor = System.Drawing.Color.Gold;
             this.label6.Location = new System.Drawing.Point(96, 227);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 27);
@@ -127,9 +153,15 @@
             // txtIDCSVC
             // 
             this.txtIDCSVC.Anchor = System.Windows.Forms.AnchorStyles.None;
+<<<<<<< HEAD
             this.txtIDCSVC.Location = new System.Drawing.Point(190, 32);
             this.txtIDCSVC.Name = "txtIDCSVC";
             this.txtIDCSVC.Size = new System.Drawing.Size(224, 26);
+=======
+            this.txtIDCSVC.Location = new System.Drawing.Point(191, 34);
+            this.txtIDCSVC.Name = "txtIDCSVC";
+            this.txtIDCSVC.Size = new System.Drawing.Size(222, 26);
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.txtIDCSVC.TabIndex = 0;
             // 
             // txtTenCSVC
@@ -140,6 +172,7 @@
             this.txtTenCSVC.Size = new System.Drawing.Size(224, 26);
             this.txtTenCSVC.TabIndex = 1;
             // 
+<<<<<<< HEAD
             // txtSoLuong
             // 
             this.txtSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -156,6 +189,8 @@
             this.txtMaLP.Size = new System.Drawing.Size(224, 26);
             this.txtMaLP.TabIndex = 3;
             // 
+=======
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             // txtTinhTrang
             // 
             this.txtTinhTrang.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -176,7 +211,11 @@
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.btnThem.BackColor = System.Drawing.Color.LightBlue;
+=======
+            this.btnThem.BackColor = System.Drawing.Color.PaleVioletRed;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.btnThem.Location = new System.Drawing.Point(565, 68);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(184, 38);
@@ -189,7 +228,11 @@
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.btnXoa.BackColor = System.Drawing.Color.LightBlue;
+=======
+            this.btnXoa.BackColor = System.Drawing.Color.PaleVioletRed;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.btnXoa.Location = new System.Drawing.Point(565, 156);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(184, 38);
@@ -202,7 +245,11 @@
             // 
             this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.btnCapNhat.BackColor = System.Drawing.Color.LightBlue;
+=======
+            this.btnCapNhat.BackColor = System.Drawing.Color.PaleVioletRed;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.btnCapNhat.Location = new System.Drawing.Point(565, 112);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(184, 38);
@@ -215,7 +262,11 @@
             // 
             this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.btnReset.BackColor = System.Drawing.Color.LightBlue;
+=======
+            this.btnReset.BackColor = System.Drawing.Color.PaleVioletRed;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.btnReset.Location = new System.Drawing.Point(565, 200);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(184, 38);
@@ -245,6 +296,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Cơ Sở Vật Chất";
             // 
+            // cbbMaLP
+            // 
+            this.cbbMaLP.FormattingEnabled = true;
+            this.cbbMaLP.Location = new System.Drawing.Point(191, 110);
+            this.cbbMaLP.Name = "cbbMaLP";
+            this.cbbMaLP.Size = new System.Drawing.Size(222, 28);
+            this.cbbMaLP.TabIndex = 2;
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSoLuong.Location = new System.Drawing.Point(191, 150);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(222, 26);
+            this.txtSoLuong.TabIndex = 3;
+            // 
             // txtTimKiem
             // 
             this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -258,7 +325,7 @@
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.BackColor = System.Drawing.Color.Cyan;
+            this.label7.BackColor = System.Drawing.Color.MediumAquamarine;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,8 +341,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.ClientSize = new System.Drawing.Size(775, 505);
+=======
+            this.BackColor = System.Drawing.Color.Gold;
+            this.ClientSize = new System.Drawing.Size(775, 506);
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);

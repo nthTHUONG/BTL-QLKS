@@ -146,5 +146,10 @@ namespace GUI
                 txtQuocTich.Text = row.Cells[7].Value.ToString();
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

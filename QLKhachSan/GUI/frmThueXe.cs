@@ -16,6 +16,7 @@ namespace GUI
 {
     public partial class frmThueXe : Form
     {
+        Business BUS;
         string cnstr;
         SqlConnection cnn;
         DataSet ds;
@@ -25,9 +26,18 @@ namespace GUI
         }      
         private void ThueXe_Load(object sender, EventArgs e)
         {
+            BUS = new Business();
             cnstr = ConfigurationManager.ConnectionStrings["cnstr"].ConnectionString;
             cnn = new SqlConnection(cnstr);
+            Load_ComboBox();
             getTheuXe();
+            Reset();
+            
+        }
+        private void Load_ComboBox()
+        {
+            cbbMaNV.DataSource = BUS.GetDataNV();
+            cbbMaNV.DisplayMember = "IDNhanVien";
         }
         private void connect()
         {
@@ -64,15 +74,6 @@ namespace GUI
                 string sql = "select * from ThueXe where GhiChu = N'chưa thanh toán'";
                 SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
                 ds = new DataSet();
-                try
-                {
-                    ds.Tables["ThueXe"].Clear();
-                }
-                catch (Exception)
-                {
-                    
-                }
-               
                 da.Fill(ds, "ThueXe");
                 dgvThueXe.DataSource = ds.Tables["ThueXe"];
             }
@@ -83,12 +84,6 @@ namespace GUI
             }
             
         }
-        private void LoadComboBox()
-        {
-            
-        }
-
-
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -101,6 +96,7 @@ namespace GUI
             txtGhiChu.Text = "";
             txtGiaThue.Text = "";
             txtTienCoc.Text = "";
+            cbbMaNV.Text = "Chọn mã NV ";
 
         }
 
@@ -120,7 +116,7 @@ namespace GUI
                 double tiencoc = double.Parse(row.Cells[6].Value.ToString());
                 double giathue = double.Parse(row.Cells[5].Value.ToString());
                 double tien = giathue - tiencoc;
-                lblTongTien.Text = tien.ToString() + " đồng";
+                lblTongTien.Text = tien.ToString() + " VNĐ ";
 
             }
         }

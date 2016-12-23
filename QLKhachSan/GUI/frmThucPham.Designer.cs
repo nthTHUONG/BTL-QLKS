@@ -75,8 +75,13 @@
             this.groupBox1.Controls.Add(this.txtTenTP);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtMieuTa);
+<<<<<<< HEAD
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             this.groupBox1.Location = new System.Drawing.Point(-3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(872, 248);
@@ -97,6 +102,33 @@
             this.dtHanSD.TabIndex = 4;
             this.dtHanSD.Value = new System.DateTime(2016, 12, 12, 20, 0, 3, 0);
             // 
+<<<<<<< HEAD
+=======
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(380, 179);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 26);
+            this.label7.TabIndex = 90;
+            this.label7.Text = "Tìm kiếm:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(469, 184);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(372, 26);
+            this.txtTimKiem.TabIndex = 0;
+            this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
+            // 
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             // dtNgaySX
             // 
             this.dtNgaySX.Anchor = System.Windows.Forms.AnchorStyles.None;

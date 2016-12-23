@@ -25,6 +25,7 @@ namespace GUI
         {
             BUS = new Business();
             dgvCSVC.DataSource = BUS.GetDataCSVC();
+<<<<<<< HEAD
         }
 
         private void Init()
@@ -32,7 +33,22 @@ namespace GUI
             txtIDCSVC.Text = "";
             txtTenCSVC.Text = "";
             txtMaLP.Text = "";
+=======
+            LoadComBoBox();
+            Init();
+        }
+        private void LoadComBoBox()
+        {
+            cbbMaLP.DataSource = BUS.GetDataLP();
+            cbbMaLP.DisplayMember = "IDLoaiPhong";
+        }
+        private void Init()
+        {
+            txtIDCSVC.Text = "";
+            txtTenCSVC.Text = ""; 
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             txtSoLuong.Text = "";
+            cbbMaLP.Text = "Chọn mã loại phòng";
             txtTinhTrang.Text = "";
             txtGhiChu.Text = "";
         }
@@ -41,7 +57,11 @@ namespace GUI
         {
             try
             {
+<<<<<<< HEAD
                 CoSoVatChat_DTO csvc = new CoSoVatChat_DTO(txtIDCSVC.Text, txtTenCSVC.Text, txtMaLP.Text, txtSoLuong.Text, txtTinhTrang.Text, txtGhiChu.Text);
+=======
+                CoSoVatChat_DTO csvc = new CoSoVatChat_DTO(txtIDCSVC.Text, txtTenCSVC.Text, txtSoLuong.Text , cbbMaLP.Text,  txtTinhTrang.Text, txtGhiChu.Text);
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
                 if (MessageBox.Show("Thêm cơ sở vật chất?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     BUS.ThemCSVC(csvc);
@@ -60,7 +80,11 @@ namespace GUI
         {
             try
             {
+<<<<<<< HEAD
                 CoSoVatChat_DTO csvc = new CoSoVatChat_DTO(txtIDCSVC.Text, txtTenCSVC.Text, txtMaLP.Text, txtSoLuong.Text, txtTinhTrang.Text, txtGhiChu.Text);
+=======
+                CoSoVatChat_DTO csvc = new CoSoVatChat_DTO(txtIDCSVC.Text, txtTenCSVC.Text,txtSoLuong.Text, cbbMaLP.Text, txtTinhTrang.Text, txtGhiChu.Text);
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
                 if (MessageBox.Show("Lưu sửa đổi?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     BUS.SuaCSVC(csvc);
@@ -95,7 +119,25 @@ namespace GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            Init();
+        }
+
+        private void dgvCSVC_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvCSVC.Rows[e.RowIndex];
+                txtIDCSVC.Text = row.Cells[0].Value.ToString();
+                txtTenCSVC.Text = row.Cells[1].Value.ToString();
+                txtSoLuong.Text = row.Cells[2].Value.ToString();
+                cbbMaLP.Text = row.Cells[3].Value.ToString();    
+                txtTinhTrang.Text = row.Cells[4].Value.ToString();
+                txtGhiChu.Text = row.Cells[5].Value.ToString();
+            }
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
         }
 
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
@@ -122,20 +164,6 @@ namespace GUI
                         dgvCSVC.Rows[i].Visible = false;
                     }
                 }
-            }
-        }
-
-        private void dgvCSVC_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvCSVC.Rows[e.RowIndex];
-                txtIDCSVC.Text = row.Cells[0].Value.ToString();
-                txtTenCSVC.Text = row.Cells[1].Value.ToString();
-                txtMaLP.Text = row.Cells[2].Value.ToString();
-                txtSoLuong.Text = row.Cells[3].Value.ToString();
-                txtTinhTrang.Text = row.Cells[4].Value.ToString();
-                txtGhiChu.Text = row.Cells[5].Value.ToString();
             }
         }
     }

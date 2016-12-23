@@ -39,14 +39,6 @@ namespace DTO
             set { _ngayThue = value; }
         }
 
-        private int _soNgayThue;
-
-        public int SoNgayThue
-        {
-            get { return _soNgayThue; }
-            set { _soNgayThue = value; }
-        }
-
 
         private decimal _giaThue;
 
@@ -54,14 +46,6 @@ namespace DTO
         {
             get { return _giaThue; }
             set { _giaThue = value; }
-        }
-
-        private decimal _traTruoc;
-
-        public decimal TraTruoc
-        {
-            get { return _traTruoc; }
-            set { _traTruoc = value; }
         }
 
         private string _ghiChu;
@@ -79,10 +63,8 @@ namespace DTO
             _idDVhdv = idDVhdv;
             _maKH = maKH;
             _maHDV = maHDV;
-            _ngayThue = Convert.ToDateTime(ngayThue);
-            _soNgayThue = Convert.ToInt32(soNgayThue);
+            _ngayThue = Convert.ToDateTime(ngayThue);           
             _giaThue = Convert.ToDecimal(giaThue);
-            _traTruoc = Convert.ToDecimal(traTruoc);
             _ghiChu = ghiChu;
         }
     }

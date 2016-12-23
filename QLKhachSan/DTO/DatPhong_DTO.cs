@@ -40,6 +40,17 @@ namespace DTO
             set { _maPhong = value; }
         }
 
+<<<<<<< HEAD
+=======
+        private string _tenLP;
+
+        public string TenLP
+        {
+            get { return _tenLP; }
+            set { _tenLP = value; }
+        }
+
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
         private DateTime _ngayDat;
 
         public DateTime NgayDat
@@ -85,12 +96,22 @@ namespace DTO
 
         public DatPhong_DTO() { }
 
+<<<<<<< HEAD
         public DatPhong_DTO(string idDatPhong, string maKH, string maNV, string maPhong, string ngayDat, string ngayNhan, string ngayTra, string thanhTien, string traTruoc, string ghiChu)
         {
             _idDatPhong = idDatPhong;
             _maKH = maKH;
             _maNV = maNV;
             _maPhong = maPhong;
+=======
+        public DatPhong_DTO(string idDatPhong, string maKH, string maNV, string maPhong, string tenLP, string ngayDat, string ngayNhan, string ngayTra, string thanhTien, string traTruoc, string ghiChu)
+        {
+            _idDatPhong = idDatPhong;
+            _maKH = maKH;
+            _maNV = MaNV;
+            _maPhong = maPhong;
+            _tenLP = tenLP;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             _ngayDat = Convert.ToDateTime(ngayDat);
             _ngayNhan = Convert.ToDateTime(ngayNhan);
             _ngayTra = Convert.ToDateTime(ngayTra);

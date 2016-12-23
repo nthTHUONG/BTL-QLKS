@@ -10,6 +10,7 @@ namespace DAL
 {
     public class DVhdv_DAL
     {
+<<<<<<< HEAD
         public DataTable GetDataDVhdv()
         {
             SqlConnection conn = ConnectDB.ConnectData();
@@ -17,6 +18,14 @@ namespace DAL
             try
             {
                 string sql = "SELECT * FROM DichVuHDV";
+=======
+        SqlConnection conn = ConnectDB.ConnectData();
+        public DataTable GetDataDVhdv(string sql)
+        {
+            ConnectDB.Open(conn);
+            try
+            {
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 cmd.Dispose();
@@ -35,6 +44,7 @@ namespace DAL
         }
         public Boolean ThemDVhdv(DVhdv_DTO DVhdv)
         {
+<<<<<<< HEAD
             string sql = "INSERT INTO DichVuHDV VALUES(N'" + DVhdv.IDDVhdv + "', N'" + DVhdv.MaKH + "', N'" + DVhdv.MaHDV
                 + "', '" + DVhdv.NgayThue.ToString("yyyy-MM-dd") + "', '" + DVhdv.SoNgayThue
                 + "', '" + DVhdv.GiaThue + "', '" + DVhdv.TraTruoc + "', N'" + DVhdv.GhiChu + "')";
@@ -51,6 +61,20 @@ namespace DAL
         {
             string sql = "DELETE FROM DichVuHDV WHERE IDDVhdv = N'" + idDVhdv + "'";
             return new ExecuteDB().ExecuteData(sql);
+=======
+            return new ExecuteDB().ExecuteData("INSERT INTO DichVuHDV(IDDVhdv, MaKH, MaHDV, NgayThue, SoNgayThue, GiaThue, TraTruoc, GhiChu) VALUES(N'" + DVhdv.IDDVhdv
+                + "', N'" + DVhdv.MaKH + "', N'" + DVhdv.MaHDV + "', '" + DVhdv.NgayThue.ToString("yyyy-MM-dd") + "', '" + DVhdv.GiaThue + "', N'" + DVhdv.GhiChu + "')");
+        }
+        public Boolean SuaDVhdv(DVhdv_DTO DVhdv)
+        {
+            return new ExecuteDB().ExecuteData("UPDATE DichVuHDV SET MaKH = N'" + DVhdv.MaKH + "', MaHDV = N'" + DVhdv.MaHDV
+                + "', NgayThue = '" + DVhdv.NgayThue.ToString("yyyy-MM-dd") + "', GiaThue = '" + DVhdv.GiaThue
+                + "', GhiChu = N'" + DVhdv.GhiChu + "'WHERE IDDVhdv = N'" + DVhdv.IDDVhdv + "'");
+        }
+        public Boolean XoaDVhdv(string idDVhdv)
+        {
+            return new ExecuteDB().ExecuteData("DELETE FROM DichVuHDV WHERE IDDVhdv = N'" + idDVhdv + "'");
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
         }
     }
 }

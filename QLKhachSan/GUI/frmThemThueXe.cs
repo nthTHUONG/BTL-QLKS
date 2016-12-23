@@ -38,7 +38,7 @@ namespace GUI
         {
             try
             {
-                string sql = "select * from ChiTietXe where TrangThai = N'True'";
+                string sql = "select * from Xe where TrangThai = N'True'";
                 SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
                 ds = new DataSet();
                 da.Fill(ds, "ChiTietXe");
@@ -47,6 +47,10 @@ namespace GUI
             catch (Exception )
             {
                 MessageBox.Show("Load dữ liệu không thành công!");
+<<<<<<< HEAD
+=======
+                //throw;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             }
             
         }
@@ -76,6 +80,10 @@ namespace GUI
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+<<<<<<< HEAD
+=======
+                //throw;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             }
             disconnect();
             return strMa;
@@ -96,6 +104,7 @@ namespace GUI
                 for (int i = 0; i < dgvThemThueXe.RowCount - 1; i++)
                 {
                     if (dgvThemThueXe.Rows[i].Cells["LoaiXe"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
+<<<<<<< HEAD
                     {
                         dgvThemThueXe.Rows[i].Visible = true;
                     }
@@ -103,6 +112,12 @@ namespace GUI
                     {
                         dgvThemThueXe.Rows[i].Visible = false;
                     }
+=======
+                        
+                             dgvThemThueXe.Rows[i].Visible = true;
+                    else
+                             dgvThemThueXe.Rows[i].Visible = false;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
                 }
             }
         }
@@ -119,13 +134,21 @@ namespace GUI
             try
             {
                 if (cnn != null && cnn.State != ConnectionState.Open)
+<<<<<<< HEAD
                 {
                     cnn.Open();
                 }
+=======
+                    cnn.Open();
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+<<<<<<< HEAD
+=======
+                //throw;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             }
             
         }
@@ -134,13 +157,21 @@ namespace GUI
             try
             {
                 if (cnn != null && cnn.State != ConnectionState.Closed)
+<<<<<<< HEAD
                 {
                     cnn.Close();
                 }
+=======
+                    cnn.Close();
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+<<<<<<< HEAD
+=======
+                //throw;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             }
 
         }
@@ -160,6 +191,10 @@ namespace GUI
             catch (Exception)
             {
                 MessageBox.Show("Xin nhập đầy đủ thông tin!");
+<<<<<<< HEAD
+=======
+               // throw;
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             }
             disconnect();   
             LoadXe();

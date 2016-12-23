@@ -145,5 +145,10 @@ namespace GUI
                 txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

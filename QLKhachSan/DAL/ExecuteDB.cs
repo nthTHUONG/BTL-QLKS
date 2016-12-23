@@ -9,9 +9,16 @@ namespace DAL
 {
     public class ExecuteDB
     {
+<<<<<<< HEAD
         public Boolean ExecuteData(string sql)
         {
             SqlConnection conn = ConnectDB.ConnectData();
+=======
+        SqlConnection conn = ConnectDB.ConnectData();
+
+        public Boolean ExecuteData(string sql)
+        {
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
             ConnectDB.Open(conn);
             try
             {
@@ -30,6 +37,7 @@ namespace DAL
                 conn.Dispose();
             }
         }
+<<<<<<< HEAD
         public object ExecuteScalar(string sql)
         {
             SqlConnection conn = ConnectDB.ConnectData();
@@ -51,5 +59,7 @@ namespace DAL
                 conn.Dispose();
             }
         }
+=======
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
     }
 }

@@ -113,6 +113,7 @@
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Nhân viên:";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // panel1
             // 
@@ -178,7 +179,6 @@
             this.txtIDNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDNhanVien.Location = new System.Drawing.Point(95, 5);
             this.txtIDNhanVien.Name = "txtIDNhanVien";
-            this.txtIDNhanVien.ReadOnly = true;
             this.txtIDNhanVien.Size = new System.Drawing.Size(344, 26);
             this.txtIDNhanVien.TabIndex = 0;
             // 
@@ -377,7 +377,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(872, 627);
+            this.ClientSize = new System.Drawing.Size(872, 628);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label9);

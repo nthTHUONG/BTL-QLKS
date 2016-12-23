@@ -24,7 +24,11 @@ namespace GUI
         private void frmThucPham_Load(object sender, EventArgs e)
         {
             BUS = new Business();
+<<<<<<< HEAD
             dgvThucPham.DataSource = BUS.GetDataTP();
+=======
+            dgvThucPham.DataSource = BUS.GetDataTP("SELECT * FROM ThucPham");
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
         }
 
         private void Init()
@@ -47,7 +51,11 @@ namespace GUI
                 {
                     BUS.ThemTP(tp);
                     MessageBox.Show("Thêm thành công!");
+<<<<<<< HEAD
                     dgvThucPham.DataSource = BUS.GetDataTP();
+=======
+                    dgvThucPham.DataSource = BUS.GetDataTP("SELECT * FROM ThucPham");
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
                     Init();
                 }
             }
@@ -74,7 +82,11 @@ namespace GUI
                 {
                     BUS.SuaTP(tp);
                     MessageBox.Show("Sửa thành công!");
+<<<<<<< HEAD
                     dgvThucPham.DataSource = BUS.GetDataTP();
+=======
+                    dgvThucPham.DataSource = BUS.GetDataTP("SELECT * FROM ThucPham");
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
                     Init();
                 }
             }
@@ -92,7 +104,11 @@ namespace GUI
                 {
                     BUS.XoaTP(txtIDTP.Text);
                     MessageBox.Show("Xóa thành công!");
+<<<<<<< HEAD
                     dgvThucPham.DataSource = BUS.GetDataTP();
+=======
+                    dgvThucPham.DataSource = BUS.GetDataTP("SELECT * FROM ThucPham");
+>>>>>>> d838e9a4307b60a38cfd1ca69dc8f3739a47a05a
                     Init();
                 }
             }
