@@ -83,9 +83,18 @@ namespace DTO
             set { _ghiChu = value; }
         }
 
+        private bool _tinhTrang;
+
+        public bool TinhTrang
+        {
+            get { return _tinhTrang; }
+            set { _tinhTrang = value; }
+        }
+        
+
         public DatPhong_DTO() { }
 
-        public DatPhong_DTO(string idDatPhong, string maKH, string maNV, string maPhong, string ngayDat, string ngayNhan, string ngayTra, string thanhTien, string traTruoc, string ghiChu)
+        public DatPhong_DTO(string idDatPhong, string maKH, string maNV, string maPhong, string ngayDat, string ngayNhan, string ngayTra, string thanhTien, string traTruoc, string ghiChu, bool tinhTrang)
         {
             _idDatPhong = idDatPhong;
             _maKH = maKH;
@@ -97,6 +106,7 @@ namespace DTO
             _thanhTien = Convert.ToDecimal(thanhTien);
             _traTruoc = Convert.ToDecimal(traTruoc);
             _ghiChu = ghiChu;
+            _tinhTrang = tinhTrang;
         }
     }
 }
