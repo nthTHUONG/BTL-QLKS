@@ -299,11 +299,35 @@ namespace BLL
             }
         }
 
-        public Boolean XoaDP(string idDatPhong)
+        //public 
+
+        public Boolean ThanhToan(string maKH, string maPhong, string ngayNhan)
         {
             try
             {
-                return new DatPhong_DAL().XoaDP(idDatPhong);
+                return new DatPhong_DAL().ThanhToan(maKH, maPhong, ngayNhan);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public Boolean XoaDatPhong(string maKH, string maPhong, string ngayNhan)
+        {
+            try
+            {
+                return new DatPhong_DAL().XoaDatPhong(maKH, maPhong, ngayNhan);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public Boolean XoaDatPhong(string IDDatPhong)
+        {
+            try
+            {
+                return new DatPhong_DAL().XoaDatPhong(IDDatPhong);
             }
             catch (Exception ex)
             {
@@ -552,5 +576,7 @@ namespace BLL
         #region Thuê xe
 
         #endregion
+
+
     }
 }

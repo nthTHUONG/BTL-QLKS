@@ -96,7 +96,7 @@ namespace GUI
             try
             {
                 DatPhong_DTO dp = new DatPhong_DTO(txtMaDP.Text, cbbMaKH.Text, cbbMaNV.Text, cbbMaPhong.Text,
-                    txtNgayDat.Text, dtpNgayNhan.Text, dtpNgayTra.Text, txtThanhTien.Text, txtTraTruoc.Text, txtGhiChu.Text);
+                    txtNgayDat.Text, dtpNgayNhan.Text, dtpNgayTra.Text, txtThanhTien.Text, txtTraTruoc.Text, txtGhiChu.Text, true);
                 BUS.ThemDP(dp);
                 MessageBox.Show("Đặt phòng thành công.", "Successfully!", MessageBoxButtons.OK);
                 Init();
