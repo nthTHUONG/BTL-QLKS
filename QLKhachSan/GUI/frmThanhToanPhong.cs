@@ -55,7 +55,7 @@ namespace GUI
         //{
         //    txtDonGia.Text = "GiaPhong";
             
-        //}
+        //} 
         private void AutoValue()
         {
             DataTable dt = BUS.GetDataDP_fromMaKH(cbbMaKH.Text);
@@ -74,7 +74,7 @@ namespace GUI
                     txtTenKH.Text = "";
                 }
                 txtTraTruoc.Text = row["TraTruoc"].ToString().Substring(0, row["TraTruoc"].ToString().Length - 5);
-                txtNhanPhong.Text = Convert.ToDateTime(row["NgayNhan"]).ToString("dd/MM/yyyy");
+                txtNhanPhong.Text = Convert.ToDateTime(row["NgayNhan"]).ToString("yyyy-MM-dd");
                 if (((DateTime)(row["NgayTra"])).ToString("yyyy-MM-dd").Equals(DateTime.Now.ToString("yyyy-MM-dd")) == true)
                 {
                     txtDonGia.Text = row["DonGia"].ToString();
@@ -131,7 +131,6 @@ namespace GUI
         private void  Sua_sttPhong_fromIDPhong()
         {
             Phong_DTO p = new Phong_DTO();
-            BUS.GetDataPhong();
             //string sql = "UPDATE Phong SET TrangThai = p.TrangThai WHERE IDPhong = idPhong";
             //return new ExecuteDB().ExecuteData(sql);
         }
@@ -139,9 +138,11 @@ namespace GUI
         {
             try
             {
-                Sua_sttPhong_fromIDPhong();
+                
                 if (MessageBox.Show("Thanh toán ?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {  
+                {
+                    BUS.ThanhToan(cbbMaKH.Text, txtMaPhong.Text, txtNhanPhong.Text);
+                   
                     MessageBox.Show("Thanh toán thành công!");
                     LoadComBoBox();
                     Init();

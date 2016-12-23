@@ -67,7 +67,7 @@ namespace DAL
             ConnectDB.Open(conn);
             try
             {
-                string sql = "SELECT * FROM DatPhong WHERE MaKH = N'" + maKH + "'";
+                string sql = "SELECT * FROM DatPhong WHERE MaKH = N'" + maKH + "' AND TinhTrang = 0";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 cmd.Dispose();
@@ -98,7 +98,7 @@ namespace DAL
             }
             sql = "INSERT INTO DatPhong VALUES(N'" + dp.IDDatPhong + "', N'" + dp.MaKH + " ', N'" + dp.MaNV + "', N'" + dp.MaPhong
                 + "', '" + dp.NgayDat.ToString("yyyy-MM-dd") + "', '" + dp.NgayNhan.ToString("yyyy-MM-dd") + "', '" + dp.NgayTra.ToString("yyyy-MM-dd")
-                + "', '" + dp.ThanhTien + "', '" + dp.TraTruoc + "', N'" + dp.GhiChu + "')";
+                + "', '" + dp.ThanhTien + "', '" + dp.TraTruoc + "', N'" + dp.GhiChu + "', 1)";
             return e.ExecuteData(sql);
         }
 
@@ -107,14 +107,29 @@ namespace DAL
             string sql = "UPDATE DatPhong SET MaKH = N'" + dp.MaKH + "', MaNV = N'" + dp.MaNV
                 + "', MaPhong = N'" + dp.MaPhong + "', NgayDat = '" + dp.NgayDat.ToString("yyyy-MM-dd")
                 + "', NgayNhan = '" + dp.NgayNhan.ToString("yyyy-MM-dd") + "', NgayTra = N'" + dp.NgayTra.ToString("yyyy-MM-dd")
-                + "', ThanhTien = N'" + dp.ThanhTien + "', TraTruoc = N'" + dp.TraTruoc + "', GhiChu = N'" + dp.GhiChu
+                + "', ThanhTien = N'" + dp.ThanhTien + "', TraTruoc = N'" + dp.TraTruoc + "', GhiChu = N'" + dp.GhiChu + ", TinhTrang = " + dp.TinhTrang.GetHashCode()
                 + "'WHERE IDDatPhong = N'" + dp.IDDatPhong + "'";
             return new ExecuteDB().ExecuteData(sql);
         }
 
-        public Boolean XoaDP(string idDatPhong)
+        public Boolean ThanhToan(string maKH, string maPhong, string ngayNhan)
         {
-            string sql = "DELETE FROM DatPhong WHERE IDDatPhong = N'" + idDatPhong + "'";
+            string sql = "UPDATE DatPhong SET TinhTrang = 1 WHERE MaKH = N'" + maKH + "' AND MaPhong = '" + maPhong + "' AND NgayNhan = '" + ngayNhan +"'";
+            ExecuteDB exc = new ExecuteDB();
+            exc.ExecuteData(sql);
+            sql = "UPDATE Phong SET TrangThai = 0 WHERE IDPhong = '"+ maPhong +"'";
+            exc.ExecuteData(sql);
+
+            return true;
+        }
+        public Boolean XoaDatPhong(string maKH, string maPhong, string ngayNhan)
+        {
+            string sql = "DELETE DatPhong WHERE MaKH = N'" + maKH + "' AND MaPhong = '" + maPhong + "' AND NgayNhan = '" + ngayNhan + "'";
+            return new ExecuteDB().ExecuteData(sql);
+        }
+        public Boolean XoaDatPhong(string IdDatPhong)
+        {
+            string sql = "DELETE DatPhong WHERE IDDatPhong = '"+ IdDatPhong +"'";
             return new ExecuteDB().ExecuteData(sql);
         }
     }
