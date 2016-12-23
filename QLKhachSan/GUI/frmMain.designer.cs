@@ -71,13 +71,13 @@ namespace GUI
             this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đangPhátTriểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnMain.SuspendLayout();
             this.pnDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -336,17 +336,12 @@ namespace GUI
             this.thựcPhẩmToolStripMenuItem1.Name = "thựcPhẩmToolStripMenuItem1";
             this.thựcPhẩmToolStripMenuItem1.Size = new System.Drawing.Size(189, 24);
             this.thựcPhẩmToolStripMenuItem1.Text = "Thực phẩm";
-<<<<<<< HEAD
-=======
-            this.thựcPhẩmToolStripMenuItem1.Click += new System.EventHandler(this.thựcPhẩmToolStripMenuItem1_Click);
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             // 
             // thuêXeToolStripMenuItem
             // 
             this.thuêXeToolStripMenuItem.Name = "thuêXeToolStripMenuItem";
             this.thuêXeToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
             this.thuêXeToolStripMenuItem.Text = "Thuê xe";
-            this.thuêXeToolStripMenuItem.Click += new System.EventHandler(this.thuêXeToolStripMenuItem_Click);
             // 
             // bảngGiáToolStripMenuItem
             // 
@@ -461,13 +456,6 @@ namespace GUI
             this.đangPhátTriểnToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
             this.đangPhátTriểnToolStripMenuItem.Text = "Đang phát triển";
             // 
-            // thoátToolStripMenuItem
-            // 
-            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
-            this.thoátToolStripMenuItem.Text = "Thoát";
-            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -536,6 +524,13 @@ namespace GUI
             this.label1.TabIndex = 93;
             this.label1.Text = "Ngày nhận phòng:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+            this.thoátToolStripMenuItem.Text = "Thoát";
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // frmMain
             // 

@@ -48,79 +48,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="frmChiTietXe.cs">
-<<<<<<< HEAD
-=======
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmChiTietXe.designer.cs">
       <DependentUpon>frmChiTietXe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPhong.designer.cs">
-      <DependentUpon>frmPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThanhToanHDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThanhToanHDV.Designer.cs">
-      <DependentUpon>frmThanhToanHDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThanhToanPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThanhToanPhong.Designer.cs">
-      <DependentUpon>frmThanhToanPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThemThueXe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThemThueXe.designer.cs">
-      <DependentUpon>frmThemThueXe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThucPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThucPham.Designer.cs">
-      <DependentUpon>frmThucPham.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCoSoVatChat.cs">
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmChiTietXe.designer.cs">
-      <DependentUpon>frmChiTietXe.cs</DependentUpon>
-    </Compile>
-<<<<<<< HEAD
     <Compile Include="frmHinhAnh.cs">
-=======
-    <Compile Include="frmDatPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDatPhong.designer.cs">
-      <DependentUpon>frmDatPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDichVuHDV.cs">
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHinhAnh.Designer.cs">
       <DependentUpon>frmHinhAnh.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
-=======
-    <Compile Include="frmHoaDonTP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHoaDonTP.designer.cs">
-      <DependentUpon>frmHoaDonTP.cs</DependentUpon>
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
     </Compile>
     <Compile Include="frmPhong.cs">
       <SubType>Form</SubType>
@@ -128,19 +71,18 @@
     <Compile Include="frmPhong.designer.cs">
       <DependentUpon>frmPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThanhToanHDV.cs">
+    <Compile Include="frmTTDVhdv.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThanhToanHDV.designer.cs">
-      <DependentUpon>frmThanhToanHDV.cs</DependentUpon>
+    <Compile Include="frmTTDVhdv.designer.cs">
+      <DependentUpon>frmTTDVhdv.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThanhToanPhong.cs">
+    <Compile Include="frmTTPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThanhToanPhong.designer.cs">
-      <DependentUpon>frmThanhToanPhong.cs</DependentUpon>
+    <Compile Include="frmTTPhong.designer.cs">
+      <DependentUpon>frmTTPhong.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="frmThemThueXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,8 +131,6 @@
     <Compile Include="frmThemKH.designer.cs">
       <DependentUpon>frmThemKH.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
     <Compile Include="frmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,21 +154,18 @@
     <EmbeddedResource Include="frmChiTietXe.resx">
       <DependentUpon>frmChiTietXe.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="frmHinhAnh.resx">
       <DependentUpon>frmHinhAnh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx" />
-=======
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
     <EmbeddedResource Include="frmPhong.resx">
       <DependentUpon>frmPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThanhToanHDV.resx">
-      <DependentUpon>frmThanhToanHDV.cs</DependentUpon>
+    <EmbeddedResource Include="frmTTDVhdv.resx">
+      <DependentUpon>frmTTDVhdv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThanhToanPhong.resx">
-      <DependentUpon>frmThanhToanPhong.cs</DependentUpon>
+    <EmbeddedResource Include="frmTTPhong.resx">
+      <DependentUpon>frmTTPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemThueXe.resx">
       <DependentUpon>frmThemThueXe.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmThanhToanPhong
+    partial class frmTTPhong
     {
         /// <summary>
         /// Required designer variable.
@@ -110,13 +110,8 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-<<<<<<< HEAD
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-=======
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
-                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(283, 366);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 24);
@@ -166,13 +161,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-<<<<<<< HEAD
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-=======
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
-                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(348, 8);
             this.label3.Name = "label3";
@@ -317,13 +307,8 @@
             // label12
             // 
             this.label12.AutoSize = true;
-<<<<<<< HEAD
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-=======
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
-                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(9, 9);
             this.label12.Name = "label12";
@@ -342,11 +327,7 @@
             this.cbbMaKH.Name = "cbbMaKH";
             this.cbbMaKH.Size = new System.Drawing.Size(226, 28);
             this.cbbMaKH.TabIndex = 121;
-<<<<<<< HEAD
             this.cbbMaKH.SelectedIndexChanged += new System.EventHandler(this.cbbMaKH_SelectedIndexChanged);
-=======
-            this.cbbMaKH.SelectedIndexChanged += new System.EventHandler(this.cbbMaKh_SelectedIndexChanged);
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             // 
             // label7
             // 
@@ -389,15 +370,9 @@
             // 
             // panel1
             // 
-<<<<<<< HEAD
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-=======
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.cbbMaKH);
@@ -508,12 +483,9 @@
             this.Controls.Add(this.lbTittle);
             this.Controls.Add(this.btCancel);
             this.Name = "frmThanhToanPhong";
-<<<<<<< HEAD
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-=======
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             this.Text = "frmThanhToanPhong";
-            this.Load += new System.EventHandler(this.frmThanhToanPhong_Load);
+            this.Load += new System.EventHandler(this.frmTTPhong_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

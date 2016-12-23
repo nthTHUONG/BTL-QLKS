@@ -24,17 +24,14 @@ namespace GUI
         private void frmThucPham_Load(object sender, EventArgs e)
         {
             BUS = new Business();
-<<<<<<< HEAD
             dgvThucPham.DataSource = BUS.GetDataTP();
-=======
-            dgvThucPham.DataSource = BUS.GetDataTP("SELECT * FROM ThucPham");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         private void Init()
         {
             txtIDTP.Text = "";
             txtTenTP.Text = "";
+            txtDonGia.Text = "";
             txtNhaSX.Text = "";
             dtNgaySX.Text = "";
             dtHanSD.Text = "";
@@ -45,16 +42,12 @@ namespace GUI
         {
             try
             {
-                ThucPham_DTO tp = new ThucPham_DTO(txtIDTP.Text, txtTenTP.Text, txtNhaSX.Text, dtNgaySX.Text, dtHanSD.Text, txtMieuTa.Text);
+                ThucPham_DTO tp = new ThucPham_DTO(txtIDTP.Text, txtTenTP.Text, txtDonGia.Text, txtNhaSX.Text, dtNgaySX.Text, dtHanSD.Text, txtMieuTa.Text);
                 if (MessageBox.Show("Thêm thực phẩm?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     BUS.ThemTP(tp);
                     MessageBox.Show("Thêm thành công!");
-<<<<<<< HEAD
                     dgvThucPham.DataSource = BUS.GetDataTP();
-=======
-                    dgvThucPham.DataSource = BUS.GetDataTP("SELECT * FROM ThucPham");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                     Init();
                 }
             }
@@ -76,16 +69,12 @@ namespace GUI
         {
             try
             {
-                ThucPham_DTO tp = new ThucPham_DTO(txtIDTP.Text, txtTenTP.Text, txtNhaSX.Text, dtNgaySX.Text, dtHanSD.Text, txtMieuTa.Text);
+                ThucPham_DTO tp = new ThucPham_DTO(txtIDTP.Text, txtTenTP.Text, txtDonGia.Text, txtNhaSX.Text, dtNgaySX.Text, dtHanSD.Text, txtMieuTa.Text);
                 if (MessageBox.Show("Lưu sửa đổi?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     BUS.SuaTP(tp);
                     MessageBox.Show("Sửa thành công!");
-<<<<<<< HEAD
                     dgvThucPham.DataSource = BUS.GetDataTP();
-=======
-                    dgvThucPham.DataSource = BUS.GetDataTP("SELECT * FROM ThucPham");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                     Init();
                 }
             }
@@ -103,11 +92,7 @@ namespace GUI
                 {
                     BUS.XoaTP(txtIDTP.Text);
                     MessageBox.Show("Xóa thành công!");
-<<<<<<< HEAD
                     dgvThucPham.DataSource = BUS.GetDataTP();
-=======
-                    dgvThucPham.DataSource = BUS.GetDataTP("SELECT * FROM ThucPham");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                     Init();
                 }
             }
@@ -153,10 +138,11 @@ namespace GUI
                 DataGridViewRow row = dgvThucPham.Rows[e.RowIndex];
                 txtIDTP.Text = row.Cells[0].Value.ToString();
                 txtTenTP.Text = row.Cells[1].Value.ToString();
-                txtNhaSX.Text = row.Cells[2].Value.ToString();
-                dtNgaySX.Text = row.Cells[3].Value.ToString();
-                dtHanSD.Text = row.Cells[4].Value.ToString();
-                txtMieuTa.Text = row.Cells[5].Value.ToString();
+                txtDonGia.Text = row.Cells[1].Value.ToString();
+                txtNhaSX.Text = row.Cells[3].Value.ToString();
+                dtNgaySX.Text = row.Cells[4].Value.ToString();
+                dtHanSD.Text = row.Cells[5].Value.ToString();
+                txtMieuTa.Text = row.Cells[6].Value.ToString();
             }
         }
     }

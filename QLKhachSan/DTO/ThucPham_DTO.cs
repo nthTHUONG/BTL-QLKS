@@ -24,6 +24,14 @@ namespace DTO
             set { _tenTP = value; }
         }
 
+        private Decimal _donGia;
+
+        public Decimal DonGia
+        {
+            get { return _donGia; }
+            set { _donGia = value; }
+        }
+
         private string _nhaSX;
 
         public string NhaSX
@@ -57,10 +65,11 @@ namespace DTO
         }
         public ThucPham_DTO() { }
 
-        public ThucPham_DTO(string idThucPham, string tenTP, string nhaSX, string ngaySX, string hanSD, string mieuTa)
+        public ThucPham_DTO(string idThucPham, string tenTP, string donGia, string nhaSX, string ngaySX, string hanSD, string mieuTa)
         {
             _idThucPham = idThucPham;
             _tenTP = tenTP;
+            _donGia = Convert.ToDecimal(donGia);
             _nhaSX = nhaSX;
             _ngaySX = Convert.ToDateTime(ngaySX);
             _hanSD = Convert.ToDateTime(hanSD);

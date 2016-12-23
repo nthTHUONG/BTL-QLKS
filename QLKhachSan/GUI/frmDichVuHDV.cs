@@ -23,11 +23,7 @@ namespace GUI
         private void frmDichVuHDV_Load(object sender, EventArgs e)
         {
             BUS = new Business();
-<<<<<<< HEAD
             dgvDVhdv.DataSource = BUS.GetDataDVhdv();
-=======
-            dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             LoadComBoBox();
             Init();
         }
@@ -36,7 +32,6 @@ namespace GUI
         {
             cbbMaKH.DataSource = BUS.GetDataKH();
             cbbMaKH.DisplayMember = "IDKhachHang";
-<<<<<<< HEAD
         }
 
         private void Init()
@@ -50,25 +45,6 @@ namespace GUI
             txtGhiChu.Text = "";
         }
 
-=======
-
-            cbbMaHDV.DataSource = BUS.GetDataDVhdv("SELECT IDHDV FROM HuongDanVien");
-            cbbMaHDV.DisplayMember = "IDHDV";
-
-        }
-
-        private void Init()
-        {
-            txtIDDVhdv.Text = "";
-            cbbMaKH.Text = "Chọn mã khách hàng";
-            cbbMaHDV.Text = "Chọn mã hướng dẫn viên";
-            txtSoNgayThue.Text = "";
-            txtGiaThue.Text = "";
-            txtTraTruoc.Text = "";
-            txtGhiChu.Text = "";
-        }
-
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         private void btThem_Click(object sender, EventArgs e)
         {
             DVhdv_DTO DVhdv = new DVhdv_DTO(txtIDDVhdv.Text, cbbMaKH.Text, cbbMaHDV.Text, dtpNgayThue.Text, txtSoNgayThue.Text, txtGiaThue.Text, txtTraTruoc.Text, txtGhiChu.Text);
@@ -78,11 +54,7 @@ namespace GUI
                 {
                     BUS.ThemDVhdv(DVhdv);
                     MessageBox.Show("Thêm thành công!");
-<<<<<<< HEAD
                     dgvDVhdv.DataSource = BUS.GetDataDVhdv();
-=======
-                    dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                     Init();
                 }
             }
@@ -101,11 +73,7 @@ namespace GUI
                 {
                     BUS.SuaDVhdv(DVhdv);
                     MessageBox.Show("Sửa thành công!");
-<<<<<<< HEAD
                     dgvDVhdv.DataSource = BUS.GetDataDVhdv();
-=======
-                    dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                     Init();
                 }
             }
@@ -117,7 +85,6 @@ namespace GUI
         private void btXoa_Click(object sender, EventArgs e)
         {
             try
-<<<<<<< HEAD
             {
                 if (MessageBox.Show("Xóa dịch vụ hướng dẫn viên?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -131,21 +98,6 @@ namespace GUI
             {
                 MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-=======
-            {
-                if (MessageBox.Show("Xóa dịch vụ hướng dẫn viên?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    BUS.XoaDVhdv(txtIDDVhdv.Text);
-                    MessageBox.Show("Xóa thành công!");
-                    dgvDVhdv.DataSource = BUS.GetDataDVhdv("SELECT * FROM DichVuHDV");
-                    Init();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         private void btReset_Click(object sender, EventArgs e)

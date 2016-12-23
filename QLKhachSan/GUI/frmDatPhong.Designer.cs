@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnThemKH = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.cbbMaPhong = new System.Windows.Forms.ComboBox();
             this.cbbMaKH = new System.Windows.Forms.ComboBox();
             this.dtpNgayNhan = new System.Windows.Forms.DateTimePicker();
@@ -38,16 +37,6 @@
             this.txtMaDP = new System.Windows.Forms.TextBox();
             this.txtTenLP = new System.Windows.Forms.TextBox();
             this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
-=======
-            this.lbTenLP = new System.Windows.Forms.Label();
-            this.lbThanhTien = new System.Windows.Forms.Label();
-            this.cbbMaPhong = new System.Windows.Forms.ComboBox();
-            this.cbbMaKH = new System.Windows.Forms.ComboBox();
-            this.dtpNgayNhan = new System.Windows.Forms.DateTimePicker();
-            this.txtMaDP = new System.Windows.Forms.TextBox();
-            this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
-            this.dtpNgayDat = new System.Windows.Forms.DateTimePicker();
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,10 +53,7 @@
             this.cbbMaNV = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lbTittle = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.txtNgayDat = new System.Windows.Forms.TextBox();
-=======
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +63,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.groupBox1.Controls.Add(this.btnThemKH);
-<<<<<<< HEAD
             this.groupBox1.Controls.Add(this.cbbMaPhong);
             this.groupBox1.Controls.Add(this.cbbMaKH);
             this.groupBox1.Controls.Add(this.dtpNgayNhan);
@@ -86,16 +71,6 @@
             this.groupBox1.Controls.Add(this.txtMaDP);
             this.groupBox1.Controls.Add(this.txtTenLP);
             this.groupBox1.Controls.Add(this.dtpNgayTra);
-=======
-            this.groupBox1.Controls.Add(this.lbTenLP);
-            this.groupBox1.Controls.Add(this.lbThanhTien);
-            this.groupBox1.Controls.Add(this.cbbMaPhong);
-            this.groupBox1.Controls.Add(this.cbbMaKH);
-            this.groupBox1.Controls.Add(this.dtpNgayNhan);
-            this.groupBox1.Controls.Add(this.txtMaDP);
-            this.groupBox1.Controls.Add(this.dtpNgayTra);
-            this.groupBox1.Controls.Add(this.dtpNgayDat);
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label1);
@@ -128,29 +103,6 @@
             this.btnThemKH.UseVisualStyleBackColor = true;
             this.btnThemKH.Click += new System.EventHandler(this.btnThemKH_Click);
             // 
-<<<<<<< HEAD
-=======
-            // lbTenLP
-            // 
-            this.lbTenLP.BackColor = System.Drawing.SystemColors.Window;
-            this.lbTenLP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbTenLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenLP.Location = new System.Drawing.Point(535, 96);
-            this.lbTenLP.Name = "lbTenLP";
-            this.lbTenLP.Size = new System.Drawing.Size(224, 26);
-            this.lbTenLP.TabIndex = 80;
-            // 
-            // lbThanhTien
-            // 
-            this.lbThanhTien.BackColor = System.Drawing.SystemColors.Window;
-            this.lbThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThanhTien.Location = new System.Drawing.Point(536, 174);
-            this.lbThanhTien.Name = "lbThanhTien";
-            this.lbThanhTien.Size = new System.Drawing.Size(224, 26);
-            this.lbThanhTien.TabIndex = 80;
-            // 
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             // cbbMaPhong
             // 
             this.cbbMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,7 +124,6 @@
             // 
             // dtpNgayNhan
             // 
-<<<<<<< HEAD
             this.dtpNgayNhan.Checked = false;
             this.dtpNgayNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayNhan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -197,23 +148,10 @@
             // txtMaDP
             // 
             this.txtMaDP.BackColor = System.Drawing.SystemColors.Window;
-=======
-            this.dtpNgayNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayNhan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayNhan.Location = new System.Drawing.Point(535, 133);
-            this.dtpNgayNhan.Name = "dtpNgayNhan";
-            this.dtpNgayNhan.Size = new System.Drawing.Size(225, 26);
-            this.dtpNgayNhan.TabIndex = 78;
-            this.dtpNgayNhan.ValueChanged += new System.EventHandler(this.DateTimePicker_ValueChanged);
-            // 
-            // txtMaDP
-            // 
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             this.txtMaDP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaDP.Location = new System.Drawing.Point(536, 54);
             this.txtMaDP.Multiline = true;
             this.txtMaDP.Name = "txtMaDP";
-<<<<<<< HEAD
             this.txtMaDP.ReadOnly = true;
             this.txtMaDP.Size = new System.Drawing.Size(225, 26);
             this.txtMaDP.TabIndex = 8;
@@ -229,37 +167,16 @@
             this.txtTenLP.Size = new System.Drawing.Size(225, 26);
             this.txtTenLP.TabIndex = 8;
             // 
-=======
-            this.txtMaDP.Size = new System.Drawing.Size(225, 26);
-            this.txtMaDP.TabIndex = 8;
-            // 
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             // dtpNgayTra
             // 
             this.dtpNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayTra.Location = new System.Drawing.Point(155, 171);
-<<<<<<< HEAD
             this.dtpNgayTra.MinDate = new System.DateTime(2016, 12, 16, 0, 0, 0, 0);
             this.dtpNgayTra.Name = "dtpNgayTra";
             this.dtpNgayTra.Size = new System.Drawing.Size(225, 26);
             this.dtpNgayTra.TabIndex = 78;
             this.dtpNgayTra.ValueChanged += new System.EventHandler(this.dtpNgayTra_ValueChanged);
-=======
-            this.dtpNgayTra.Name = "dtpNgayTra";
-            this.dtpNgayTra.Size = new System.Drawing.Size(225, 26);
-            this.dtpNgayTra.TabIndex = 78;
-            this.dtpNgayTra.ValueChanged += new System.EventHandler(this.DateTimePicker_ValueChanged);
-            // 
-            // dtpNgayDat
-            // 
-            this.dtpNgayDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayDat.Location = new System.Drawing.Point(155, 132);
-            this.dtpNgayDat.Name = "dtpNgayDat";
-            this.dtpNgayDat.Size = new System.Drawing.Size(225, 26);
-            this.dtpNgayDat.TabIndex = 78;
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             // 
             // label3
             // 
@@ -421,7 +338,6 @@
             this.lbTittle.TabIndex = 104;
             this.lbTittle.Text = "Đặt Phòng";
             this.lbTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-<<<<<<< HEAD
             // 
             // txtNgayDat
             // 
@@ -433,8 +349,6 @@
             this.txtNgayDat.ReadOnly = true;
             this.txtNgayDat.Size = new System.Drawing.Size(225, 26);
             this.txtNgayDat.TabIndex = 8;
-=======
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             // 
             // frmDatPhong
             // 
@@ -476,16 +390,10 @@
         private System.Windows.Forms.ComboBox cbbMaPhong;
         private System.Windows.Forms.ComboBox cbbMaKH;
         private System.Windows.Forms.DateTimePicker dtpNgayTra;
-<<<<<<< HEAD
-=======
-        private System.Windows.Forms.DateTimePicker dtpNgayDat;
-        private System.Windows.Forms.TextBox txtMaDP;
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         private System.Windows.Forms.Button btnDatPhong;
         private System.Windows.Forms.ComboBox cbbMaNV;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbTittle;
-<<<<<<< HEAD
         private System.Windows.Forms.DateTimePicker dtpNgayNhan;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnThemKH;
@@ -493,12 +401,5 @@
         private System.Windows.Forms.TextBox txtThanhTien;
         private System.Windows.Forms.TextBox txtMaDP;
         private System.Windows.Forms.TextBox txtNgayDat;
-=======
-        private System.Windows.Forms.Label lbThanhTien;
-        private System.Windows.Forms.DateTimePicker dtpNgayNhan;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbTenLP;
-        private System.Windows.Forms.Button btnThemKH;
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
     }
 }

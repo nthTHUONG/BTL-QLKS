@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmThanhToanHDV : Form
+    public partial class frmTTDVhdv : Form
     {
-        public frmThanhToanHDV()
+        public frmTTDVhdv()
         {
             InitializeComponent();
         }

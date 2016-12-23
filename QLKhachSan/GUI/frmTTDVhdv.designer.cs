@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmThanhToanHDV
+    partial class frmTTDVhdv
     {
         /// <summary>
         /// Required designer variable.

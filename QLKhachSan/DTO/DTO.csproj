@@ -40,11 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Xe_DTO.cs" />
-=======
-    <Compile Include="ChiTietXe_DTO.cs" />
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
     <Compile Include="CoSoVatChat_DTO.cs" />
     <Compile Include="ThucPham_DTO.cs" />
     <Compile Include="DatPhong_DTO.cs" />
@@ -55,7 +51,6 @@
     <Compile Include="NhanVien_DTO.cs" />
     <Compile Include="Phong_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThueXe_DTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

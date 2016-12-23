@@ -23,11 +23,7 @@ namespace GUI
         private void frmChiTietXe_Load(object sender, EventArgs e)
         {
             BUS = new Business();
-<<<<<<< HEAD
             dgvXe.DataSource = BUS.GetDataXe();
-=======
-            dgvXe.DataSource = BUS.getChiTietXe("SELECT * FROM ChiTietXe");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -35,15 +31,9 @@ namespace GUI
             
             try
             {
-<<<<<<< HEAD
                 Xe_DTO xe = new Xe_DTO(txtIDXe.Text, txtHangSX.Text, txtLoaiXe.Text, txtGiaThue.Text, txtGhiChu.Text, txtTrangThai.Text);
                 BUS.ThemXe(xe);
                 dgvXe.DataSource = BUS.GetDataXe();
-=======
-                ChiTietXe_DTO xe = new ChiTietXe_DTO(txtIDXe.Text, txtHangSX.Text, txtLoaiXe.Text, txtGiaThue.Text, txtGhiChu.Text, txtTrangThai.Text);
-                BUS.Them_CTX(xe);
-                dgvXe.DataSource = BUS.getChiTietXe("SELECT * FROM ChiTietXe");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
                 MessageBox.Show("Đã thêm thành công!");
             }
             catch (Exception ex)
@@ -51,7 +41,6 @@ namespace GUI
                 MessageBox.Show(ex.Message);
             }
         }
-<<<<<<< HEAD
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             try
@@ -60,24 +49,12 @@ namespace GUI
                 BUS.SuaXe(xe);
                 dgvXe.DataSource = BUS.GetDataXe();
                 MessageBox.Show("Đã cập nhật thành công!");
-=======
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ChiTietXe_DTO xe = new ChiTietXe_DTO(txtIDXe.Text, txtHangSX.Text, txtLoaiXe.Text, txtGiaThue.Text, txtGhiChu.Text, txtTrangThai.Text);
-                BUS.Xoa_CTX (xe);
-                dgvXe.DataSource = BUS.getChiTietXe("SELECT * FROM ChiTietXe");
-                MessageBox.Show("Đã xóa thành công!");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-<<<<<<< HEAD
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -86,26 +63,13 @@ namespace GUI
                 BUS.XoaXe(txtIDXe.Text);
                 dgvXe.DataSource = BUS.GetDataXe();
                 MessageBox.Show("Đã xóa thành công!");
-=======
-        private void btnCapNhat_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ChiTietXe_DTO xe = new ChiTietXe_DTO(txtIDXe.Text, txtHangSX.Text, txtLoaiXe.Text, txtGiaThue.Text, txtGhiChu.Text, txtTrangThai.Text);
-                BUS.CapNhat_CTX(xe);
-                dgvXe.DataSource = BUS.getChiTietXe("SELECT * FROM ChiTietXe");
-                MessageBox.Show("Đã cập nhật thành công!");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-<<<<<<< HEAD
         
-=======
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
         private void dgvXe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

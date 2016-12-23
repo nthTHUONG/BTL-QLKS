@@ -16,6 +16,7 @@ namespace GUI
     public partial class frmHoaDonTP : Form
     {
         Business BUS;
+        DataTable dt, dtTP;
         public frmHoaDonTP()
         {
             InitializeComponent();
@@ -25,6 +26,8 @@ namespace GUI
         {
             BUS = new Business();
             LoadCombobox();
+            Init_Table();
+            dgvThucPham.DataSource = dt;
             Init();
         }
 
@@ -32,13 +35,23 @@ namespace GUI
         {
             cbbMaNV.DataSource = BUS.GetDataNV();
             cbbMaNV.DisplayMember = "IDNhanVien";
+            cbbMaNV.Text = "Chọn nã NV";
 
-<<<<<<< HEAD
             cbbMaTP.DataSource = BUS.GetDataTP();
-=======
-            cbbMaTP.DataSource = BUS.GetDataTP("SELECT IDThucPham FROM ThucPham");
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
             cbbMaTP.DisplayMember = "IDThucPham";
+        }
+
+        private void Init_Table()
+        {
+            dt = new DataTable();
+            dt.Columns.Add("IDThucPham");
+            dt.Columns.Add("Tên TP");
+            dt.Columns.Add("Nhà SX");
+            dt.Columns.Add("Ngày SX");
+            dt.Columns.Add("Hạn SD");
+            dt.Columns.Add("Số lượng");
+            dt.Columns.Add("Đơn giá");
+            dtTP = new DataTable();
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -48,7 +61,6 @@ namespace GUI
 
         private void Init()
         {
-            cbbMaNV.Text = "Chọn nã NV";
             cbbMaTP.Text = "Chọn mã TP";
             txtSoLuong.Text = "";
             lbDonGia.Text = "";
@@ -56,30 +68,35 @@ namespace GUI
 
         private void cbbMaTP_SelectedIndexChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            lbDonGia.Text = BUS.GetDataTP(cbbMaTP.Text).ToString();
-=======
-            lbDonGia.Text = BUS.GetDataTP("SELECT DonGia FROM HoaDonThucPham WHERE MaTP = N'" + cbbMaTP.Text + "'").ToString();
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
+            txtSoLuong.Text = "1";
         }
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            lbDonGia.Text = (Convert.ToDecimal(BUS.GetDataTP(cbbMaTP.Text)) * Convert.ToInt32(txtSoLuong)).ToString();
-=======
-            lbDonGia.Text = (Convert.ToDecimal(BUS.GetDataTP("SELECT DonGia FROM HoaDonThucPham WHERE MaTP = N'" + cbbMaTP.Text + "'")) * Convert.ToInt32(txtSoLuong)).ToString();
->>>>>>> 3af32be00ffc70fb665eb58bee93763a1c2d5ef0
+            if (txtSoLuong.Text != "")
+            {
+                lbDonGia.Text = (Convert.ToDecimal(BUS.GetDataTP(cbbMaTP.Text).Rows[0]["DonGia"]) * Convert.ToInt32(txtSoLuong.Text)).ToString();
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            dtTP.Rows.Clear();
+            dtTP = BUS.GetDataTP(cbbMaTP.Text);
+            DataRow row = dt.NewRow();
+            row["IDThucPham"] = cbbMaTP.Text;
+            row["Tên TP"] = dtTP.Rows[0]["TenTP"];
+            row["Nhà SX"] = dtTP.Rows[0]["NhaSX"];
+            row["Ngày SX"] = dtTP.Rows[0]["NgaySX"];
+            row["Hạn SD"] = dtTP.Rows[0]["HanSD"];
+            row["Số lượng"] = txtSoLuong.Text;
+            row["Đơn giá"] = lbDonGia.Text;
+            dt.Rows.Add(row);
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
