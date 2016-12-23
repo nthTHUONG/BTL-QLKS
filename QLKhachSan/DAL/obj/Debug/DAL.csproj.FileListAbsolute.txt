@@ -1,5 +1,5 @@
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BIN\DAL.dll
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BIN\DAL.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DAL\obj\Debug\DAL.dll
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\DAL\obj\Debug\DAL.pdb
