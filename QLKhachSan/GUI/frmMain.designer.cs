@@ -69,6 +69,10 @@ namespace GUI
             this.thanhToánDVHướngDẫnViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinKháchHàngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tTThựcPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tTĐặtPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đangPhátTriểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -219,6 +223,8 @@ namespace GUI
             this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox.ErrorImage = null;
+            this.pictureBox.Image = global::GUI.Properties.Resources._15319554_1615662488736959_778824304_n;
             this.pictureBox.Location = new System.Drawing.Point(0, 0);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(868, 403);
@@ -441,10 +447,41 @@ namespace GUI
             // 
             // xuấtBáoCáoToolStripMenuItem
             // 
+            this.xuấtBáoCáoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thôngTinKháchHàngToolStripMenuItem1,
+            this.thôngTinNhânViênToolStripMenuItem,
+            this.tTThựcPhẩmToolStripMenuItem,
+            this.tTĐặtPhòngToolStripMenuItem});
             this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
             this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
             this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
-            this.xuấtBáoCáoToolStripMenuItem.Click += new System.EventHandler(this.xuấtBáoCáoToolStripMenuItem_Click);
+            // 
+            // thôngTinKháchHàngToolStripMenuItem1
+            // 
+            this.thôngTinKháchHàngToolStripMenuItem1.Name = "thôngTinKháchHàngToolStripMenuItem1";
+            this.thôngTinKháchHàngToolStripMenuItem1.Size = new System.Drawing.Size(187, 24);
+            this.thôngTinKháchHàngToolStripMenuItem1.Text = "Khách hàng";
+            this.thôngTinKháchHàngToolStripMenuItem1.Click += new System.EventHandler(this.thôngTinKháchHàngToolStripMenuItem1_Click);
+            // 
+            // thôngTinNhânViênToolStripMenuItem
+            // 
+            this.thôngTinNhânViênToolStripMenuItem.Name = "thôngTinNhânViênToolStripMenuItem";
+            this.thôngTinNhânViênToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.thôngTinNhânViênToolStripMenuItem.Text = "Nhân viên";
+            this.thôngTinNhânViênToolStripMenuItem.Click += new System.EventHandler(this.thôngTinNhânViênToolStripMenuItem_Click);
+            // 
+            // tTThựcPhẩmToolStripMenuItem
+            // 
+            this.tTThựcPhẩmToolStripMenuItem.Name = "tTThựcPhẩmToolStripMenuItem";
+            this.tTThựcPhẩmToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.tTThựcPhẩmToolStripMenuItem.Text = "Thực phẩm";
+            this.tTThựcPhẩmToolStripMenuItem.Click += new System.EventHandler(this.tTThựcPhẩmToolStripMenuItem_Click);
+            // 
+            // tTĐặtPhòngToolStripMenuItem
+            // 
+            this.tTĐặtPhòngToolStripMenuItem.Name = "tTĐặtPhòngToolStripMenuItem";
+            this.tTĐặtPhòngToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.tTĐặtPhòngToolStripMenuItem.Text = "Đặt phòng";
             // 
             // trợGiúpToolStripMenuItem
             // 
@@ -625,6 +662,10 @@ namespace GUI
         private ToolStripMenuItem thêmKháchHàngToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
         private ToolStripMenuItem hToolStripMenuItem;
+        private ToolStripMenuItem thôngTinKháchHàngToolStripMenuItem1;
+        private ToolStripMenuItem thôngTinNhânViênToolStripMenuItem;
+        private ToolStripMenuItem tTThựcPhẩmToolStripMenuItem;
+        private ToolStripMenuItem tTĐặtPhòngToolStripMenuItem;
 
         public AutoScaleMode AutoScaleMode { get; private set; }
     }

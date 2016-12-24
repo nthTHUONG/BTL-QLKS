@@ -25,3 +25,8 @@ C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BIN\GUI.exe
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BIN\GUI.pdb
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.exe
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.pdb
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmReportKH.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\RdlCompile.cache
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\RdlCompile.compiled
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmReportThongTinTP.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmReportDSDatphong.resources
