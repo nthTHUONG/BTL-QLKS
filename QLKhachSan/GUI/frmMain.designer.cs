@@ -626,6 +626,6 @@ namespace GUI
         private ToolStripMenuItem thoátToolStripMenuItem;
         private ToolStripMenuItem hToolStripMenuItem;
 
-        public AutoScaleMode AutoScaleMode { get; private set; }
+       // public AutoScaleMode AutoScaleMode { get; private set; }
     }
 }

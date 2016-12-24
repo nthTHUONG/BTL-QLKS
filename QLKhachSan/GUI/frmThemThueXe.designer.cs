@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayMuon = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtIDKhachHang = new System.Windows.Forms.TextBox();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.txtTienCoc = new System.Windows.Forms.TextBox();
             this.txtGiaThue = new System.Windows.Forms.TextBox();
             this.txtMaXe = new System.Windows.Forms.TextBox();
             this.txtIDThueXe = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,14 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvThemThueXe)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtpNgayTra
-            // 
-            this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayTra.Location = new System.Drawing.Point(175, 175);
-            this.dtpNgayTra.Name = "dtpNgayTra";
-            this.dtpNgayTra.Size = new System.Drawing.Size(168, 26);
-            this.dtpNgayTra.TabIndex = 127;
-            // 
             // dtpNgayMuon
             // 
             this.dtpNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -69,17 +57,6 @@
             this.dtpNgayMuon.Name = "dtpNgayMuon";
             this.dtpNgayMuon.Size = new System.Drawing.Size(168, 26);
             this.dtpNgayMuon.TabIndex = 125;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(66, 175);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 20);
-            this.label9.TabIndex = 136;
-            this.label9.Text = "Ngày trả";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
@@ -97,13 +74,6 @@
             this.txtIDKhachHang.Name = "txtIDKhachHang";
             this.txtIDKhachHang.Size = new System.Drawing.Size(166, 26);
             this.txtIDKhachHang.TabIndex = 123;
-            // 
-            // txtGhiChu
-            // 
-            this.txtGhiChu.Location = new System.Drawing.Point(455, 108);
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(189, 26);
-            this.txtGhiChu.TabIndex = 126;
             // 
             // txtTienCoc
             // 
@@ -134,17 +104,6 @@
             this.txtIDThueXe.ReadOnly = true;
             this.txtIDThueXe.Size = new System.Drawing.Size(166, 26);
             this.txtIDThueXe.TabIndex = 122;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(364, 114);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 20);
-            this.label8.TabIndex = 130;
-            this.label8.Text = "Ghi Chú:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
             // 
@@ -203,17 +162,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtpNgayTra);
             this.groupBox1.Controls.Add(this.dtpNgayMuon);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtIDKhachHang);
-            this.groupBox1.Controls.Add(this.txtGhiChu);
             this.groupBox1.Controls.Add(this.txtTienCoc);
             this.groupBox1.Controls.Add(this.txtGiaThue);
             this.groupBox1.Controls.Add(this.txtMaXe);
             this.groupBox1.Controls.Add(this.txtIDThueXe);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
@@ -304,18 +259,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dtpNgayTra;
         private System.Windows.Forms.DateTimePicker dtpNgayMuon;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtIDKhachHang;
-        private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.TextBox txtTienCoc;
         private System.Windows.Forms.TextBox txtGiaThue;
         private System.Windows.Forms.TextBox txtMaXe;
         private System.Windows.Forms.TextBox txtIDThueXe;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;

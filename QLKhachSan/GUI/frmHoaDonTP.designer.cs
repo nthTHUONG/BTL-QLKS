@@ -38,15 +38,15 @@
             this.lbDonGia = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbMaNV = new System.Windows.Forms.ComboBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbTongTien = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             // 
             // dgvThucPham
             // 
+            this.dgvThucPham.AllowUserToAddRows = false;
             this.dgvThucPham.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -72,8 +73,10 @@
             this.dgvThucPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThucPham.Location = new System.Drawing.Point(0, 214);
             this.dgvThucPham.Name = "dgvThucPham";
+            this.dgvThucPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThucPham.Size = new System.Drawing.Size(757, 175);
             this.dgvThucPham.TabIndex = 1;
+            this.dgvThucPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucPham_CellClick);
             // 
             // label4
             // 
@@ -94,12 +97,13 @@
             this.cbbMaTP.Size = new System.Drawing.Size(121, 28);
             this.cbbMaTP.TabIndex = 102;
             this.cbbMaTP.SelectedIndexChanged += new System.EventHandler(this.cbbMaTP_SelectedIndexChanged);
+            this.cbbMaTP.Click += new System.EventHandler(this.cbbMaTP_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(446, 169);
+            this.label5.Location = new System.Drawing.Point(358, 174);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 18);
             this.label5.TabIndex = 101;
@@ -111,9 +115,9 @@
             this.lbDonGia.BackColor = System.Drawing.SystemColors.Window;
             this.lbDonGia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDonGia.Location = new System.Drawing.Point(508, 164);
+            this.lbDonGia.Location = new System.Drawing.Point(420, 169);
             this.lbDonGia.Name = "lbDonGia";
-            this.lbDonGia.Size = new System.Drawing.Size(128, 28);
+            this.lbDonGia.Size = new System.Drawing.Size(146, 28);
             this.lbDonGia.TabIndex = 101;
             this.lbDonGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -121,7 +125,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(246, 169);
+            this.label2.Location = new System.Drawing.Point(210, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 18);
             this.label2.TabIndex = 101;
@@ -130,7 +134,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(680, 164);
+            this.btnAdd.Location = new System.Drawing.Point(608, 169);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(62, 28);
             this.btnAdd.TabIndex = 103;
@@ -171,9 +175,9 @@
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(317, 165);
+            this.txtSoLuong.Location = new System.Drawing.Point(281, 169);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(67, 26);
+            this.txtSoLuong.Size = new System.Drawing.Size(54, 26);
             this.txtSoLuong.TabIndex = 104;
             this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
@@ -182,24 +186,24 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(505, 414);
+            this.label6.Location = new System.Drawing.Point(483, 419);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 18);
             this.label6.TabIndex = 101;
             this.label6.Text = "Tổng tiền:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // lbTongTien
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.BackColor = System.Drawing.SystemColors.Window;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(594, 409);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(149, 28);
-            this.label7.TabIndex = 101;
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTongTien.BackColor = System.Drawing.SystemColors.Window;
+            this.lbTongTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongTien.Location = new System.Drawing.Point(572, 409);
+            this.lbTongTien.Name = "lbTongTien";
+            this.lbTongTien.Size = new System.Drawing.Size(171, 28);
+            this.lbTongTien.TabIndex = 101;
+            this.lbTongTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbTime
             // 
@@ -229,7 +233,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cbbMaNV);
             this.Controls.Add(this.cbbMaTP);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbTongTien);
             this.Controls.Add(this.lbDonGia);
             this.Controls.Add(this.lbTime);
             this.Controls.Add(this.label6);
@@ -271,7 +275,7 @@
         private System.Windows.Forms.ComboBox cbbMaNV;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbTongTien;
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Timer timer;
     }

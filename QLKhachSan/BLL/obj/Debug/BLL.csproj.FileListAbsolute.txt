@@ -3,3 +3,8 @@ C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BIN\BLL.pdb
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.dll
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\tuongVi\BTL-QLKS\QLKhachSan\BIN\BLL.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\tuongVi\BTL-QLKS\QLKhachSan\BIN\BLL.pdb
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\tuongVi\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\tuongVi\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.dll
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\tuongVi\BTL-QLKS\QLKhachSan\BLL\obj\Debug\BLL.pdb

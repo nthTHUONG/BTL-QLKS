@@ -48,14 +48,11 @@
             this.txtGiaThue = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTienCoc = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dtpNgayMuon = new System.Windows.Forms.DateTimePicker();
-            this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
             this.timerXe = new System.Windows.Forms.Timer(this.components);
             this.txtTime = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThueXe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +96,7 @@
             this.lblTongTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTongTien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.Location = new System.Drawing.Point(450, 396);
+            this.lblTongTien.Location = new System.Drawing.Point(408, 395);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(149, 28);
             this.lblTongTien.TabIndex = 107;
@@ -121,7 +118,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(338, 401);
+            this.label6.Location = new System.Drawing.Point(296, 400);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 18);
             this.label6.TabIndex = 110;
@@ -175,14 +172,17 @@
             // 
             // dgvThueXe
             // 
-            this.dgvThueXe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvThueXe.AllowUserToAddRows = false;
+            this.dgvThueXe.AllowUserToDeleteRows = false;
+            this.dgvThueXe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThueXe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThueXe.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvThueXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThueXe.Location = new System.Drawing.Point(8, 231);
             this.dgvThueXe.Name = "dgvThueXe";
+            this.dgvThueXe.ReadOnly = true;
             this.dgvThueXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThueXe.Size = new System.Drawing.Size(794, 158);
             this.dgvThueXe.TabIndex = 106;
@@ -225,7 +225,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(293, 111);
+            this.label5.Location = new System.Drawing.Point(289, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 113;
@@ -234,7 +234,7 @@
             // 
             // txtGiaThue
             // 
-            this.txtGiaThue.Location = new System.Drawing.Point(402, 108);
+            this.txtGiaThue.Location = new System.Drawing.Point(398, 75);
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(120, 26);
             this.txtGiaThue.TabIndex = 5;
@@ -243,7 +243,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(293, 141);
+            this.label7.Location = new System.Drawing.Point(289, 108);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 113;
@@ -252,39 +252,10 @@
             // 
             // txtTienCoc
             // 
-            this.txtTienCoc.Location = new System.Drawing.Point(402, 140);
+            this.txtTienCoc.Location = new System.Drawing.Point(398, 107);
             this.txtTienCoc.Name = "txtTienCoc";
             this.txtTienCoc.Size = new System.Drawing.Size(120, 26);
             this.txtTienCoc.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(293, 175);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 20);
-            this.label8.TabIndex = 113;
-            this.label8.Text = "Ghi Chú:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtGhiChu
-            // 
-            this.txtGhiChu.Location = new System.Drawing.Point(402, 172);
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(120, 26);
-            this.txtGhiChu.TabIndex = 3;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(293, 76);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 20);
-            this.label9.TabIndex = 120;
-            this.label9.Text = "Ngày trả";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
@@ -304,14 +275,6 @@
             this.dtpNgayMuon.Size = new System.Drawing.Size(172, 26);
             this.dtpNgayMuon.TabIndex = 3;
             // 
-            // dtpNgayTra
-            // 
-            this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayTra.Location = new System.Drawing.Point(402, 76);
-            this.dtpNgayTra.Name = "dtpNgayTra";
-            this.dtpNgayTra.Size = new System.Drawing.Size(172, 26);
-            this.dtpNgayTra.TabIndex = 4;
-            // 
             // timerXe
             // 
             this.timerXe.Enabled = true;
@@ -327,19 +290,28 @@
             this.txtTime.Size = new System.Drawing.Size(231, 19);
             this.txtTime.TabIndex = 1;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(563, 400);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 20);
+            this.label8.TabIndex = 122;
+            this.label8.Text = "Đồng";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmThueXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.ClientSize = new System.Drawing.Size(814, 451);
-            this.Controls.Add(this.dtpNgayTra);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.dtpNgayMuon);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.txtIDKhachHang);
-            this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.txtTienCoc);
             this.Controls.Add(this.txtGiaThue);
             this.Controls.Add(this.txtMaXe);
@@ -347,7 +319,6 @@
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.cbbMaNV);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.lblTongTien);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lbTime);
@@ -392,13 +363,10 @@
         private System.Windows.Forms.TextBox txtGiaThue;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTienCoc;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtGhiChu;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtpNgayMuon;
-        private System.Windows.Forms.DateTimePicker dtpNgayTra;
         private System.Windows.Forms.Timer timerXe;
         private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.Label label8;
     }
 }

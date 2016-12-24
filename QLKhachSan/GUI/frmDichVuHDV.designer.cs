@@ -54,6 +54,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvDVhdv = new System.Windows.Forms.DataGridView();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVhdv)).BeginInit();
@@ -62,9 +63,9 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
-                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 404);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 415);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 27);
             this.label1.TabIndex = 23;
@@ -305,7 +306,7 @@
             // 
             this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(228, 404);
+            this.txtTimKiem.Location = new System.Drawing.Point(110, 415);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(292, 27);
             this.txtTimKiem.TabIndex = 0;
@@ -338,12 +339,25 @@
             this.dgvDVhdv.TabIndex = 26;
             this.dgvDVhdv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDVhdv_CellClick);
             // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.Location = new System.Drawing.Point(514, 402);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(117, 40);
+            this.btnThanhToan.TabIndex = 27;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            // 
             // frmDichVuHDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(656, 587);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.dgvDVhdv);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
@@ -390,5 +404,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTraTruoc;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnThanhToan;
     }
 }
