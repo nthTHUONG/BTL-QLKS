@@ -34,9 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanhSachKH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DanhSachKH.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ExecuteDB.cs" />
     <Compile Include="frmChiTietXe.cs">
       <SubType>Form</SubType>
@@ -108,11 +116,29 @@
     <Compile Include="frmNhanVien.designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhong.cs">
+    <Compile Include="frmHH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPhong.designer.cs">
-      <DependentUpon>frmPhong.cs</DependentUpon>
+    <Compile Include="frmHH.designer.cs">
+      <DependentUpon>frmHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportDSDatphong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportDSDatphong.Designer.cs">
+      <DependentUpon>frmReportDSDatphong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportKH.Designer.cs">
+      <DependentUpon>frmReportKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportThongTinTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportThongTinTP.Designer.cs">
+      <DependentUpon>frmReportThongTinTP.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThanhToanHDV.cs">
       <SubType>Form</SubType>
@@ -152,6 +178,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportDSDP.cs">
+      <DependentUpon>ReportDSDP.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDSDP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDSDP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TTTP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TTTP.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DanhSachKH.rdlc" />
     <EmbeddedResource Include="frmChiTietXe.resx">
       <DependentUpon>frmChiTietXe.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,8 +223,17 @@
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPhong.resx">
-      <DependentUpon>frmPhong.cs</DependentUpon>
+    <EmbeddedResource Include="frmHH.resx">
+      <DependentUpon>frmHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportDSDatphong.resx">
+      <DependentUpon>frmReportDSDatphong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportKH.resx">
+      <DependentUpon>frmReportKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportThongTinTP.resx">
+      <DependentUpon>frmReportThongTinTP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThanhToanHDV.resx">
       <DependentUpon>frmThanhToanHDV.cs</DependentUpon>
@@ -211,8 +261,22 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportDSDatPhong.rdlc" />
+    <EmbeddedResource Include="ReportTP.rdlc" />
     <None Include="App.config" />
+    <None Include="DanhSachKH.xsc">
+      <DependentUpon>DanhSachKH.xsd</DependentUpon>
+    </None>
+    <None Include="DanhSachKH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DanhSachKH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DanhSachKH.xss">
+      <DependentUpon>DanhSachKH.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -222,6 +286,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ReportDSDP.xsc">
+      <DependentUpon>ReportDSDP.xsd</DependentUpon>
+    </None>
+    <None Include="ReportDSDP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDSDP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportDSDP.xss">
+      <DependentUpon>ReportDSDP.xsd</DependentUpon>
+    </None>
+    <None Include="TTTP.xsc">
+      <DependentUpon>TTTP.xsd</DependentUpon>
+    </None>
+    <None Include="TTTP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TTTP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TTTP.xss">
+      <DependentUpon>TTTP.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -232,6 +318,12 @@
       <Project>{0CF5B74A-0C0D-4503-9030-E19B80028E6B}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sun_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15319554_1615662488736959_778824304_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

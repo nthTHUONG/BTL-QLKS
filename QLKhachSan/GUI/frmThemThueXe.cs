@@ -44,9 +44,9 @@ namespace GUI
                 da.Fill(ds, "ChiTietXe");
                 dgvThemThueXe.DataSource = ds.Tables["ChiTietXe"];
             }
-            catch (Exception )
+            catch (Exception ex)
             {
-                MessageBox.Show("Load dữ liệu không thành công!");
+                MessageBox.Show(ex.Message);
             }
             
         }

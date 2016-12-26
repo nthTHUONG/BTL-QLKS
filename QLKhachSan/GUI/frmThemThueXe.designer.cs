@@ -93,6 +93,7 @@
             // 
             // txtIDKhachHang
             // 
+            this.txtIDKhachHang.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtIDKhachHang.Location = new System.Drawing.Point(175, 76);
             this.txtIDKhachHang.Name = "txtIDKhachHang";
             this.txtIDKhachHang.Size = new System.Drawing.Size(166, 26);
@@ -100,6 +101,7 @@
             // 
             // txtGhiChu
             // 
+            this.txtGhiChu.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtGhiChu.Location = new System.Drawing.Point(455, 108);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(189, 26);
@@ -107,6 +109,7 @@
             // 
             // txtTienCoc
             // 
+            this.txtTienCoc.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtTienCoc.Location = new System.Drawing.Point(455, 76);
             this.txtTienCoc.Name = "txtTienCoc";
             this.txtTienCoc.Size = new System.Drawing.Size(189, 26);
@@ -114,6 +117,7 @@
             // 
             // txtGiaThue
             // 
+            this.txtGiaThue.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtGiaThue.Location = new System.Drawing.Point(455, 44);
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(189, 26);
@@ -121,6 +125,7 @@
             // 
             // txtMaXe
             // 
+            this.txtMaXe.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtMaXe.Location = new System.Drawing.Point(175, 110);
             this.txtMaXe.Name = "txtMaXe";
             this.txtMaXe.ReadOnly = true;
@@ -129,6 +134,7 @@
             // 
             // txtIDThueXe
             // 
+            this.txtIDThueXe.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtIDThueXe.Location = new System.Drawing.Point(175, 44);
             this.txtIDThueXe.Name = "txtIDThueXe";
             this.txtIDThueXe.ReadOnly = true;
@@ -228,7 +234,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.Green;
+            this.btnThem.BackColor = System.Drawing.Color.SandyBrown;
             this.btnThem.Location = new System.Drawing.Point(221, 233);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(95, 43);
@@ -239,7 +245,7 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.BackColor = System.Drawing.Color.Green;
+            this.btnHuy.BackColor = System.Drawing.Color.SandyBrown;
             this.btnHuy.Location = new System.Drawing.Point(414, 233);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(95, 43);
@@ -250,6 +256,7 @@
             // 
             // dgvThemThueXe
             // 
+            this.dgvThemThueXe.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvThemThueXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThemThueXe.Location = new System.Drawing.Point(12, 338);
             this.dgvThemThueXe.Name = "dgvThemThueXe";
@@ -271,6 +278,7 @@
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtTimKiem.Location = new System.Drawing.Point(107, 306);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(221, 26);
@@ -281,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Orange;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(724, 503);
             this.Controls.Add(this.dgvThemThueXe);
             this.Controls.Add(this.btnHuy);

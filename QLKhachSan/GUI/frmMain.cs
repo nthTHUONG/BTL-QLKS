@@ -43,10 +43,7 @@ namespace GUI
             MessageBox.Show("chưa làm");
         }
 
-        private void xuấtBáoCáoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("chưa làm");
-        }
+        
 
         private void thựcPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -98,8 +95,8 @@ namespace GUI
 
         private void phòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPhong frmP = new frmPhong();
-            frmP.Show();
+            frmHH frmH = new frmHH();
+            frmH.Show();
         }
 
         private void thôngTinKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -149,9 +146,26 @@ namespace GUI
 
         private void hToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHinhAnh frmHH = new frmHinhAnh();
-            frmHH.Show();
         }
+
+        private void thôngTinKháchHàngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReportKH frmReportKH = new frmReportKH();
+            frmReportKH.Show();
+        }
+
+        private void tTThựcPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportThongTinTP frmReportTP = new frmReportThongTinTP();
+            frmReportTP.Show();
+        }
+
+        private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
 
 
     }
