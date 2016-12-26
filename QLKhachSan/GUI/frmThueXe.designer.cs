@@ -58,8 +58,8 @@
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThanhToan.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThanhToan.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThanhToan.Location = new System.Drawing.Point(622, 395);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(146, 30);
@@ -70,7 +70,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(644, 180);
             this.btnThem.Name = "btnThem";
@@ -92,7 +92,7 @@
             // lblTongTien
             // 
             this.lblTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTongTien.BackColor = System.Drawing.SystemColors.Window;
+            this.lblTongTien.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTongTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTongTien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,7 +149,7 @@
             // 
             // lbTittle
             // 
-            this.lbTittle.BackColor = System.Drawing.Color.DarkOrange;
+            this.lbTittle.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lbTittle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTittle.Location = new System.Drawing.Point(0, 0);
@@ -190,6 +190,7 @@
             // 
             // txtIDThueXe
             // 
+            this.txtIDThueXe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtIDThueXe.Location = new System.Drawing.Point(119, 85);
             this.txtIDThueXe.Name = "txtIDThueXe";
             this.txtIDThueXe.ReadOnly = true;
@@ -198,6 +199,7 @@
             // 
             // txtIDKhachHang
             // 
+            this.txtIDKhachHang.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtIDKhachHang.Location = new System.Drawing.Point(119, 117);
             this.txtIDKhachHang.Name = "txtIDKhachHang";
             this.txtIDKhachHang.Size = new System.Drawing.Size(120, 26);
@@ -216,6 +218,7 @@
             // 
             // txtMaXe
             // 
+            this.txtMaXe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtMaXe.Location = new System.Drawing.Point(119, 149);
             this.txtMaXe.Name = "txtMaXe";
             this.txtMaXe.Size = new System.Drawing.Size(120, 26);
@@ -234,6 +237,7 @@
             // 
             // txtGiaThue
             // 
+            this.txtGiaThue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtGiaThue.Location = new System.Drawing.Point(398, 75);
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(120, 26);
@@ -252,6 +256,7 @@
             // 
             // txtTienCoc
             // 
+            this.txtTienCoc.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTienCoc.Location = new System.Drawing.Point(398, 107);
             this.txtTienCoc.Name = "txtTienCoc";
             this.txtTienCoc.Size = new System.Drawing.Size(120, 26);
@@ -283,7 +288,8 @@
             // 
             // txtTime
             // 
-            this.txtTime.BackColor = System.Drawing.Color.Coral;
+            this.txtTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtTime.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTime.Location = new System.Drawing.Point(8, 413);
             this.txtTime.Name = "txtTime";
@@ -292,6 +298,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(563, 400);
@@ -305,7 +312,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Coral;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(814, 451);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dtpNgayMuon);

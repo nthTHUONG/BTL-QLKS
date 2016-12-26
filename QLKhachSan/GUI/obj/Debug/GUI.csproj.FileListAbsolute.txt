@@ -35,3 +35,4 @@ C:\Users\Administrator.MAYTINH-25KUREH\Desktop\tuongVi\BTL-QLKS\QLKhachSan\GUI\o
 C:\Users\Administrator.MAYTINH-25KUREH\Desktop\tuongVi\BTL-QLKS\QLKhachSan\GUI\obj\Debug\RdlCompile.cache
 C:\Users\Administrator.MAYTINH-25KUREH\Desktop\tuongVi\BTL-QLKS\QLKhachSan\GUI\obj\Debug\RdlCompile.compiled
 C:\Users\Administrator.MAYTINH-25KUREH\Desktop\tuongVi\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmReportNhanVien.resources
+C:\Users\Administrator.MAYTINH-25KUREH\Desktop\tuongVi\BTL-QLKS\QLKhachSan\GUI\obj\Debug\GUI.frmHH.resources

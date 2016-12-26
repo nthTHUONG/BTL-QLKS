@@ -53,7 +53,7 @@
             // 
             // lbTittle
             // 
-            this.lbTittle.BackColor = System.Drawing.Color.SandyBrown;
+            this.lbTittle.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lbTittle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTittle.Location = new System.Drawing.Point(0, 0);
@@ -69,7 +69,7 @@
             this.dgvThucPham.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvThucPham.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvThucPham.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.dgvThucPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThucPham.Location = new System.Drawing.Point(0, 214);
             this.dgvThucPham.Name = "dgvThucPham";
@@ -134,23 +134,25 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAdd.Location = new System.Drawing.Point(608, 169);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(62, 28);
             this.btnAdd.TabIndex = 103;
             this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnThanhToan
             // 
             this.btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThanhToan.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThanhToan.Location = new System.Drawing.Point(633, 79);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(109, 29);
             this.btnThanhToan.TabIndex = 103;
             this.btnThanhToan.Text = "Thanh Toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // label3
@@ -226,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(757, 457);
             this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.btnThanhToan);

@@ -25,7 +25,7 @@ namespace GUI
         {
             try
             {
-                string sql = "select * from HoaDonThucPham";
+                string sql = "select hd.IDHoaDon, hd.MaKH, hd.MaNV, hd.NgayMua, hd.TongTien from HoaDonThucPham hd ";
                 ds = new DataSet();
                 SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
                 da.Fill(ds, "HoaDonThucPham");
@@ -122,14 +122,45 @@ namespace GUI
             connect();
             try
             {
-               // string sql = "insert into HoaDonThucPham values(N'" + txtIDHoaDon.Text + "', N'" + cbbIDKhachHang.Text + "', N'" + txtIDNhanVien.Text + "', N'" + dtpNgayMua.Value.ToString("yyyy/MM/dd") + "', N'" + txtGhiChu.Text + "')";
-
+                string sql = "insert into HoaDonThucPham values(N'" + txtIDHoaDon.Text + "', N'" + cbbIDKhachHang.Text + "', N'" + txtIDNhanVien.Text + "', N'" + dtpNgayMua.Value.ToString("yyyy/MM/dd") + "', '"+lblTongTien.Text+"', NULL)";
+                SqlCommand cmd = new SqlCommand(sql, cnn);
+                cmd.ExecuteNonQuery(); 
+                MessageBox.Show("Thêm Thành Công");
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }
             disconnect();
+            getHDTP();
         }
+
+        private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
+        {
+            dgvHDTP.CurrentCell = null;
+            if (txtTimKiem == null)
+            {
+                for (int i = 0; i < dgvHDTP.RowCount - 1; i++)
+                {
+                    dgvHDTP.Rows[i].Visible = true;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < dgvHDTP.RowCount - 1; i++)
+                {
+                    if (dgvHDTP.Rows[i].Cells["IDHoaDon"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
+                       || dgvHDTP.Rows[i].Cells["MaKH"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true
+                       || dgvHDTP.Rows[i].Cells["MaNV"].Value.ToString().ToLower().Contains(txtTimKiem.Text.ToLower()) == true)
+                    {
+                        dgvHDTP.Rows[i].Visible = true;
+                    }
+                    else
+                    {
+                        dgvHDTP.Rows[i].Visible = false;
+                    }
+                }
+            }
+    }
     }
 }

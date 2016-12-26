@@ -131,7 +131,7 @@ namespace GUI
                 dt.Rows.Add(row);
             }
             tongTien += Convert.ToDecimal(lbDonGia.Text);
-            lbTongTien.Text = tongTien.ToString() + "VNĐ";
+            lbTongTien.Text = tongTien.ToString() ;
         }
         bool coHieu = false;
         private void cbbMaTP_Click(object sender, EventArgs e)

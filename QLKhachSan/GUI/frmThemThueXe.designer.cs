@@ -73,37 +73,39 @@
             this.txtIDKhachHang.Location = new System.Drawing.Point(175, 76);
             this.txtIDKhachHang.Name = "txtIDKhachHang";
             this.txtIDKhachHang.Size = new System.Drawing.Size(166, 26);
-            this.txtIDKhachHang.TabIndex = 123;
+            this.txtIDKhachHang.TabIndex = 1;
             // 
             // txtTienCoc
             // 
             this.txtTienCoc.Location = new System.Drawing.Point(455, 76);
             this.txtTienCoc.Name = "txtTienCoc";
             this.txtTienCoc.Size = new System.Drawing.Size(189, 26);
-            this.txtTienCoc.TabIndex = 129;
+            this.txtTienCoc.TabIndex = 4;
             // 
             // txtGiaThue
             // 
             this.txtGiaThue.Location = new System.Drawing.Point(455, 44);
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(189, 26);
-            this.txtGiaThue.TabIndex = 128;
+            this.txtGiaThue.TabIndex = 3;
             // 
             // txtMaXe
             // 
+            this.txtMaXe.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtMaXe.Location = new System.Drawing.Point(175, 110);
             this.txtMaXe.Name = "txtMaXe";
             this.txtMaXe.ReadOnly = true;
             this.txtMaXe.Size = new System.Drawing.Size(166, 26);
-            this.txtMaXe.TabIndex = 124;
+            this.txtMaXe.TabIndex = 2;
             // 
             // txtIDThueXe
             // 
+            this.txtIDThueXe.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtIDThueXe.Location = new System.Drawing.Point(175, 44);
             this.txtIDThueXe.Name = "txtIDThueXe";
             this.txtIDThueXe.ReadOnly = true;
             this.txtIDThueXe.Size = new System.Drawing.Size(166, 26);
-            this.txtIDThueXe.TabIndex = 122;
+            this.txtIDThueXe.TabIndex = 0;
             // 
             // label7
             // 
@@ -183,33 +185,35 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.Green;
+            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThem.Location = new System.Drawing.Point(221, 233);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(95, 43);
-            this.btnThem.TabIndex = 139;
+            this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnHuy
             // 
-            this.btnHuy.BackColor = System.Drawing.Color.Green;
+            this.btnHuy.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnHuy.Location = new System.Drawing.Point(414, 233);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(95, 43);
-            this.btnHuy.TabIndex = 139;
+            this.btnHuy.TabIndex = 1;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // dgvThemThueXe
             // 
+            this.dgvThemThueXe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThemThueXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThemThueXe.Location = new System.Drawing.Point(12, 338);
+            this.dgvThemThueXe.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvThemThueXe.Location = new System.Drawing.Point(0, 350);
             this.dgvThemThueXe.Name = "dgvThemThueXe";
             this.dgvThemThueXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThemThueXe.Size = new System.Drawing.Size(700, 153);
+            this.dgvThemThueXe.Size = new System.Drawing.Size(724, 153);
             this.dgvThemThueXe.TabIndex = 140;
             this.dgvThemThueXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThemThueXe_CellClick);
             // 
@@ -229,14 +233,14 @@
             this.txtTimKiem.Location = new System.Drawing.Point(107, 306);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(221, 26);
-            this.txtTimKiem.TabIndex = 128;
+            this.txtTimKiem.TabIndex = 2;
             this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // frmThemThueXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Orange;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(724, 503);
             this.Controls.Add(this.dgvThemThueXe);
             this.Controls.Add(this.btnHuy);
