@@ -62,8 +62,8 @@
             // btnThanhToan
             // 
             this.btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThanhToan.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnThanhToan.Location = new System.Drawing.Point(622, 395);
+            this.btnThanhToan.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThanhToan.Location = new System.Drawing.Point(625, 395);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(146, 30);
             this.btnThanhToan.TabIndex = 8;
@@ -73,7 +73,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(644, 180);
             this.btnThem.Name = "btnThem";
@@ -86,7 +86,7 @@
             // cbbMaNV
             // 
             this.cbbMaNV.FormattingEnabled = true;
-            this.cbbMaNV.Location = new System.Drawing.Point(681, 76);
+            this.cbbMaNV.Location = new System.Drawing.Point(664, 76);
             this.cbbMaNV.Name = "cbbMaNV";
             this.cbbMaNV.Size = new System.Drawing.Size(121, 28);
             this.cbbMaNV.TabIndex = 0;
@@ -95,11 +95,10 @@
             // lblTongTien
             // 
             this.lblTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTongTien.BackColor = System.Drawing.SystemColors.Window;
-            this.lblTongTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTongTien.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lblTongTien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.Location = new System.Drawing.Point(450, 396);
+            this.lblTongTien.Location = new System.Drawing.Point(453, 396);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(149, 28);
             this.lblTongTien.TabIndex = 107;
@@ -110,7 +109,7 @@
             this.lbTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTime.AutoSize = true;
             this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.Location = new System.Drawing.Point(8, 406);
+            this.lbTime.Location = new System.Drawing.Point(11, 406);
             this.lbTime.Name = "lbTime";
             this.lbTime.Size = new System.Drawing.Size(0, 18);
             this.lbTime.TabIndex = 109;
@@ -121,7 +120,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(338, 401);
+            this.label6.Location = new System.Drawing.Point(341, 401);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 18);
             this.label6.TabIndex = 110;
@@ -143,7 +142,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(577, 75);
+            this.label3.Location = new System.Drawing.Point(577, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 114;
@@ -152,12 +151,12 @@
             // 
             // lbTittle
             // 
-            this.lbTittle.BackColor = System.Drawing.Color.DarkOrange;
+            this.lbTittle.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lbTittle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTittle.Location = new System.Drawing.Point(0, 0);
             this.lbTittle.Name = "lbTittle";
-            this.lbTittle.Size = new System.Drawing.Size(814, 65);
+            this.lbTittle.Size = new System.Drawing.Size(817, 65);
             this.lbTittle.TabIndex = 105;
             this.lbTittle.Text = "Thông tin thuê xe";
             this.lbTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,7 +183,7 @@
             this.dgvThueXe.Location = new System.Drawing.Point(8, 231);
             this.dgvThueXe.Name = "dgvThueXe";
             this.dgvThueXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThueXe.Size = new System.Drawing.Size(794, 158);
+            this.dgvThueXe.Size = new System.Drawing.Size(797, 158);
             this.dgvThueXe.TabIndex = 106;
             this.dgvThueXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThueXe_CellClick);
             // 
@@ -320,7 +319,7 @@
             // 
             // txtTime
             // 
-            this.txtTime.BackColor = System.Drawing.Color.Coral;
+            this.txtTime.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTime.Location = new System.Drawing.Point(8, 413);
             this.txtTime.Name = "txtTime";
@@ -331,8 +330,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Coral;
-            this.ClientSize = new System.Drawing.Size(814, 451);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(817, 451);
             this.Controls.Add(this.dtpNgayTra);
             this.Controls.Add(this.dtpNgayMuon);
             this.Controls.Add(this.label9);

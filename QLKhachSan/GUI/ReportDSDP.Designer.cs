@@ -301,6 +301,8 @@ namespace GUI {
             
             private global::System.Data.DataColumn columnGhiChu;
             
+            private global::System.Data.DataColumn columnMaPhong;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DataTable1DataTable() {
@@ -424,6 +426,14 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MaPhongColumn {
+                get {
+                    return this.columnMaPhong;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,7 +469,7 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string IDDatPhong, string MaKH, string Ho, string Ten, string SDT, System.DateTime NgayNhan, decimal TraTruoc, string IDLoaiPhong, string TenLP, decimal GiaLP, string GhiChu) {
+            public DataTable1Row AddDataTable1Row(string IDDatPhong, string MaKH, string Ho, string Ten, string SDT, System.DateTime NgayNhan, decimal TraTruoc, string IDLoaiPhong, string TenLP, decimal GiaLP, string GhiChu, string MaPhong) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IDDatPhong,
@@ -472,7 +482,8 @@ namespace GUI {
                         IDLoaiPhong,
                         TenLP,
                         GiaLP,
-                        GhiChu};
+                        GhiChu,
+                        MaPhong};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -506,6 +517,7 @@ namespace GUI {
                 this.columnTenLP = base.Columns["TenLP"];
                 this.columnGiaLP = base.Columns["GiaLP"];
                 this.columnGhiChu = base.Columns["GhiChu"];
+                this.columnMaPhong = base.Columns["MaPhong"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -533,6 +545,8 @@ namespace GUI {
                 base.Columns.Add(this.columnGiaLP);
                 this.columnGhiChu = new global::System.Data.DataColumn("GhiChu", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGhiChu);
+                this.columnMaPhong = new global::System.Data.DataColumn("MaPhong", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaPhong);
                 this.columnIDDatPhong.AllowDBNull = false;
                 this.columnIDDatPhong.MaxLength = 10;
                 this.columnMaKH.AllowDBNull = false;
@@ -544,6 +558,7 @@ namespace GUI {
                 this.columnIDLoaiPhong.MaxLength = 10;
                 this.columnTenLP.MaxLength = 50;
                 this.columnGhiChu.MaxLength = 2147483647;
+                this.columnMaPhong.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -847,6 +862,17 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MaPhong {
+                get {
+                    return ((string)(this[this.tableDataTable1.MaPhongColumn]));
+                }
+                set {
+                    this[this.tableDataTable1.MaPhongColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsHoNull() {
                 return this.IsNull(this.tableDataTable1.HoColumn);
             }
@@ -1112,6 +1138,7 @@ namespace GUI.ReportDSDPTableAdapters {
             tableMapping.ColumnMappings.Add("TenLP", "TenLP");
             tableMapping.ColumnMappings.Add("GiaLP", "GiaLP");
             tableMapping.ColumnMappings.Add("GhiChu", "GhiChu");
+            tableMapping.ColumnMappings.Add("MaPhong", "MaPhong");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1125,31 +1152,15 @@ namespace GUI.ReportDSDPTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        DatPhong.IDDatPhong, DatPhong.MaKH, KhachHang.Ho, KhachHang.Ten, KhachHang.SDT, DatPhong.NgayNhan, DatPhong.TraTruoc, LoaiPhong.IDLoaiPhong, 
-                         LoaiPhong.TenLP, LoaiPhong.GiaLP, DatPhong.GhiChu
-FROM            DatPhong INNER JOIN
-                         KhachHang ON DatPhong.MaKH = KhachHang.IDKhachHang CROSS JOIN
-                         LoaiPhong";
+            this._commandCollection[0].CommandText = @"SELECT        dp.IDDatPhong, dp.MaPhong, dp.MaKH, kh.Ho, kh.Ten, kh.SDT, dp.NgayNhan, dp.TraTruoc, lp.IDLoaiPhong, lp.TenLP, lp.GiaLP, dp.GhiChu
+FROM            DatPhong AS dp INNER JOIN
+                         KhachHang AS kh ON dp.MaKH = kh.IDKhachHang INNER JOIN
+                         Phong AS p ON dp.MaPhong = p.IDPhong INNER JOIN
+                         LoaiPhong AS lp ON p.MaLP = lp.IDLoaiPhong";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        DatPhong.IDDatPhong, DatPhong.MaKH, KhachHang.Ho, KhachHang.Ten, KhachHang.SDT, DatPhong.NgayNhan, DatPhong.TraTruoc, LoaiPhong.IDLoaiPhong, 
-                         LoaiPhong.TenLP, LoaiPhong.GiaLP, DatPhong.GhiChu
-FROM            DatPhong INNER JOIN
-                         KhachHang ON DatPhong.MaKH = KhachHang.IDKhachHang CROSS JOIN
-                         LoaiPhong";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT        DatPhong.IDDatPhong, DatPhong.MaKH, KhachHang.Ho, KhachHang.Ten, KhachHang.SDT, DatPhong.NgayNhan, DatPhong.TraTruoc, LoaiPhong.IDLoaiPhong, 
-                         LoaiPhong.TenLP, LoaiPhong.GiaLP, DatPhong.GhiChu
-FROM            DatPhong INNER JOIN
-                         KhachHang ON DatPhong.MaKH = KhachHang.IDKhachHang CROSS JOIN
-                         LoaiPhong";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1171,54 +1182,6 @@ FROM            DatPhong INNER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ReportDSDP.DataTable1DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ReportDSDP.DataTable1DataTable dataTable = new ReportDSDP.DataTable1DataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(ReportDSDP.DataTable1DataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual ReportDSDP.DataTable1DataTable GetDataBy() {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            ReportDSDP.DataTable1DataTable dataTable = new ReportDSDP.DataTable1DataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy1(ReportDSDP.DataTable1DataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual ReportDSDP.DataTable1DataTable GetDataBy1() {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
             ReportDSDP.DataTable1DataTable dataTable = new ReportDSDP.DataTable1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

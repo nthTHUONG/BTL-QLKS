@@ -52,63 +52,63 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label1.Location = new System.Drawing.Point(30, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Xe";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label2.Location = new System.Drawing.Point(30, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 26);
             this.label2.TabIndex = 0;
             this.label2.Text = "Hãng sản xuất";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label3.Location = new System.Drawing.Point(30, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 26);
             this.label3.TabIndex = 0;
             this.label3.Text = "Loại Xe";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label4.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label4.Location = new System.Drawing.Point(30, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 26);
             this.label4.TabIndex = 0;
             this.label4.Text = "Giá Thuê";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label5.Location = new System.Drawing.Point(30, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(126, 26);
             this.label5.TabIndex = 0;
             this.label5.Text = "Ghi chú";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label6.Location = new System.Drawing.Point(30, 257);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 26);
             this.label6.TabIndex = 0;
             this.label6.Text = "Trạng Thái";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtGhiChu
             // 
@@ -175,11 +175,12 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết xe";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dgvXe
             // 
             this.dgvXe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvXe.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.dgvXe.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvXe.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvXe.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -193,7 +194,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnThem.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThem.Location = new System.Drawing.Point(529, 64);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(91, 44);
@@ -205,7 +206,7 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnXoa.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnXoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnXoa.Location = new System.Drawing.Point(529, 119);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 44);
@@ -217,7 +218,7 @@
             // btnCapNhat
             // 
             this.btnCapNhat.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCapNhat.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnCapNhat.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCapNhat.Location = new System.Drawing.Point(529, 174);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(91, 44);
@@ -229,7 +230,7 @@
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnReset.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnReset.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnReset.Location = new System.Drawing.Point(529, 227);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(91, 44);
@@ -242,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(677, 483);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnCapNhat);

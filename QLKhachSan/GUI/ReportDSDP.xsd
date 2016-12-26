@@ -9,14 +9,14 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QLKhachSanConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QLKhachSanConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT        DatPhong.IDDatPhong, DatPhong.MaKH, KhachHang.Ho, KhachHang.Ten, KhachHang.SDT, DatPhong.NgayNhan, DatPhong.TraTruoc, LoaiPhong.IDLoaiPhong, 
-                         LoaiPhong.TenLP, LoaiPhong.GiaLP, DatPhong.GhiChu
-FROM            DatPhong INNER JOIN
-                         KhachHang ON DatPhong.MaKH = KhachHang.IDKhachHang CROSS JOIN
-                         LoaiPhong</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        dp.IDDatPhong, dp.MaPhong, dp.MaKH, kh.Ho, kh.Ten, kh.SDT, dp.NgayNhan, dp.TraTruoc, lp.IDLoaiPhong, lp.TenLP, lp.GiaLP, dp.GhiChu
+FROM            DatPhong AS dp INNER JOIN
+                         KhachHang AS kh ON dp.MaKH = kh.IDKhachHang INNER JOIN
+                         Phong AS p ON dp.MaPhong = p.IDPhong INNER JOIN
+                         LoaiPhong AS lp ON p.MaLP = lp.IDLoaiPhong</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -34,33 +34,9 @@ FROM            DatPhong INNER JOIN
               <Mapping SourceColumn="TenLP" DataSetColumn="TenLP" />
               <Mapping SourceColumn="GiaLP" DataSetColumn="GiaLP" />
               <Mapping SourceColumn="GhiChu" DataSetColumn="GhiChu" />
+              <Mapping SourceColumn="MaPhong" DataSetColumn="MaPhong" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="QLKhachSanConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        DatPhong.IDDatPhong, DatPhong.MaKH, KhachHang.Ho, KhachHang.Ten, KhachHang.SDT, DatPhong.NgayNhan, DatPhong.TraTruoc, LoaiPhong.IDLoaiPhong, 
-                         LoaiPhong.TenLP, LoaiPhong.GiaLP, DatPhong.GhiChu
-FROM            DatPhong INNER JOIN
-                         KhachHang ON DatPhong.MaKH = KhachHang.IDKhachHang CROSS JOIN
-                         LoaiPhong</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="QLKhachSanConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        DatPhong.IDDatPhong, DatPhong.MaKH, KhachHang.Ho, KhachHang.Ten, KhachHang.SDT, DatPhong.NgayNhan, DatPhong.TraTruoc, LoaiPhong.IDLoaiPhong, 
-                         LoaiPhong.TenLP, LoaiPhong.GiaLP, DatPhong.GhiChu
-FROM            DatPhong INNER JOIN
-                         KhachHang ON DatPhong.MaKH = KhachHang.IDKhachHang CROSS JOIN
-                         LoaiPhong</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
         </Tables>
         <Sources />
@@ -70,7 +46,7 @@ FROM            DatPhong INNER JOIN
   <xs:element name="ReportDSDP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportDSDP" msprop:Generator_UserDSName="ReportDSDP">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDDatPhong" msprop:Generator_ColumnVarNameInTable="columnIDDatPhong" msprop:Generator_ColumnPropNameInRow="IDDatPhong" msprop:Generator_ColumnPropNameInTable="IDDatPhongColumn" msprop:Generator_UserColumnName="IDDatPhong">
@@ -132,6 +108,7 @@ FROM            DatPhong INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="MaPhong" msprop:Generator_ColumnVarNameInTable="columnMaPhong" msprop:Generator_ColumnPropNameInRow="MaPhong" msprop:Generator_ColumnPropNameInTable="MaPhongColumn" msprop:Generator_UserColumnName="MaPhong" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -11,7 +11,6 @@ C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmKh
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmLoaiPhong.resources
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmMain.resources
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmNhanVien.resources
-C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmPhong.resources
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmThanhToanHDV.resources
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmThanhToanPhong.resources
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmThemKH.resources
@@ -30,3 +29,37 @@ C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\RdlCompil
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\RdlCompile.compiled
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmReportThongTinTP.resources
 C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmReportDSDatphong.resources
+C:\Users\WIN\Desktop\github-QLKS\BTL-QLKS\QLKhachSan\GUI\obj\x86\Debug\GUI.frmHH.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\BIN\GUI.exe.config
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.exe
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.pdb
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\BIN\GUI.exe
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\BIN\GUI.pdb
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmChiTietXe.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmCoSoVatChat.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmDatPhong.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmDichVuHDV.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmHinhAnh.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmHoaDonTP.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmKhachHang.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmLoaiPhong.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmMain.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmNhanVien.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmHH.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmReportDSDatphong.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmReportKH.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmReportThongTinTP.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmThanhToanHDV.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmThanhToanPhong.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmThemKH.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmThemThueXe.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmThucPham.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.frmThueXe.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\RdlCompile.cache
+C:\Users\Quoc Danh\Desktop\Project\QLKhachSan\GUI\obj\x86\Debug\RdlCompile.compiled
+C:\Users\WIN\Downloads\QLKhachSan\BIN\GUI.exe.config
+C:\Users\WIN\Downloads\QLKhachSan\GUI\obj\x86\Debug\GUI.exe
+C:\Users\WIN\Downloads\QLKhachSan\GUI\obj\x86\Debug\GUI.pdb

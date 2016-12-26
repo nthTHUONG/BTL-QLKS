@@ -17,7 +17,7 @@ namespace DAL
             ConnectDB.Open(conn);
             try
             {
-                string sql = "SELECT * FROM Phong";
+                string sql = "select p.IDPhong, lp.TenLP,lp.GiaLP,p.TrangThai from LoaiPhong lp,Phong p where lp.IDLoaiPhong = p.MaLP";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 cmd.Dispose();

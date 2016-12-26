@@ -57,6 +57,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupBox1.Controls.Add(this.dtHanSD);
             this.groupBox1.Controls.Add(this.dtNgaySX);
             this.groupBox1.Controls.Add(this.btnReset);
@@ -75,8 +76,8 @@
             this.groupBox1.Controls.Add(this.txtTenTP);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtMieuTa);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(-3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(872, 248);
@@ -88,9 +89,11 @@
             // 
             this.dtHanSD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtHanSD.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtHanSD.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaption;
+            this.dtHanSD.CalendarTrailingForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtHanSD.CustomFormat = "dd/MM/yyyy";
             this.dtHanSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtHanSD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtHanSD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtHanSD.Location = new System.Drawing.Point(102, 165);
             this.dtHanSD.Name = "dtHanSD";
             this.dtHanSD.Size = new System.Drawing.Size(253, 29);
@@ -101,9 +104,10 @@
             // 
             this.dtNgaySX.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtNgaySX.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgaySX.CalendarMonthBackground = System.Drawing.Color.DarkGray;
             this.dtNgaySX.CustomFormat = "dd/MM/yyyy";
             this.dtNgaySX.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgaySX.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgaySX.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtNgaySX.Location = new System.Drawing.Point(538, 114);
             this.dtNgaySX.Name = "dtNgaySX";
             this.dtNgaySX.Size = new System.Drawing.Size(253, 29);
@@ -113,7 +117,7 @@
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnReset.BackColor = System.Drawing.Color.IndianRed;
+            this.btnReset.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(565, 206);
             this.btnReset.Name = "btnReset";
@@ -126,7 +130,7 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.BackColor = System.Drawing.Color.IndianRed;
+            this.btnXoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(463, 206);
             this.btnXoa.Name = "btnXoa";
@@ -194,16 +198,18 @@
             // txtIDTP
             // 
             this.txtIDTP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIDTP.BackColor = System.Drawing.Color.White;
+            this.txtIDTP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIDTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDTP.Location = new System.Drawing.Point(102, 24);
             this.txtIDTP.Name = "txtIDTP";
-            this.txtIDTP.Size = new System.Drawing.Size(253, 29);
+            this.txtIDTP.Size = new System.Drawing.Size(253, 22);
             this.txtIDTP.TabIndex = 0;
             // 
             // btnSua
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSua.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSua.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(359, 206);
             this.btnSua.Name = "btnSua";
@@ -227,7 +233,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThem.BackColor = System.Drawing.Color.IndianRed;
+            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(258, 206);
             this.btnThem.Name = "btnThem";
@@ -240,28 +246,34 @@
             // txtDonGia
             // 
             this.txtDonGia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDonGia.BackColor = System.Drawing.Color.White;
+            this.txtDonGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(538, 66);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(253, 29);
+            this.txtDonGia.Size = new System.Drawing.Size(253, 22);
             this.txtDonGia.TabIndex = 1;
             // 
             // txtNhaSX
             // 
             this.txtNhaSX.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNhaSX.BackColor = System.Drawing.Color.White;
+            this.txtNhaSX.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNhaSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhaSX.Location = new System.Drawing.Point(102, 118);
             this.txtNhaSX.Name = "txtNhaSX";
-            this.txtNhaSX.Size = new System.Drawing.Size(253, 29);
+            this.txtNhaSX.Size = new System.Drawing.Size(253, 22);
             this.txtNhaSX.TabIndex = 2;
             // 
             // txtTenTP
             // 
             this.txtTenTP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTenTP.BackColor = System.Drawing.Color.White;
+            this.txtTenTP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTP.Location = new System.Drawing.Point(102, 71);
             this.txtTenTP.Name = "txtTenTP";
-            this.txtTenTP.Size = new System.Drawing.Size(253, 29);
+            this.txtTenTP.Size = new System.Drawing.Size(253, 22);
             this.txtTenTP.TabIndex = 1;
             // 
             // label6
@@ -278,18 +290,20 @@
             // txtMieuTa
             // 
             this.txtMieuTa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMieuTa.BackColor = System.Drawing.Color.White;
+            this.txtMieuTa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMieuTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMieuTa.Location = new System.Drawing.Point(538, 165);
             this.txtMieuTa.Name = "txtMieuTa";
-            this.txtMieuTa.Size = new System.Drawing.Size(253, 29);
+            this.txtMieuTa.Size = new System.Drawing.Size(253, 22);
             this.txtMieuTa.TabIndex = 5;
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(398, 257);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 26);
@@ -299,8 +313,9 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTimKiem.BackColor = System.Drawing.Color.White;
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(487, 262);
             this.txtTimKiem.Name = "txtTimKiem";
@@ -311,7 +326,7 @@
             // dgvThucPham
             // 
             this.dgvThucPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvThucPham.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgvThucPham.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvThucPham.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvThucPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThucPham.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -326,7 +341,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCoral;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(869, 480);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
