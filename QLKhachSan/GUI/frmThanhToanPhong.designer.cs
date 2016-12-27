@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
-            this.cbbMaNV = new System.Windows.Forms.ComboBox();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.txtTime = new System.Windows.Forms.TextBox();
             this.timerP = new System.Windows.Forms.Timer(this.components);
+            this.cbbMaNV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,17 +75,6 @@
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(161, 19);
             this.txtGhiChu.TabIndex = 119;
-            // 
-            // cbbMaNV
-            // 
-            this.cbbMaNV.BackColor = System.Drawing.Color.Silver;
-            this.cbbMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMaNV.ForeColor = System.Drawing.Color.Black;
-            this.cbbMaNV.FormattingEnabled = true;
-            this.cbbMaNV.Location = new System.Drawing.Point(448, 9);
-            this.cbbMaNV.Name = "cbbMaNV";
-            this.cbbMaNV.Size = new System.Drawing.Size(226, 28);
-            this.cbbMaNV.TabIndex = 115;
             // 
             // lbTongTien
             // 
@@ -391,13 +380,13 @@
             this.panel1.Controls.Add(this.txtTraTruoc);
             this.panel1.Controls.Add(this.txtTenKH);
             this.panel1.Controls.Add(this.txtGhiChu);
-            this.panel1.Controls.Add(this.cbbMaNV);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.cbbMaNV);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-2, 67);
@@ -470,7 +459,6 @@
             this.txtTenKH.ReadOnly = true;
             this.txtTenKH.Size = new System.Drawing.Size(226, 19);
             this.txtTenKH.TabIndex = 119;
-       
             // 
             // txtTime
             // 
@@ -490,6 +478,18 @@
             this.timerP.Enabled = true;
             this.timerP.Interval = 1000;
             this.timerP.Tick += new System.EventHandler(this.timerP_Tick);
+            // 
+            // cbbMaNV
+            // 
+            this.cbbMaNV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbMaNV.AutoSize = true;
+            this.cbbMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMaNV.ForeColor = System.Drawing.Color.Black;
+            this.cbbMaNV.Location = new System.Drawing.Point(460, 8);
+            this.cbbMaNV.Name = "cbbMaNV";
+            this.cbbMaNV.Size = new System.Drawing.Size(0, 20);
+            this.cbbMaNV.TabIndex = 109;
+            this.cbbMaNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmThanhToanPhong
             // 
@@ -520,7 +520,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtGhiChu;
-        private System.Windows.Forms.ComboBox cbbMaNV;
         private System.Windows.Forms.Label lbTongTien;
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Label label6;
@@ -551,5 +550,6 @@
         private System.Windows.Forms.TextBox txtMaPhong;
         private System.Windows.Forms.TextBox txtTime;
         private System.Windows.Forms.Timer timerP;
+        private System.Windows.Forms.Label cbbMaNV;
     }
 }

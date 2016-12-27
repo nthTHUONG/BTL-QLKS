@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayMuon = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtIDKhachHang = new System.Windows.Forms.TextBox();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.txtTienCoc = new System.Windows.Forms.TextBox();
             this.txtGiaThue = new System.Windows.Forms.TextBox();
             this.txtMaXe = new System.Windows.Forms.TextBox();
             this.txtIDThueXe = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,14 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvThemThueXe)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtpNgayTra
-            // 
-            this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayTra.Location = new System.Drawing.Point(175, 175);
-            this.dtpNgayTra.Name = "dtpNgayTra";
-            this.dtpNgayTra.Size = new System.Drawing.Size(168, 26);
-            this.dtpNgayTra.TabIndex = 127;
-            // 
             // dtpNgayMuon
             // 
             this.dtpNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -69,17 +57,6 @@
             this.dtpNgayMuon.Name = "dtpNgayMuon";
             this.dtpNgayMuon.Size = new System.Drawing.Size(168, 26);
             this.dtpNgayMuon.TabIndex = 125;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(66, 175);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 20);
-            this.label9.TabIndex = 136;
-            this.label9.Text = "Ngày trả";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
@@ -96,55 +73,39 @@
             this.txtIDKhachHang.Location = new System.Drawing.Point(175, 76);
             this.txtIDKhachHang.Name = "txtIDKhachHang";
             this.txtIDKhachHang.Size = new System.Drawing.Size(166, 26);
-            this.txtIDKhachHang.TabIndex = 123;
-            // 
-            // txtGhiChu
-            // 
-            this.txtGhiChu.Location = new System.Drawing.Point(455, 108);
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(189, 26);
-            this.txtGhiChu.TabIndex = 126;
+            this.txtIDKhachHang.TabIndex = 1;
             // 
             // txtTienCoc
             // 
             this.txtTienCoc.Location = new System.Drawing.Point(455, 76);
             this.txtTienCoc.Name = "txtTienCoc";
             this.txtTienCoc.Size = new System.Drawing.Size(189, 26);
-            this.txtTienCoc.TabIndex = 129;
+            this.txtTienCoc.TabIndex = 4;
             // 
             // txtGiaThue
             // 
             this.txtGiaThue.Location = new System.Drawing.Point(455, 44);
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(189, 26);
-            this.txtGiaThue.TabIndex = 128;
+            this.txtGiaThue.TabIndex = 3;
             // 
             // txtMaXe
             // 
+            this.txtMaXe.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtMaXe.Location = new System.Drawing.Point(175, 110);
             this.txtMaXe.Name = "txtMaXe";
             this.txtMaXe.ReadOnly = true;
             this.txtMaXe.Size = new System.Drawing.Size(166, 26);
-            this.txtMaXe.TabIndex = 124;
+            this.txtMaXe.TabIndex = 2;
             // 
             // txtIDThueXe
             // 
+            this.txtIDThueXe.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtIDThueXe.Location = new System.Drawing.Point(175, 44);
             this.txtIDThueXe.Name = "txtIDThueXe";
             this.txtIDThueXe.ReadOnly = true;
             this.txtIDThueXe.Size = new System.Drawing.Size(166, 26);
-            this.txtIDThueXe.TabIndex = 122;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(364, 114);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 20);
-            this.label8.TabIndex = 130;
-            this.label8.Text = "Ghi Chú:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtIDThueXe.TabIndex = 0;
             // 
             // label7
             // 
@@ -203,17 +164,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtpNgayTra);
             this.groupBox1.Controls.Add(this.dtpNgayMuon);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtIDKhachHang);
-            this.groupBox1.Controls.Add(this.txtGhiChu);
             this.groupBox1.Controls.Add(this.txtTienCoc);
             this.groupBox1.Controls.Add(this.txtGiaThue);
             this.groupBox1.Controls.Add(this.txtMaXe);
             this.groupBox1.Controls.Add(this.txtIDThueXe);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
@@ -228,33 +185,35 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.Green;
+            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThem.Location = new System.Drawing.Point(221, 233);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(95, 43);
-            this.btnThem.TabIndex = 139;
+            this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnHuy
             // 
-            this.btnHuy.BackColor = System.Drawing.Color.Green;
+            this.btnHuy.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnHuy.Location = new System.Drawing.Point(414, 233);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(95, 43);
-            this.btnHuy.TabIndex = 139;
+            this.btnHuy.TabIndex = 1;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // dgvThemThueXe
             // 
+            this.dgvThemThueXe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThemThueXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThemThueXe.Location = new System.Drawing.Point(12, 338);
+            this.dgvThemThueXe.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvThemThueXe.Location = new System.Drawing.Point(0, 350);
             this.dgvThemThueXe.Name = "dgvThemThueXe";
             this.dgvThemThueXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThemThueXe.Size = new System.Drawing.Size(700, 153);
+            this.dgvThemThueXe.Size = new System.Drawing.Size(724, 153);
             this.dgvThemThueXe.TabIndex = 140;
             this.dgvThemThueXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThemThueXe_CellClick);
             // 
@@ -274,14 +233,14 @@
             this.txtTimKiem.Location = new System.Drawing.Point(107, 306);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(221, 26);
-            this.txtTimKiem.TabIndex = 128;
+            this.txtTimKiem.TabIndex = 2;
             this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // frmThemThueXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Orange;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(724, 503);
             this.Controls.Add(this.dgvThemThueXe);
             this.Controls.Add(this.btnHuy);
@@ -304,18 +263,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dtpNgayTra;
         private System.Windows.Forms.DateTimePicker dtpNgayMuon;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtIDKhachHang;
-        private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.TextBox txtTienCoc;
         private System.Windows.Forms.TextBox txtGiaThue;
         private System.Windows.Forms.TextBox txtMaXe;
         private System.Windows.Forms.TextBox txtIDThueXe;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;

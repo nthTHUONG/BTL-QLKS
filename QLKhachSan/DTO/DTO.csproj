@@ -43,6 +43,7 @@
     <Compile Include="CoSoVatChat_DTO.cs" />
     <Compile Include="DatPhong_DTO.cs" />
     <Compile Include="DVhdv_DTO.cs" />
+    <Compile Include="HDV_DTO.cs" />
     <Compile Include="HoaDonTP_DTO.cs" />
     <Compile Include="KhachHang_DTO.cs" />
     <Compile Include="LoaiPhong_DTO.cs" />

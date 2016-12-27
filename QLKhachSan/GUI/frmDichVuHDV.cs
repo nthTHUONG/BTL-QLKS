@@ -15,25 +15,74 @@ namespace GUI
     public partial class frmDichVuHDV : Form
     {
         Business BUS;
+        SqlConnection cnn;
+        string cnStr = "";
         public frmDichVuHDV()
         {
             InitializeComponent();
         }
 
+        
         private void frmDichVuHDV_Load(object sender, EventArgs e)
         {
             BUS = new Business();
+            cnStr = ConfigurationManager.ConnectionStrings["cnstr"].ConnectionString;
+            cnn = new SqlConnection(cnStr);
             dgvDVhdv.DataSource = BUS.GetDataDVhdv();
-            LoadComBoBox();
+            LoadComBoBox_IDKhachHang();
+            LoadComBoBox_IDHDV();
+           
             Init();
         }
+        private void connect()
+        {
+            try
+            {
+                if (cnn != null && cnn.State != ConnectionState.Open)
+                    cnn.Open();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);            }
 
-        private void LoadComBoBox()
+        }
+        private void disconnect()
+        {
+            try
+            {
+                if (cnn != null && cnn.State != ConnectionState.Closed)
+                    cnn.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void LoadComBoBox_IDKhachHang()
         {
             cbbMaKH.DataSource = BUS.GetDataKH();
             cbbMaKH.DisplayMember = "IDKhachHang";
+           
         }
-
+        private void LoadComBoBox_IDHDV()
+        {
+            connect();
+            try
+            {
+                string sql = "SELECT IDHDV FROM HuongDanVien";
+                SqlCommand cmd = new SqlCommand(sql, cnn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                cbbMaHDV.DataSource = dt;
+                cbbMaHDV.DisplayMember = "IDHDV";
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            disconnect();
+        }
         private void Init()
         {
             txtIDDVhdv.Text = "";
@@ -44,7 +93,6 @@ namespace GUI
             txtTraTruoc.Text = "";
             txtGhiChu.Text = "";
         }
-
         private void btThem_Click(object sender, EventArgs e)
         {
             DVhdv_DTO DVhdv = new DVhdv_DTO(txtIDDVhdv.Text, cbbMaKH.Text, cbbMaHDV.Text, dtpNgayThue.Text, txtSoNgayThue.Text, txtGiaThue.Text, txtTraTruoc.Text, txtGhiChu.Text);
@@ -63,7 +111,6 @@ namespace GUI
                 MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void btSua_Click(object sender, EventArgs e)
         {
             try
@@ -99,7 +146,6 @@ namespace GUI
                 MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void btReset_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Reset?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -107,7 +153,6 @@ namespace GUI
                 Init();
             }
         }
-
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
         {
             dgvDVhdv.CurrentCell = null;
@@ -135,7 +180,6 @@ namespace GUI
                 }
             }
         }
-
         private void dgvDVhdv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -150,6 +194,18 @@ namespace GUI
                 txtTraTruoc.Text = row.Cells["TraTruoc"].Value.ToString();
                 txtGhiChu.Text = row.Cells["GhiChu"].Value.ToString();
             }
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            frmThanhToanDichVuHDV frmTT = new frmThanhToanDichVuHDV();
+            frmTT.str_MaKH = cbbMaKH.Text;
+            frmTT.str_NgayThue = dtpNgayThue.Text;
+            frmTT.str_SoNgayThue = txtSoNgayThue.Text;
+            frmTT.str_GiaThue = txtGiaThue.Text;
+            frmTT.str_MaHDV = cbbMaHDV.Text;
+            frmTT.str_TraTruoc = txtTraTruoc.Text;
+            frmTT.ShowDialog();
         }
     }
 }

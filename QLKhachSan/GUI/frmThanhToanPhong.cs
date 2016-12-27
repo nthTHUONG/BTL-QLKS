@@ -29,16 +29,14 @@ namespace GUI
 
         private void LoadComBoBox()
         {
-            cbbMaNV.DataSource = BUS.GetDataNV();
-            cbbMaNV.DisplayMember = "IDNhanVien";
             cbbMaKH.DataSource = BUS.GetDataKH();
             cbbMaKH.DisplayMember = "IDKhachHang";
+            cbbMaNV.Text = frmDangNhap.MaNV;
             
         }
 
         private void Init()
         {
-            cbbMaNV.Text = "Chọn mã nhân viên";
             cbbMaKH.Text = "Chọn mã khách hàng";
             txtTenKH.Text = "";
             txtMaPhong.Text = "";
@@ -75,11 +73,13 @@ namespace GUI
                 }
                 txtTraTruoc.Text = row["TraTruoc"].ToString().Substring(0, row["TraTruoc"].ToString().Length - 5);
                 txtNhanPhong.Text = Convert.ToDateTime(row["NgayNhan"]).ToString("yyyy-MM-dd");
-                if (((DateTime)(row["NgayTra"])).ToString("yyyy-MM-dd").Equals(DateTime.Now.ToString("yyyy-MM-dd")) == true)
+                if (((DateTime)(row["NgayTra"])).ToString("yyyy-MM-dd").Equals(DateTime.Now.ToString("yyyy-MM-dd")) != true)
                 {
-                    txtDonGia.Text = row["DonGia"].ToString();
+                    txtDonGia.Text = row["ThanhTien"].ToString();
                     txtTraPhong.Text = Convert.ToDateTime(row["NgayTra"]).ToString("dd/MM/yyyy");
-                    txtSoNgayThue.Text = row["SoNgayThue"].ToString();
+                    TimeSpan duration = (Convert.ToDateTime(row["NgayNhan"])).Subtract(Convert.ToDateTime(row["NgayNhan"]));
+                    int time = Convert.ToInt32(duration.ToString("%d"));
+                    txtSoNgayThue.Text = time.ToString();
                 }
                 else
                 {

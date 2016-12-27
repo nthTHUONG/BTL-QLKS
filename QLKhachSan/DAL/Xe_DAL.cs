@@ -16,7 +16,7 @@ namespace DAL
             ConnectDB.Open(cnn);
             try
             {
-                string sql = "SELECT * FROM ChiTietXe";
+                string sql = "SELECT * FROM Xe";
                 SqlCommand cmd = new SqlCommand(sql, cnn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 cmd.Dispose();
@@ -36,16 +36,16 @@ namespace DAL
 
         public Boolean ThemXe(Xe_DTO xe)
         {
-            return new ExecuteDB().ExecuteData("INSERT INTO ChiTietXe values (N'" + xe.IDXe+"', N'" + xe.HangSX+"', N'" + xe.LoaiXe+"', '" + xe.GiaThue+"', N'" + xe.GhiChu+"', N'" + xe.TinhTrang+"')");
+            return new ExecuteDB().ExecuteData("INSERT INTO Xe values (N'" + xe.IDXe+"', N'" + xe.HangSX+"', N'" + xe.LoaiXe+"', '" + xe.GiaThue+"', N'" + xe.GhiChu+"', N'" + xe.TinhTrang+"')");
         }
 
         public Boolean SuaXe(Xe_DTO xe)
         {
-            return new ExecuteDB().ExecuteData("update ChiTietXe set HangSX = N'" + xe.HangSX + "', LoaiXe = N'" + xe.LoaiXe + "', GiaThue = '" + xe.GiaThue + "',GhiChu =  N'" + xe.GhiChu + "',TrangThai = '" + xe.TinhTrang + "' where IDXe = N'" + xe.IDXe + "'");
+            return new ExecuteDB().ExecuteData("update Xe set HangSX = N'" + xe.HangSX + "', LoaiXe = N'" + xe.LoaiXe + "', GiaThue = '" + xe.GiaThue + "',GhiChu =  N'" + xe.GhiChu + "',TrangThai = '" + xe.TinhTrang + "' where IDXe = N'" + xe.IDXe + "'");
         }
         public Boolean XoaXe(string idXe)
         {
-            return new ExecuteDB().ExecuteData("DELETE FROM ChiTietXe WHERE IDXe = N'" + idXe + "'");
+            return new ExecuteDB().ExecuteData("DELETE FROM Xe WHERE IDXe = N'" + idXe + "'");
         }
     }
 }

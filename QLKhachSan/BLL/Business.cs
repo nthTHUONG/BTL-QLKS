@@ -17,7 +17,10 @@ namespace BLL
         {
             return new NhanVien_DAL().GetDataNV();
         }
-
+        public string GetChucVu(string maNV)
+        {
+            return new NhanVien_DAL().getChucVuNhanVien(maNV);
+        }
         public Boolean ThemNV(NhanVien_DTO nv)
         {
             try
@@ -128,6 +131,11 @@ namespace BLL
             return new Phong_DAL().GetDataPhong();
         }
 
+        public DataTable GetDataPhong_fromTenLP(string tenLP)
+        {
+            return new Phong_DAL().GetDataPhong_fromTenLP(tenLP);
+        }
+
         public Boolean ThemPhong(Phong_DTO p)
         {
             try
@@ -186,6 +194,11 @@ namespace BLL
         public DataTable GetDataLP_IDLP(string idLoaiPhong)
         {
             return new LoaiPhong_DAL().GetDataLP_IDLP(idLoaiPhong);
+        }
+
+        public DataTable GetDataLP_TenLP()
+        {
+            return new LoaiPhong_DAL().GetDataLP_TenLP();
         }
 
         public DataTable GetDataLP_fromIDPhong(string idPhong)
@@ -251,6 +264,16 @@ namespace BLL
         public DataTable GetDataDP(string idDatPhong)
         {
             return new DatPhong_DAL().GetDataDP(idDatPhong);
+        }
+
+        public Boolean GetDataDP_khongLP(string maPhong, DateTime start, DateTime finish)
+        {
+            return new DatPhong_DAL().GetDataDP_khongLP(maPhong, start, finish);
+        }
+
+        public Boolean GetDataDP_coLP(string maPhong, DateTime start, DateTime finish, string maLP)
+        {
+            return new DatPhong_DAL().GetDataDP_coLP(maPhong, start, finish, maLP);
         }
 
         public DataTable GetDataDP_fromMaKH(string maKH)
@@ -576,7 +599,5 @@ namespace BLL
         #region Thuê xe
 
         #endregion
-
-
     }
 }

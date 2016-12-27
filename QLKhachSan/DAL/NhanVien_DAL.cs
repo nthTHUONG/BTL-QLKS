@@ -35,6 +35,33 @@ namespace DAL
                 conn.Dispose();
             }
         }
+
+        public string getChucVuNhanVien(string maNV)
+        {
+            string cv = "";
+            SqlConnection conn = ConnectDB.ConnectData();
+            ConnectDB.Open(conn);
+            try
+            {
+                string sql = "SELECT * FROM NhanVien where IDNhanVien = '"+ maNV +"'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                IDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    cv = dr["ChucVu"].ToString();
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                ConnectDB.Close(conn);
+                conn.Dispose();
+            }
+            return cv;
+        }
         
         public Boolean ThemNV(NhanVien_DTO nv)
         {

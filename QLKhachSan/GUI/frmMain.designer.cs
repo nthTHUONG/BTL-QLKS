@@ -32,20 +32,11 @@ namespace GUI
         {
             this.components = new System.ComponentModel.Container();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.btnDatPhong = new System.Windows.Forms.Button();
             this.lbTitle = new System.Windows.Forms.Label();
-            this.rdDaDat = new System.Windows.Forms.RadioButton();
             this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayNhan = new System.Windows.Forms.DateTimePicker();
-            this.lstLoaiPhong = new System.Windows.Forms.ComboBox();
-            this.pnMain = new System.Windows.Forms.Panel();
-            this.pnDisplay = new System.Windows.Forms.Panel();
-            this.rdTatCa = new System.Windows.Forms.RadioButton();
-            this.rdTrong = new System.Windows.Forms.RadioButton();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.cbbLoaiPhong = new System.Windows.Forms.ComboBox();
+            this.lbEmpty = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +50,6 @@ namespace GUI
             this.cơSởVậtChấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đặtPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loạiPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,33 +64,31 @@ namespace GUI
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnMain.SuspendLayout();
-            this.pnDisplay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbPlaced = new System.Windows.Forms.Label();
+            this.btnDatPhong = new System.Windows.Forms.Button();
+            this.pnlChoose = new System.Windows.Forms.Panel();
+            this.rdTrong = new System.Windows.Forms.RadioButton();
+            this.rdTatCa = new System.Windows.Forms.RadioButton();
+            this.rdDaDat = new System.Windows.Forms.RadioButton();
+            this.pnlDisplay = new System.Windows.Forms.Panel();
+            this.picDisplay = new System.Windows.Forms.PictureBox();
+            this.tTThựcPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tTKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tTNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
+            this.pnlChoose.SuspendLayout();
+            this.pnlDisplay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).BeginInit();
             this.SuspendLayout();
             // 
             // timer
             // 
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // btnDatPhong
-            // 
-            this.btnDatPhong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDatPhong.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnDatPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatPhong.Location = new System.Drawing.Point(773, 0);
-            this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(96, 36);
-            this.btnDatPhong.TabIndex = 0;
-            this.btnDatPhong.Text = "Đặt phòng";
-            this.btnDatPhong.UseVisualStyleBackColor = false;
-            this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
             // lbTitle
             // 
@@ -115,20 +103,6 @@ namespace GUI
             this.lbTitle.Text = "Quản Lý Đặt Phòng";
             this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rdDaDat
-            // 
-            this.rdDaDat.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rdDaDat.AutoCheck = false;
-            this.rdDaDat.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.rdDaDat.Location = new System.Drawing.Point(96, 0);
-            this.rdDaDat.Name = "rdDaDat";
-            this.rdDaDat.Size = new System.Drawing.Size(96, 36);
-            this.rdDaDat.TabIndex = 1;
-            this.rdDaDat.TabStop = true;
-            this.rdDaDat.Text = "Đã đặt";
-            this.rdDaDat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdDaDat.UseVisualStyleBackColor = false;
-            // 
             // dtpNgayTra
             // 
             this.dtpNgayTra.CustomFormat = "dd/MM/yyyy";
@@ -140,6 +114,7 @@ namespace GUI
             this.dtpNgayTra.Name = "dtpNgayTra";
             this.dtpNgayTra.Size = new System.Drawing.Size(173, 29);
             this.dtpNgayTra.TabIndex = 101;
+            this.dtpNgayTra.ValueChanged += new System.EventHandler(this.DateTimePicker_ValueChanged);
             // 
             // dtpNgayNhan
             // 
@@ -152,109 +127,27 @@ namespace GUI
             this.dtpNgayNhan.Name = "dtpNgayNhan";
             this.dtpNgayNhan.Size = new System.Drawing.Size(173, 29);
             this.dtpNgayNhan.TabIndex = 102;
+            this.dtpNgayNhan.ValueChanged += new System.EventHandler(this.DateTimePicker_ValueChanged);
             // 
-            // lstLoaiPhong
+            // cbbLoaiPhong
             // 
-            this.lstLoaiPhong.FormattingEnabled = true;
-            this.lstLoaiPhong.Location = new System.Drawing.Point(8, 159);
-            this.lstLoaiPhong.Name = "lstLoaiPhong";
-            this.lstLoaiPhong.Size = new System.Drawing.Size(173, 28);
-            this.lstLoaiPhong.TabIndex = 100;
+            this.cbbLoaiPhong.FormattingEnabled = true;
+            this.cbbLoaiPhong.Location = new System.Drawing.Point(8, 159);
+            this.cbbLoaiPhong.Name = "cbbLoaiPhong";
+            this.cbbLoaiPhong.Size = new System.Drawing.Size(173, 28);
+            this.cbbLoaiPhong.TabIndex = 100;
+            this.cbbLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiPhong_SelectedIndexChanged);
+            this.cbbLoaiPhong.Click += new System.EventHandler(this.cbbLoaiPhong_Click);
             // 
-            // pnMain
+            // lbEmpty
             // 
-            this.pnMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnMain.BackColor = System.Drawing.SystemColors.Control;
-            this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnMain.Controls.Add(this.pnDisplay);
-            this.pnMain.Controls.Add(this.btnDatPhong);
-            this.pnMain.Controls.Add(this.pictureBox);
-            this.pnMain.Location = new System.Drawing.Point(0, 220);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(872, 407);
-            this.pnMain.TabIndex = 88;
-            // 
-            // pnDisplay
-            // 
-            this.pnDisplay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnDisplay.Controls.Add(this.rdTatCa);
-            this.pnDisplay.Controls.Add(this.rdTrong);
-            this.pnDisplay.Controls.Add(this.rdDaDat);
-            this.pnDisplay.Location = new System.Drawing.Point(0, 0);
-            this.pnDisplay.Name = "pnDisplay";
-            this.pnDisplay.Size = new System.Drawing.Size(291, 39);
-            this.pnDisplay.TabIndex = 0;
-            // 
-            // rdTatCa
-            // 
-            this.rdTatCa.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rdTatCa.AutoCheck = false;
-            this.rdTatCa.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.rdTatCa.Location = new System.Drawing.Point(192, 0);
-            this.rdTatCa.Name = "rdTatCa";
-            this.rdTatCa.Size = new System.Drawing.Size(96, 36);
-            this.rdTatCa.TabIndex = 2;
-            this.rdTatCa.TabStop = true;
-            this.rdTatCa.Text = "Tất cả";
-            this.rdTatCa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdTatCa.UseVisualStyleBackColor = false;
-            // 
-            // rdTrong
-            // 
-            this.rdTrong.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rdTrong.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.rdTrong.Location = new System.Drawing.Point(0, 0);
-            this.rdTrong.Name = "rdTrong";
-            this.rdTrong.Size = new System.Drawing.Size(96, 36);
-            this.rdTrong.TabIndex = 0;
-            this.rdTrong.TabStop = true;
-            this.rdTrong.Text = "Trống";
-            this.rdTrong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdTrong.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(868, 403);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox.TabIndex = 0;
-            this.pictureBox.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.BackColor = System.Drawing.Color.Red;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Location = new System.Drawing.Point(815, 159);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 26);
-            this.label7.TabIndex = 97;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.BackColor = System.Drawing.Color.Yellow;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Location = new System.Drawing.Point(758, 159);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 26);
-            this.label6.TabIndex = 98;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.BackColor = System.Drawing.Color.Lime;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(701, 159);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 26);
-            this.label5.TabIndex = 99;
+            this.lbEmpty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbEmpty.BackColor = System.Drawing.Color.LimeGreen;
+            this.lbEmpty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbEmpty.Location = new System.Drawing.Point(758, 159);
+            this.lbEmpty.Name = "lbEmpty";
+            this.lbEmpty.Size = new System.Drawing.Size(40, 26);
+            this.lbEmpty.TabIndex = 98;
             // 
             // menuStrip
             // 
@@ -355,7 +248,6 @@ namespace GUI
             // 
             this.đặtPhòngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loạiPhòngToolStripMenuItem,
-            this.phòngToolStripMenuItem,
             this.hToolStripMenuItem});
             this.đặtPhòngToolStripMenuItem.Name = "đặtPhòngToolStripMenuItem";
             this.đặtPhòngToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
@@ -367,13 +259,6 @@ namespace GUI
             this.loạiPhòngToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.loạiPhòngToolStripMenuItem.Text = "Loại phòng";
             this.loạiPhòngToolStripMenuItem.Click += new System.EventHandler(this.loạiPhòngToolStripMenuItem_Click);
-            // 
-            // phòngToolStripMenuItem
-            // 
-            this.phòngToolStripMenuItem.Name = "phòngToolStripMenuItem";
-            this.phòngToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
-            this.phòngToolStripMenuItem.Text = "Phòng";
-            this.phòngToolStripMenuItem.Click += new System.EventHandler(this.phòngToolStripMenuItem_Click);
             // 
             // hToolStripMenuItem
             // 
@@ -441,6 +326,11 @@ namespace GUI
             // 
             // xuấtBáoCáoToolStripMenuItem
             // 
+            this.xuấtBáoCáoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tTThựcPhẩmToolStripMenuItem,
+            this.tTKháchHàngToolStripMenuItem,
+            this.tTNhânViênToolStripMenuItem,
+            this.thốngKêToolStripMenuItem});
             this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
             this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
             this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
@@ -491,30 +381,6 @@ namespace GUI
             this.label3.Text = "Loại phòng:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(812, 135);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 18);
-            this.label10.TabIndex = 89;
-            this.label10.Text = "Đang ở";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(698, 135);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 18);
-            this.label8.TabIndex = 91;
-            this.label8.Text = "Trống";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -522,9 +388,9 @@ namespace GUI
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(755, 135);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 18);
+            this.label9.Size = new System.Drawing.Size(47, 18);
             this.label9.TabIndex = 90;
-            this.label9.Text = "Đã đặt";
+            this.label9.Text = "Trống";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -538,6 +404,146 @@ namespace GUI
             this.label1.Text = "Ngày nhận phòng:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(812, 135);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 18);
+            this.label10.TabIndex = 89;
+            this.label10.Text = "Đã đặt";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbPlaced
+            // 
+            this.lbPlaced.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbPlaced.BackColor = System.Drawing.Color.DarkOrange;
+            this.lbPlaced.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbPlaced.Location = new System.Drawing.Point(815, 159);
+            this.lbPlaced.Name = "lbPlaced";
+            this.lbPlaced.Size = new System.Drawing.Size(40, 26);
+            this.lbPlaced.TabIndex = 97;
+            // 
+            // btnDatPhong
+            // 
+            this.btnDatPhong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDatPhong.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnDatPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatPhong.Location = new System.Drawing.Point(773, -1);
+            this.btnDatPhong.Name = "btnDatPhong";
+            this.btnDatPhong.Size = new System.Drawing.Size(96, 36);
+            this.btnDatPhong.TabIndex = 0;
+            this.btnDatPhong.Text = "Đặt phòng";
+            this.btnDatPhong.UseVisualStyleBackColor = false;
+            this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
+            // 
+            // pnlChoose
+            // 
+            this.pnlChoose.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlChoose.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlChoose.Controls.Add(this.rdTrong);
+            this.pnlChoose.Controls.Add(this.rdTatCa);
+            this.pnlChoose.Controls.Add(this.rdDaDat);
+            this.pnlChoose.Location = new System.Drawing.Point(-1, -2);
+            this.pnlChoose.Name = "pnlChoose";
+            this.pnlChoose.Size = new System.Drawing.Size(310, 40);
+            this.pnlChoose.TabIndex = 0;
+            // 
+            // rdTrong
+            // 
+            this.rdTrong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rdTrong.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.rdTrong.Location = new System.Drawing.Point(1, 2);
+            this.rdTrong.Name = "rdTrong";
+            this.rdTrong.Size = new System.Drawing.Size(96, 36);
+            this.rdTrong.TabIndex = 0;
+            this.rdTrong.Text = "Trống";
+            this.rdTrong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdTrong.UseVisualStyleBackColor = false;
+            this.rdTrong.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // rdTatCa
+            // 
+            this.rdTatCa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rdTatCa.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.rdTatCa.Location = new System.Drawing.Point(209, 2);
+            this.rdTatCa.Name = "rdTatCa";
+            this.rdTatCa.Size = new System.Drawing.Size(96, 36);
+            this.rdTatCa.TabIndex = 0;
+            this.rdTatCa.Text = "Tất cả";
+            this.rdTatCa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdTatCa.UseVisualStyleBackColor = false;
+            this.rdTatCa.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // rdDaDat
+            // 
+            this.rdDaDat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rdDaDat.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.rdDaDat.Location = new System.Drawing.Point(105, 2);
+            this.rdDaDat.Name = "rdDaDat";
+            this.rdDaDat.Size = new System.Drawing.Size(96, 36);
+            this.rdDaDat.TabIndex = 0;
+            this.rdDaDat.Text = "Đã đặt";
+            this.rdDaDat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdDaDat.UseVisualStyleBackColor = false;
+            this.rdDaDat.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // pnlDisplay
+            // 
+            this.pnlDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlDisplay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlDisplay.Controls.Add(this.pnlChoose);
+            this.pnlDisplay.Controls.Add(this.btnDatPhong);
+            this.pnlDisplay.Controls.Add(this.picDisplay);
+            this.pnlDisplay.Location = new System.Drawing.Point(0, 220);
+            this.pnlDisplay.Name = "pnlDisplay";
+            this.pnlDisplay.Size = new System.Drawing.Size(872, 407);
+            this.pnlDisplay.TabIndex = 88;
+            // 
+            // picDisplay
+            // 
+            this.picDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picDisplay.Image = global::GUI.Properties.Resources._15319554_1615662488736959_778824304_n;
+            this.picDisplay.Location = new System.Drawing.Point(0, 0);
+            this.picDisplay.Name = "picDisplay";
+            this.picDisplay.Size = new System.Drawing.Size(868, 403);
+            this.picDisplay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDisplay.TabIndex = 0;
+            this.picDisplay.TabStop = false;
+            // 
+            // tTThựcPhẩmToolStripMenuItem
+            // 
+            this.tTThựcPhẩmToolStripMenuItem.Name = "tTThựcPhẩmToolStripMenuItem";
+            this.tTThựcPhẩmToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
+            this.tTThựcPhẩmToolStripMenuItem.Text = "TT Thực phẩm";
+            this.tTThựcPhẩmToolStripMenuItem.Click += new System.EventHandler(this.tTThựcPhẩmToolStripMenuItem_Click);
+            // 
+            // tTKháchHàngToolStripMenuItem
+            // 
+            this.tTKháchHàngToolStripMenuItem.Name = "tTKháchHàngToolStripMenuItem";
+            this.tTKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
+            this.tTKháchHàngToolStripMenuItem.Text = "TT Khách Hàng";
+            this.tTKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.tTKháchHàngToolStripMenuItem_Click);
+            // 
+            // tTNhânViênToolStripMenuItem
+            // 
+            this.tTNhânViênToolStripMenuItem.Name = "tTNhânViênToolStripMenuItem";
+            this.tTNhânViênToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
+            this.tTNhânViênToolStripMenuItem.Text = "TT Nhân Viên";
+            this.tTNhânViênToolStripMenuItem.Click += new System.EventHandler(this.tTNhânViênToolStripMenuItem_Click);
+            // 
+            // thốngKêToolStripMenuItem
+            // 
+            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -547,16 +553,14 @@ namespace GUI
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.dtpNgayTra);
             this.Controls.Add(this.dtpNgayNhan);
-            this.Controls.Add(this.lstLoaiPhong);
-            this.Controls.Add(this.pnMain);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbbLoaiPhong);
+            this.Controls.Add(this.pnlDisplay);
+            this.Controls.Add(this.lbPlaced);
+            this.Controls.Add(this.lbEmpty);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -565,13 +569,14 @@ namespace GUI
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.pnMain.ResumeLayout(false);
-            this.pnDisplay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.pnlChoose.ResumeLayout(false);
+            this.pnlDisplay.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picDisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -579,20 +584,11 @@ namespace GUI
 
         #endregion
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.Button btnDatPhong;
         private System.Windows.Forms.Label lbTitle;
-        private System.Windows.Forms.RadioButton rdDaDat;
         private System.Windows.Forms.DateTimePicker dtpNgayTra;
         private System.Windows.Forms.DateTimePicker dtpNgayNhan;
-        private System.Windows.Forms.ComboBox lstLoaiPhong;
-        private System.Windows.Forms.Panel pnMain;
-        private System.Windows.Forms.Panel pnDisplay;
-        private System.Windows.Forms.RadioButton rdTatCa;
-        private System.Windows.Forms.RadioButton rdTrong;
-        private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbbLoaiPhong;
+        private System.Windows.Forms.Label lbEmpty;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kháchHàngToolStripMenuItem;
@@ -606,8 +602,6 @@ namespace GUI
         private System.Windows.Forms.ToolStripMenuItem đangPhátTriểnToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private ToolStripMenuItem cơSởVậtChấtToolStripMenuItem;
@@ -620,12 +614,24 @@ namespace GUI
         private ToolStripMenuItem thanhToánDVHướngDẫnViênToolStripMenuItem;
         private ToolStripMenuItem đặtPhòngToolStripMenuItem;
         private ToolStripMenuItem loạiPhòngToolStripMenuItem;
-        private ToolStripMenuItem phòngToolStripMenuItem;
         private ToolStripMenuItem thôngTinKháchHàngToolStripMenuItem;
         private ToolStripMenuItem thêmKháchHàngToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
         private ToolStripMenuItem hToolStripMenuItem;
+        private Label label10;
+        private Label lbPlaced;
+        private Button btnDatPhong;
+        private Panel pnlChoose;
+        private RadioButton rdTrong;
+        private RadioButton rdTatCa;
+        private RadioButton rdDaDat;
+        private Panel pnlDisplay;
+        private PictureBox picDisplay;
+        private ToolStripMenuItem tTThựcPhẩmToolStripMenuItem;
+        private ToolStripMenuItem tTKháchHàngToolStripMenuItem;
+        private ToolStripMenuItem tTNhânViênToolStripMenuItem;
+        private ToolStripMenuItem thốngKêToolStripMenuItem;
 
-        public AutoScaleMode AutoScaleMode { get; private set; }
+        // public AutoScaleMode AutoScaleMode { get; private set; }
     }
 }

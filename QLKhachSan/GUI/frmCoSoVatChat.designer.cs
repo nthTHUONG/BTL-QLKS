@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvCSVC = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,11 +59,40 @@
             // 
             // dgvCSVC
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvCSVC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCSVC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCSVC.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCSVC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCSVC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCSVC.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCSVC.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvCSVC.Location = new System.Drawing.Point(0, 342);
             this.dgvCSVC.Name = "dgvCSVC";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCSVC.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvCSVC.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCSVC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCSVC.Size = new System.Drawing.Size(643, 164);
             this.dgvCSVC.TabIndex = 0;
@@ -67,7 +101,7 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.label1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label1.Location = new System.Drawing.Point(59, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 27);
@@ -78,7 +112,7 @@
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.label2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label2.Location = new System.Drawing.Point(59, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 27);
@@ -89,7 +123,7 @@
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label3.Location = new System.Drawing.Point(59, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 27);
@@ -100,7 +134,7 @@
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.label4.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label4.Location = new System.Drawing.Point(59, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 27);
@@ -111,7 +145,7 @@
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.label5.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label5.Location = new System.Drawing.Point(59, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 27);
@@ -122,7 +156,7 @@
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.label6.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label6.Location = new System.Drawing.Point(59, 225);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 27);
@@ -181,7 +215,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnThem.BackColor = System.Drawing.Color.LightBlue;
+            this.btnThem.BackColor = System.Drawing.Color.SandyBrown;
             this.btnThem.Location = new System.Drawing.Point(503, 70);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(101, 38);
@@ -193,7 +227,7 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnXoa.BackColor = System.Drawing.Color.LightBlue;
+            this.btnXoa.BackColor = System.Drawing.Color.SandyBrown;
             this.btnXoa.Location = new System.Drawing.Point(503, 158);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(101, 38);
@@ -205,7 +239,7 @@
             // btnCapNhat
             // 
             this.btnCapNhat.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCapNhat.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCapNhat.BackColor = System.Drawing.Color.SandyBrown;
             this.btnCapNhat.Location = new System.Drawing.Point(503, 114);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(101, 38);
@@ -217,7 +251,7 @@
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnReset.BackColor = System.Drawing.Color.LightBlue;
+            this.btnReset.BackColor = System.Drawing.Color.SandyBrown;
             this.btnReset.Location = new System.Drawing.Point(503, 202);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(101, 38);
@@ -262,8 +296,7 @@
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label7.BackColor = System.Drawing.Color.Cyan;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label7.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
                             | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(27, 301);
@@ -278,7 +311,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(643, 506);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.groupBox1);

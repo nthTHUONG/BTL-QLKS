@@ -61,6 +61,33 @@ namespace DAL
             }
         }
 
+        public Boolean GetDataDP_khongLP(string maPhong, DateTime start, DateTime finish)
+        {
+            ExecuteDB e = new ExecuteDB();
+            string sql = "SELECT COUNT(*) FROM DatPhong WHERE MaPhong = N'" + maPhong
+                    + "' AND(NgayNhan >= '" + finish.ToString("yyyy-MM-dd") + "' OR NgayTra <= '" + start.ToString("yyyy-MM-dd") + "')";
+            int status = (int)e.ExecuteScalar(sql);
+            if (status != 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public Boolean GetDataDP_coLP(string maPhong, DateTime start, DateTime finish, string tenLP)
+        {
+            ExecuteDB e = new ExecuteDB();
+            string sql = "SELECT COUNT(*) FROM DatPhong WHERE MaPhong = N'" + maPhong
+                    + "' AND(NgayNhan >= '" + finish.ToString("yyyy-MM-dd") + "' OR NgayTra <= '" + start.ToString("yyyy-MM-dd")
+                    + "') AND MaPhong IN (SELECT MaPhong FROM Phong WHERE MaLP IN (SELECT IDLoaiPhong FROM LoaiPhong WHERE TenLP = N'" + tenLP + "'))";
+            int status = (int)e.ExecuteScalar(sql);
+            if (status != 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public DataTable GetDataDP_fromMaKH(string maKH)
         {
             SqlConnection conn = ConnectDB.ConnectData();
@@ -90,7 +117,7 @@ namespace DAL
         {
             ExecuteDB e = new ExecuteDB();
             string sql = "SELECT COUNT(*) FROM DatPhong WHERE MaPhong = N'" + dp.MaPhong
-                + "' AND(NgayNhan <= '" + dp.NgayTra.ToString("yyyy-MM-dd") + "' OR NgayTra >= '" + dp.NgayNhan.ToString("yyyy-MM-dd") + "')";
+                + "' AND(NgayNhan >= '" + dp.NgayTra.ToString("yyyy-MM-dd") + "' OR NgayTra <= '" + dp.NgayNhan.ToString("yyyy-MM-dd") + "')";
             int status = (int)e.ExecuteScalar(sql);
             if (status != 0)
             {

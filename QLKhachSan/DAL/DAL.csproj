@@ -46,6 +46,7 @@
     <Compile Include="DatPhong_DAL.cs" />
     <Compile Include="DVhdv_DAL.cs" />
     <Compile Include="ExecuteDB.cs" />
+    <Compile Include="HDV_DAL.cs" />
     <Compile Include="KhachHang_DAL.cs" />
     <Compile Include="LoaiPhong_DAL.cs" />
     <Compile Include="NhanVien_DAL.cs" />

@@ -30,23 +30,23 @@ namespace GUI
             txtMaXe.Text = "";
             txtTienCoc.Text = "";
             txtGiaThue.Text = "";
-            txtGhiChu.Text = "";
+            //txtGhiChu.Text = "";
             dtpNgayMuon.Text = "";
-            dtpNgayTra.Text = ""; 
+            //dtpNgayTra.Text = ""; 
         }
         private void LoadXe()
         {
             try
             {
-                string sql = "select * from ChiTietXe where TrangThai = N'True'";
+                string sql = "select * from Xe where TrangThai = N'True'";
                 SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
                 ds = new DataSet();
-                da.Fill(ds, "ChiTietXe");
-                dgvThemThueXe.DataSource = ds.Tables["ChiTietXe"];
+                da.Fill(ds, "Xe");
+                dgvThemThueXe.DataSource = ds.Tables["Xe"];
             }
-            catch (Exception )
+            catch (Exception ex)
             {
-                MessageBox.Show("Load dữ liệu không thành công!");
+                MessageBox.Show("Load dữ liệu không thành công! " + ex.Message);
             }
             
         }
@@ -56,6 +56,8 @@ namespace GUI
             cnn = new SqlConnection(cnstr);
             LoadXe();
             txtIDThueXe.Text = SinhMa();
+            dtpNgayMuon.Format = DateTimePickerFormat.Custom;
+            dtpNgayMuon.CustomFormat = "dd/MM/yyyy HH:00";
 
         }
 
@@ -112,6 +114,7 @@ namespace GUI
             {
                 DataGridViewRow row = dgvThemThueXe.Rows[e.RowIndex];
                 txtMaXe.Text = row.Cells["IDXe"].Value.ToString();
+                txtGiaThue.Text = row.Cells["GiaThue"].Value.ToString();
             }
         }
         private void connect()
@@ -149,17 +152,18 @@ namespace GUI
             connect();
             try
             {
-                string sql = "insert into ThueXe values(N'" + txtIDThueXe.Text + "', N'" + txtIDKhachHang.Text + " ', N'" + txtMaXe.Text + "', N'" + dtpNgayMuon.Value.ToString("yyyy-MM-dd") + "', N'" + dtpNgayTra.Value.ToString("yyyy-MM-dd") + "', '" + txtGiaThue.Text + "', '" + txtTienCoc.Text + "', N'" + txtGhiChu.Text + "')";
-                string sql2 = "update ChiTietXe set TrangThai = N'False' where IDXe = N'" + txtMaXe.Text + "'";
+                string sql = "insert into ThueXe values(N'" + txtIDThueXe.Text + "', N'" + txtIDKhachHang.Text + " ', N'" + txtMaXe.Text + "', N'" + dtpNgayMuon.Value.ToString("yyyy-MM-dd HH:mm") + "', NULL, '" + txtGiaThue.Text + "', '" + txtTienCoc.Text + "', NULL,N'chưa thanh toán')";
+                string sql2 = "update Xe set TrangThai = 'False' where IDXe = N'" + txtMaXe.Text + "'";
                 SqlCommand cmd = new SqlCommand(sql, cnn);
                 cmd.ExecuteNonQuery();
                 cmd = new SqlCommand(sql2, cnn);
                 cmd.ExecuteNonQuery();
                 reset();
+                MessageBox.Show("Thêm Thành Công");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Xin nhập đầy đủ thông tin!");
+                MessageBox.Show("Xin nhập đầy đủ thông tin!  " + ex.Message);
             }
             disconnect();   
             LoadXe();

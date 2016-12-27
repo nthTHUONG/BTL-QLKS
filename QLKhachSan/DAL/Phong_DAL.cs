@@ -36,6 +36,31 @@ namespace DAL
             }
         }
 
+        public DataTable GetDataPhong_fromTenLP(string tenLP)
+        {
+            SqlConnection conn = ConnectDB.ConnectData();
+            ConnectDB.Open(conn);
+            try
+            {
+                string sql = "SELECT * FROM Phong WHERE MaLP IN (SELECT IDLoaiPhong FROM LoaiPhong WHERE TenLP = N'" + tenLP + "')";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cmd.Dispose();
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                ConnectDB.Close(conn);
+                conn.Dispose();
+            }
+        }
+
         public Boolean ThemPhong(Phong_DTO p)
         {
             string sql = "INSERT INTO Phong(IDPhong, MaLP, GhiChu, TrangThai) VALUES(N'" + p.IDPhong + "', N'" + p.MaLP

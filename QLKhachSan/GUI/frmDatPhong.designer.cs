@@ -51,9 +51,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtTraTruoc = new System.Windows.Forms.TextBox();
             this.btnDatPhong = new System.Windows.Forms.Button();
-            this.cbbMaNV = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lbTittle = new System.Windows.Forms.Label();
+            this.cbbMaNV = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.btnThemKH);
             this.groupBox1.Controls.Add(this.cbbMaPhong);
             this.groupBox1.Controls.Add(this.cbbMaKH);
@@ -310,21 +310,16 @@
             // btnDatPhong
             // 
             this.btnDatPhong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDatPhong.Location = new System.Drawing.Point(744, 421);
+            this.btnDatPhong.BackColor = System.Drawing.Color.Gray;
+            this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatPhong.ForeColor = System.Drawing.Color.Maroon;
+            this.btnDatPhong.Location = new System.Drawing.Point(737, 421);
             this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(94, 29);
+            this.btnDatPhong.Size = new System.Drawing.Size(101, 38);
             this.btnDatPhong.TabIndex = 107;
             this.btnDatPhong.Text = "Đặt phòng";
-            this.btnDatPhong.UseVisualStyleBackColor = true;
+            this.btnDatPhong.UseVisualStyleBackColor = false;
             this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
-            // 
-            // cbbMaNV
-            // 
-            this.cbbMaNV.FormattingEnabled = true;
-            this.cbbMaNV.Location = new System.Drawing.Point(116, 82);
-            this.cbbMaNV.Name = "cbbMaNV";
-            this.cbbMaNV.Size = new System.Drawing.Size(121, 28);
-            this.cbbMaNV.TabIndex = 106;
             // 
             // label7
             // 
@@ -340,9 +335,10 @@
             // 
             // lbTittle
             // 
-            this.lbTittle.BackColor = System.Drawing.Color.SandyBrown;
+            this.lbTittle.BackColor = System.Drawing.Color.Gray;
             this.lbTittle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTittle.ForeColor = System.Drawing.Color.Maroon;
             this.lbTittle.Location = new System.Drawing.Point(0, 0);
             this.lbTittle.Name = "lbTittle";
             this.lbTittle.Size = new System.Drawing.Size(859, 65);
@@ -350,14 +346,23 @@
             this.lbTittle.Text = "Đặt Phòng";
             this.lbTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cbbMaNV
+            // 
+            this.cbbMaNV.AutoSize = true;
+            this.cbbMaNV.Location = new System.Drawing.Point(125, 84);
+            this.cbbMaNV.Name = "cbbMaNV";
+            this.cbbMaNV.Size = new System.Drawing.Size(51, 20);
+            this.cbbMaNV.TabIndex = 108;
+            this.cbbMaNV.Text = "label6";
+            // 
             // frmDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(859, 471);
-            this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.cbbMaNV);
+            this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lbTittle);
             this.Controls.Add(this.groupBox1);
@@ -391,7 +396,6 @@
         private System.Windows.Forms.ComboBox cbbMaKH;
         private System.Windows.Forms.DateTimePicker dtpNgayTra;
         private System.Windows.Forms.Button btnDatPhong;
-        private System.Windows.Forms.ComboBox cbbMaNV;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbTittle;
         private System.Windows.Forms.DateTimePicker dtpNgayNhan;
@@ -401,5 +405,6 @@
         private System.Windows.Forms.TextBox txtThanhTien;
         private System.Windows.Forms.TextBox txtMaDP;
         private System.Windows.Forms.TextBox txtNgayDat;
+        private System.Windows.Forms.Label cbbMaNV;
     }
 }

@@ -15,6 +15,12 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            /*Application.Run(new frmDangNhap());
+            if (frmDangNhap.coHieu == true)
+            {
+                Application.Run(new frmMain());
+            }
+             */
             Application.Run(new frmThanhToanPhong());
         }
     }

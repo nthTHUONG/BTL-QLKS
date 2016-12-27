@@ -31,19 +31,11 @@ namespace GUI
 
         private void LoadCombobox()
         {
-            cbbMaNV.DataSource = BUS.GetDataNV();
-            cbbMaNV.DisplayMember = "IDNhanVien";
-
-            cbbMaKH.DataSource = BUS.GetDataKH();
-            cbbMaKH.DisplayMember = "IDKhachHang";
-
-            cbbMaPhong.DataSource = BUS.GetDataPhong();
-            cbbMaPhong.DisplayMember = "IDPhong";
+            cbbMaNV.Text = frmDangNhap.MaNV;
         }
 
         private void Init()
         {
-            cbbMaNV.Text = "Chọn mã NV";
             cbbMaKH.Text = "Chọn mã KH";
             txtMaDP.Text = "DP" + (BUS.GetDataDP().Rows.Count + 1).ToString();
             cbbMaPhong.Text = "Chọn mã phòng";

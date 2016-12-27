@@ -86,6 +86,31 @@ namespace DAL
             }
         }
 
+        public DataTable GetDataLP_TenLP()
+        {
+            SqlConnection conn = ConnectDB.ConnectData();
+            ConnectDB.Open(conn);
+            try
+            {
+                string sql = "SELECT DISTINCT TenLP FROM LoaiPhong";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cmd.Dispose();
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                ConnectDB.Close(conn);
+                conn.Dispose();
+            }
+        }
+
         public Boolean ThemLP(LoaiPhong_DTO lp)
         {
             string sql = "INSERT INTO LoaiPhong VALUES(N'" + lp.IDLoaiPhong + "', N'" + lp.TenLP

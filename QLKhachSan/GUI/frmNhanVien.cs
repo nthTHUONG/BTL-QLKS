@@ -25,6 +25,15 @@ namespace GUI
         {
             BUS = new Business();
             dgvNhanVien.DataSource = BUS.GetDataNV();
+            string chucVuNhanVien = BUS.GetChucVu(frmDangNhap.MaNV);
+            if(string.IsNullOrWhiteSpace(chucVuNhanVien) == false)
+            {
+                if (chucVuNhanVien.Trim().ToLower().Equals("quản lý") != true)
+                {
+                    MessageBox.Show("chỉ có quản lý mới được vào form nầy");
+                    this.Close();
+                }
+            }
         }
 
         private void Init()
@@ -144,6 +153,12 @@ namespace GUI
                 txtSDT.Text = row.Cells["SDT"].Value.ToString();
                 txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
             }
+        }
+
+        private void btSinhMaNV_Click(object sender, EventArgs e)
+        {
+            DataTable dtNV = BUS.GetDataNV();
+            txtIDNhanVien.Text = "NV" + (Convert.ToInt32(dtNV.Rows[dtNV.Rows.Count - 1]["IDNhanVien"].ToString().Substring(2)) + 1).ToString();
         }
     }
 }

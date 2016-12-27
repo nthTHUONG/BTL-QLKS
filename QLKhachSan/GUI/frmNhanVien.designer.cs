@@ -53,6 +53,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
+            this.btSinhMaNV = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -117,6 +118,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.btSinhMaNV);
             this.panel1.Controls.Add(this.dtpNgaySinh);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtTen);
@@ -180,8 +182,7 @@
             this.txtIDNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDNhanVien.Location = new System.Drawing.Point(95, 5);
             this.txtIDNhanVien.Name = "txtIDNhanVien";
-            this.txtIDNhanVien.ReadOnly = true;
-            this.txtIDNhanVien.Size = new System.Drawing.Size(344, 26);
+            this.txtIDNhanVien.Size = new System.Drawing.Size(313, 26);
             this.txtIDNhanVien.TabIndex = 0;
             // 
             // label7
@@ -380,6 +381,17 @@
             this.dgvNhanVien.TabIndex = 41;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
+            // btSinhMaNV
+            // 
+            this.btSinhMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSinhMaNV.Location = new System.Drawing.Point(416, 6);
+            this.btSinhMaNV.Name = "btSinhMaNV";
+            this.btSinhMaNV.Size = new System.Drawing.Size(26, 26);
+            this.btSinhMaNV.TabIndex = 24;
+            this.btSinhMaNV.Text = "+";
+            this.btSinhMaNV.UseVisualStyleBackColor = true;
+            this.btSinhMaNV.Click += new System.EventHandler(this.btSinhMaNV_Click);
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -434,5 +446,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.Button btSinhMaNV;
     }
 }
