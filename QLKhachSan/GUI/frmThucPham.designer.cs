@@ -97,7 +97,7 @@
             this.dtHanSD.Location = new System.Drawing.Point(102, 165);
             this.dtHanSD.Name = "dtHanSD";
             this.dtHanSD.Size = new System.Drawing.Size(253, 29);
-            this.dtHanSD.TabIndex = 4;
+            this.dtHanSD.TabIndex = 3;
             this.dtHanSD.Value = new System.DateTime(2016, 12, 12, 20, 0, 3, 0);
             // 
             // dtNgaySX
@@ -111,7 +111,7 @@
             this.dtNgaySX.Location = new System.Drawing.Point(538, 114);
             this.dtNgaySX.Name = "dtNgaySX";
             this.dtNgaySX.Size = new System.Drawing.Size(253, 29);
-            this.dtNgaySX.TabIndex = 3;
+            this.dtNgaySX.TabIndex = 5;
             this.dtNgaySX.Value = new System.DateTime(2016, 12, 12, 20, 0, 3, 0);
             // 
             // btnReset
@@ -252,7 +252,7 @@
             this.txtDonGia.Location = new System.Drawing.Point(538, 66);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(253, 22);
-            this.txtDonGia.TabIndex = 1;
+            this.txtDonGia.TabIndex = 4;
             // 
             // txtNhaSX
             // 
@@ -296,7 +296,7 @@
             this.txtMieuTa.Location = new System.Drawing.Point(538, 165);
             this.txtMieuTa.Name = "txtMieuTa";
             this.txtMieuTa.Size = new System.Drawing.Size(253, 22);
-            this.txtMieuTa.TabIndex = 5;
+            this.txtMieuTa.TabIndex = 6;
             // 
             // label7
             // 

@@ -33,6 +33,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btSinhMaNV = new System.Windows.Forms.Button();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.btSinhMaNV = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -79,7 +79,7 @@
             this.txtTimKiem.Location = new System.Drawing.Point(210, 410);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(443, 26);
-            this.txtTimKiem.TabIndex = 40;
+            this.txtTimKiem.TabIndex = 0;
             this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // label9
@@ -139,6 +139,17 @@
             this.panel1.Size = new System.Drawing.Size(450, 291);
             this.panel1.TabIndex = 0;
             // 
+            // btSinhMaNV
+            // 
+            this.btSinhMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSinhMaNV.Location = new System.Drawing.Point(416, 6);
+            this.btSinhMaNV.Name = "btSinhMaNV";
+            this.btSinhMaNV.Size = new System.Drawing.Size(26, 26);
+            this.btSinhMaNV.TabIndex = 24;
+            this.btSinhMaNV.Text = "+";
+            this.btSinhMaNV.UseVisualStyleBackColor = true;
+            this.btSinhMaNV.Click += new System.EventHandler(this.btSinhMaNV_Click);
+            // 
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,7 +161,7 @@
             this.dtpNgaySinh.MinDate = new System.DateTime(1900, 9, 9, 0, 0, 0, 0);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(344, 27);
-            this.dtpNgaySinh.TabIndex = 23;
+            this.dtpNgaySinh.TabIndex = 5;
             // 
             // label1
             // 
@@ -288,7 +299,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(95, 260);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(344, 26);
-            this.txtDiaChi.TabIndex = 6;
+            this.txtDiaChi.TabIndex = 7;
             // 
             // label2
             // 
@@ -311,7 +322,7 @@
             this.txtSDT.Location = new System.Drawing.Point(95, 218);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(344, 26);
-            this.txtSDT.TabIndex = 7;
+            this.txtSDT.TabIndex = 6;
             // 
             // btnReset
             // 
@@ -380,17 +391,6 @@
             this.dgvNhanVien.Size = new System.Drawing.Size(872, 172);
             this.dgvNhanVien.TabIndex = 41;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
-            // 
-            // btSinhMaNV
-            // 
-            this.btSinhMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSinhMaNV.Location = new System.Drawing.Point(416, 6);
-            this.btSinhMaNV.Name = "btSinhMaNV";
-            this.btSinhMaNV.Size = new System.Drawing.Size(26, 26);
-            this.btSinhMaNV.TabIndex = 24;
-            this.btSinhMaNV.Text = "+";
-            this.btSinhMaNV.UseVisualStyleBackColor = true;
-            this.btSinhMaNV.Click += new System.EventHandler(this.btSinhMaNV_Click);
             // 
             // frmNhanVien
             // 

@@ -183,7 +183,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(94, 217);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(345, 26);
-            this.txtDiaChi.TabIndex = 4;
+            this.txtDiaChi.TabIndex = 6;
             // 
             // label4
             // 
@@ -204,7 +204,7 @@
             this.txtSDT.Location = new System.Drawing.Point(94, 131);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(345, 26);
-            this.txtSDT.TabIndex = 5;
+            this.txtSDT.TabIndex = 4;
             // 
             // label6
             // 
@@ -246,7 +246,7 @@
             this.txtEmail.Location = new System.Drawing.Point(94, 173);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(345, 26);
-            this.txtEmail.TabIndex = 6;
+            this.txtEmail.TabIndex = 5;
             // 
             // label2
             // 
@@ -341,7 +341,7 @@
             this.txtTimKiem.Location = new System.Drawing.Point(210, 411);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(444, 26);
-            this.txtTimKiem.TabIndex = 36;
+            this.txtTimKiem.TabIndex = 0;
             this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // dgvKhachHang

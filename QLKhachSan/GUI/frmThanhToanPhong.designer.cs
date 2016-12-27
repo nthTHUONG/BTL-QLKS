@@ -53,14 +53,14 @@
             this.txtSoNgayThue = new System.Windows.Forms.TextBox();
             this.txtLoaiPhong = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbMaPhong = new System.Windows.Forms.ComboBox();
             this.txtTraPhong = new System.Windows.Forms.TextBox();
             this.txtNhanPhong = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
-            this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.cbbMaNV = new System.Windows.Forms.Label();
             this.txtTime = new System.Windows.Forms.TextBox();
             this.timerP = new System.Windows.Forms.Timer(this.components);
-            this.cbbMaNV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -367,6 +367,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.cbbMaPhong);
             this.panel1.Controls.Add(this.cbbMaKH);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label9);
@@ -375,7 +376,6 @@
             this.panel1.Controls.Add(this.txtNhanPhong);
             this.panel1.Controls.Add(this.txtDonGia);
             this.panel1.Controls.Add(this.txtSoNgayThue);
-            this.panel1.Controls.Add(this.txtMaPhong);
             this.panel1.Controls.Add(this.txtLoaiPhong);
             this.panel1.Controls.Add(this.txtTraTruoc);
             this.panel1.Controls.Add(this.txtTenKH);
@@ -393,6 +393,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(676, 263);
             this.panel1.TabIndex = 124;
+            // 
+            // cbbMaPhong
+            // 
+            this.cbbMaPhong.BackColor = System.Drawing.Color.Silver;
+            this.cbbMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMaPhong.ForeColor = System.Drawing.Color.Black;
+            this.cbbMaPhong.FormattingEnabled = true;
+            this.cbbMaPhong.Location = new System.Drawing.Point(97, 120);
+            this.cbbMaPhong.Name = "cbbMaPhong";
+            this.cbbMaPhong.Size = new System.Drawing.Size(226, 28);
+            this.cbbMaPhong.TabIndex = 121;
+            this.cbbMaPhong.SelectedIndexChanged += new System.EventHandler(this.cbbMaPhong_SelectedIndexChanged);
             // 
             // txtTraPhong
             // 
@@ -433,20 +445,6 @@
             this.txtDonGia.Size = new System.Drawing.Size(226, 19);
             this.txtDonGia.TabIndex = 119;
             // 
-            // txtMaPhong
-            // 
-            this.txtMaPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMaPhong.BackColor = System.Drawing.Color.Silver;
-            this.txtMaPhong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaPhong.ForeColor = System.Drawing.Color.Black;
-            this.txtMaPhong.Location = new System.Drawing.Point(101, 125);
-            this.txtMaPhong.Name = "txtMaPhong";
-            this.txtMaPhong.ReadOnly = true;
-            this.txtMaPhong.Size = new System.Drawing.Size(226, 19);
-            this.txtMaPhong.TabIndex = 119;
-            this.txtMaPhong.TextChanged += new System.EventHandler(this.txtMaPhong_TextChanged);
-            // 
             // txtTenKH
             // 
             this.txtTenKH.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -459,6 +457,18 @@
             this.txtTenKH.ReadOnly = true;
             this.txtTenKH.Size = new System.Drawing.Size(226, 19);
             this.txtTenKH.TabIndex = 119;
+            // 
+            // cbbMaNV
+            // 
+            this.cbbMaNV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbMaNV.AutoSize = true;
+            this.cbbMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMaNV.ForeColor = System.Drawing.Color.Black;
+            this.cbbMaNV.Location = new System.Drawing.Point(460, 8);
+            this.cbbMaNV.Name = "cbbMaNV";
+            this.cbbMaNV.Size = new System.Drawing.Size(0, 20);
+            this.cbbMaNV.TabIndex = 109;
+            this.cbbMaNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtTime
             // 
@@ -479,18 +489,6 @@
             this.timerP.Interval = 1000;
             this.timerP.Tick += new System.EventHandler(this.timerP_Tick);
             // 
-            // cbbMaNV
-            // 
-            this.cbbMaNV.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbbMaNV.AutoSize = true;
-            this.cbbMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMaNV.ForeColor = System.Drawing.Color.Black;
-            this.cbbMaNV.Location = new System.Drawing.Point(460, 8);
-            this.cbbMaNV.Name = "cbbMaNV";
-            this.cbbMaNV.Size = new System.Drawing.Size(0, 20);
-            this.cbbMaNV.TabIndex = 109;
-            this.cbbMaNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // frmThanhToanPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,7 +506,7 @@
             this.Controls.Add(this.btCancel);
             this.Name = "frmThanhToanPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThanhToanPhong";
+            this.Text = "Thanh toán phòng";
             this.Load += new System.EventHandler(this.frmThanhToanPhong_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -547,9 +545,9 @@
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.ComboBox cbbMaKH;
-        private System.Windows.Forms.TextBox txtMaPhong;
         private System.Windows.Forms.TextBox txtTime;
         private System.Windows.Forms.Timer timerP;
         private System.Windows.Forms.Label cbbMaNV;
+        private System.Windows.Forms.ComboBox cbbMaPhong;
     }
 }

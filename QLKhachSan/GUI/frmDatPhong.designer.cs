@@ -110,7 +110,7 @@
             this.cbbMaPhong.Location = new System.Drawing.Point(155, 94);
             this.cbbMaPhong.Name = "cbbMaPhong";
             this.cbbMaPhong.Size = new System.Drawing.Size(224, 28);
-            this.cbbMaPhong.TabIndex = 79;
+            this.cbbMaPhong.TabIndex = 1;
             this.cbbMaPhong.SelectedIndexChanged += new System.EventHandler(this.cbbMaPhong_SelectedIndexChanged);
             // 
             // cbbMaKH
@@ -120,7 +120,7 @@
             this.cbbMaKH.Location = new System.Drawing.Point(155, 54);
             this.cbbMaKH.Name = "cbbMaKH";
             this.cbbMaKH.Size = new System.Drawing.Size(181, 28);
-            this.cbbMaKH.TabIndex = 79;
+            this.cbbMaKH.TabIndex = 0;
             // 
             // dtpNgayNhan
             // 
@@ -131,7 +131,7 @@
             this.dtpNgayNhan.MinDate = new System.DateTime(2016, 12, 16, 0, 0, 0, 0);
             this.dtpNgayNhan.Name = "dtpNgayNhan";
             this.dtpNgayNhan.Size = new System.Drawing.Size(225, 26);
-            this.dtpNgayNhan.TabIndex = 78;
+            this.dtpNgayNhan.TabIndex = 7;
             this.dtpNgayNhan.ValueChanged += new System.EventHandler(this.dtpNgayTra_ValueChanged);
             // 
             // txtThanhTien
@@ -154,7 +154,7 @@
             this.txtNgayDat.Name = "txtNgayDat";
             this.txtNgayDat.ReadOnly = true;
             this.txtNgayDat.Size = new System.Drawing.Size(225, 26);
-            this.txtNgayDat.TabIndex = 8;
+            this.txtNgayDat.TabIndex = 2;
             // 
             // txtMaDP
             // 
@@ -165,7 +165,7 @@
             this.txtMaDP.Name = "txtMaDP";
             this.txtMaDP.ReadOnly = true;
             this.txtMaDP.Size = new System.Drawing.Size(225, 26);
-            this.txtMaDP.TabIndex = 8;
+            this.txtMaDP.TabIndex = 5;
             // 
             // txtTenLP
             // 
@@ -176,7 +176,7 @@
             this.txtTenLP.Name = "txtTenLP";
             this.txtTenLP.ReadOnly = true;
             this.txtTenLP.Size = new System.Drawing.Size(225, 26);
-            this.txtTenLP.TabIndex = 8;
+            this.txtTenLP.TabIndex = 6;
             // 
             // dtpNgayTra
             // 
@@ -186,7 +186,7 @@
             this.dtpNgayTra.MinDate = new System.DateTime(2016, 12, 16, 0, 0, 0, 0);
             this.dtpNgayTra.Name = "dtpNgayTra";
             this.dtpNgayTra.Size = new System.Drawing.Size(225, 26);
-            this.dtpNgayTra.TabIndex = 78;
+            this.dtpNgayTra.TabIndex = 3;
             this.dtpNgayTra.ValueChanged += new System.EventHandler(this.dtpNgayTra_ValueChanged);
             // 
             // label3
@@ -266,7 +266,7 @@
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(225, 26);
-            this.txtGhiChu.TabIndex = 10;
+            this.txtGhiChu.TabIndex = 9;
             // 
             // label10
             // 
@@ -305,7 +305,7 @@
             this.txtTraTruoc.Multiline = true;
             this.txtTraTruoc.Name = "txtTraTruoc";
             this.txtTraTruoc.Size = new System.Drawing.Size(225, 26);
-            this.txtTraTruoc.TabIndex = 9;
+            this.txtTraTruoc.TabIndex = 4;
             // 
             // btnDatPhong
             // 
@@ -316,7 +316,7 @@
             this.btnDatPhong.Location = new System.Drawing.Point(737, 421);
             this.btnDatPhong.Name = "btnDatPhong";
             this.btnDatPhong.Size = new System.Drawing.Size(101, 38);
-            this.btnDatPhong.TabIndex = 107;
+            this.btnDatPhong.TabIndex = 0;
             this.btnDatPhong.Text = "Đặt phòng";
             this.btnDatPhong.UseVisualStyleBackColor = false;
             this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
@@ -351,9 +351,8 @@
             this.cbbMaNV.AutoSize = true;
             this.cbbMaNV.Location = new System.Drawing.Point(125, 84);
             this.cbbMaNV.Name = "cbbMaNV";
-            this.cbbMaNV.Size = new System.Drawing.Size(51, 20);
+            this.cbbMaNV.Size = new System.Drawing.Size(0, 20);
             this.cbbMaNV.TabIndex = 108;
-            this.cbbMaNV.Text = "label6";
             // 
             // frmDatPhong
             // 

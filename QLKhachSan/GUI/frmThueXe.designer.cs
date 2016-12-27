@@ -235,7 +235,7 @@
             this.txtGiaThue.Location = new System.Drawing.Point(398, 75);
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(120, 26);
-            this.txtGiaThue.TabIndex = 5;
+            this.txtGiaThue.TabIndex = 4;
             // 
             // label7
             // 
@@ -254,7 +254,7 @@
             this.txtTienCoc.Location = new System.Drawing.Point(398, 107);
             this.txtTienCoc.Name = "txtTienCoc";
             this.txtTienCoc.Size = new System.Drawing.Size(120, 26);
-            this.txtTienCoc.TabIndex = 6;
+            this.txtTienCoc.TabIndex = 5;
             // 
             // label10
             // 

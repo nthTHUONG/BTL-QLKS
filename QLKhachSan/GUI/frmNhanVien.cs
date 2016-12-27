@@ -25,6 +25,7 @@ namespace GUI
         {
             BUS = new Business();
             dgvNhanVien.DataSource = BUS.GetDataNV();
+            dgvNhanVien.Columns["Pass"].Visible = false;
             string chucVuNhanVien = BUS.GetChucVu(frmDangNhap.MaNV);
             if(string.IsNullOrWhiteSpace(chucVuNhanVien) == false)
             {

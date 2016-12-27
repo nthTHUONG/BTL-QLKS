@@ -176,7 +176,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Name = "frm_ThongKe";
-            this.Text = "frm_ThongKe";
+            this.Text = "Thống kê";
             this.Load += new System.EventHandler(this.frm_ThongKe_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

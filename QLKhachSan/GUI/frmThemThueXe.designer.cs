@@ -56,7 +56,7 @@
             this.dtpNgayMuon.Location = new System.Drawing.Point(175, 143);
             this.dtpNgayMuon.Name = "dtpNgayMuon";
             this.dtpNgayMuon.Size = new System.Drawing.Size(168, 26);
-            this.dtpNgayMuon.TabIndex = 125;
+            this.dtpNgayMuon.TabIndex = 3;
             // 
             // label10
             // 
@@ -80,14 +80,14 @@
             this.txtTienCoc.Location = new System.Drawing.Point(455, 76);
             this.txtTienCoc.Name = "txtTienCoc";
             this.txtTienCoc.Size = new System.Drawing.Size(189, 26);
-            this.txtTienCoc.TabIndex = 4;
+            this.txtTienCoc.TabIndex = 5;
             // 
             // txtGiaThue
             // 
             this.txtGiaThue.Location = new System.Drawing.Point(455, 44);
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(189, 26);
-            this.txtGiaThue.TabIndex = 3;
+            this.txtGiaThue.TabIndex = 4;
             // 
             // txtMaXe
             // 
@@ -233,7 +233,7 @@
             this.txtTimKiem.Location = new System.Drawing.Point(107, 306);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(221, 26);
-            this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TabIndex = 0;
             this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // frmThemThueXe

@@ -38,12 +38,25 @@ namespace GUI
             txtMaHDV.Text = str_MaHDV;
             txtTraTruoc.Text = str_TraTruoc;
             cbbMaNV.Text = frmDangNhap.MaNV;
+            TongTien();
+        }
+
+        private void TongTien()
+        {
+            decimal tongTien, giaThue, traTruoc;
+            int soNgayThue;
+            soNgayThue = int.Parse(txtSoNgayThue.Text);
+            giaThue = decimal.Parse(txtDonGia.Text);
+            traTruoc = decimal.Parse(txtTraTruoc.Text);
+            tongTien = soNgayThue * giaThue - traTruoc;
+            lblTongTien.Text = tongTien.ToString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             txtTime.Text = DateTime.Now.ToString("dd/MM/yyyy   hh:mm:ss tt");
         }
+
         private void connect()
         {
             try
@@ -77,18 +90,7 @@ namespace GUI
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            double TongTien;
-            double soNgayThue, GiaThue, TraTruoc;
-            soNgayThue = double.Parse(txtSoNgayThue.Text);
-            GiaThue = double.Parse(txtDonGia.Text);
-            TraTruoc = double.Parse(txtTraTruoc.Text);
-            TongTien = soNgayThue * GiaThue - TraTruoc;
-            lblTongTien.Text = TongTien.ToString();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            MessageBox.Show("Thanh toán thành công!");
         }
     }
 }

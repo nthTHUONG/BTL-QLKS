@@ -73,7 +73,7 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReportNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReportNV";
+            this.Text = "Thông tin nhân viên";
             this.Load += new System.EventHandler(this.frmReportNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLKhachSanDataSet)).EndInit();

@@ -188,7 +188,7 @@
             this.btnThanhToan.BackColor = System.Drawing.Color.Gray;
             this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan.ForeColor = System.Drawing.Color.Maroon;
-            this.btnThanhToan.Location = new System.Drawing.Point(514, 390);
+            this.btnThanhToan.Location = new System.Drawing.Point(517, 385);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(73, 35);
             this.btnThanhToan.TabIndex = 1;
@@ -202,7 +202,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.Gray;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Maroon;
-            this.btnCancel.Location = new System.Drawing.Point(614, 390);
+            this.btnCancel.Location = new System.Drawing.Point(614, 385);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(73, 35);
             this.btnCancel.TabIndex = 2;
@@ -233,7 +233,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(708, 246);
             this.panel1.TabIndex = 138;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dtpNgayThue
             // 
@@ -242,7 +241,7 @@
             this.dtpNgayThue.Location = new System.Drawing.Point(144, 95);
             this.dtpNgayThue.Name = "dtpNgayThue";
             this.dtpNgayThue.Size = new System.Drawing.Size(178, 26);
-            this.dtpNgayThue.TabIndex = 135;
+            this.dtpNgayThue.TabIndex = 2;
             // 
             // txtMaHDV
             // 
@@ -252,7 +251,7 @@
             this.txtMaHDV.Multiline = true;
             this.txtMaHDV.Name = "txtMaHDV";
             this.txtMaHDV.Size = new System.Drawing.Size(178, 26);
-            this.txtMaHDV.TabIndex = 2;
+            this.txtMaHDV.TabIndex = 1;
             // 
             // cbbMaNV
             // 
@@ -273,7 +272,7 @@
             this.txtMaKH.Multiline = true;
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(178, 26);
-            this.txtMaKH.TabIndex = 1;
+            this.txtMaKH.TabIndex = 0;
             // 
             // txtTraTruoc
             // 
@@ -284,7 +283,7 @@
             this.txtTraTruoc.Name = "txtTraTruoc";
             this.txtTraTruoc.ReadOnly = true;
             this.txtTraTruoc.Size = new System.Drawing.Size(178, 26);
-            this.txtTraTruoc.TabIndex = 4;
+            this.txtTraTruoc.TabIndex = 5;
             // 
             // txtDonGia
             // 
@@ -358,7 +357,7 @@
             this.MinimumSize = new System.Drawing.Size(728, 475);
             this.Name = "frmThanhToanDichVuHDV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThanhToanHDV";
+            this.Text = "Thanh toán hướng dẫn viên";
             this.Load += new System.EventHandler(this.frmThanhToanHDV_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

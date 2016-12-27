@@ -77,7 +77,7 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReportKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReportKH";
+            this.Text = "Thông tin khách hàng";
             this.Load += new System.EventHandler(this.frmReportKH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.KhachHangBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachKH)).EndInit();

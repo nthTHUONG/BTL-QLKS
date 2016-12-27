@@ -80,7 +80,7 @@
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(227, 33);
-            this.txtGhiChu.TabIndex = 44;
+            this.txtGhiChu.TabIndex = 4;
             // 
             // txtSoLuong
             // 
@@ -90,7 +90,7 @@
             this.txtSoLuong.Multiline = true;
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(227, 33);
-            this.txtSoLuong.TabIndex = 45;
+            this.txtSoLuong.TabIndex = 3;
             // 
             // txtGiaLP
             // 
@@ -100,7 +100,7 @@
             this.txtGiaLP.Multiline = true;
             this.txtGiaLP.Name = "txtGiaLP";
             this.txtGiaLP.Size = new System.Drawing.Size(227, 33);
-            this.txtGiaLP.TabIndex = 45;
+            this.txtGiaLP.TabIndex = 2;
             // 
             // txtIDLP
             // 
@@ -110,7 +110,7 @@
             this.txtIDLP.Multiline = true;
             this.txtIDLP.Name = "txtIDLP";
             this.txtIDLP.Size = new System.Drawing.Size(227, 33);
-            this.txtIDLP.TabIndex = 45;
+            this.txtIDLP.TabIndex = 0;
             // 
             // txtTenLP
             // 
@@ -120,7 +120,7 @@
             this.txtTenLP.Multiline = true;
             this.txtTenLP.Name = "txtTenLP";
             this.txtTenLP.Size = new System.Drawing.Size(227, 33);
-            this.txtTenLP.TabIndex = 45;
+            this.txtTenLP.TabIndex = 1;
             // 
             // label3
             // 
@@ -191,7 +191,7 @@
             this.txtTimKiem.Location = new System.Drawing.Point(109, 282);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(271, 26);
-            this.txtTimKiem.TabIndex = 56;
+            this.txtTimKiem.TabIndex = 0;
             this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // dgvLoaiPhong

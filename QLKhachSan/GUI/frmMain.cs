@@ -23,7 +23,7 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        
         private void frmMain_Load(object sender, EventArgs e)
         {
             
@@ -149,6 +149,7 @@ namespace GUI
                     p_btn.X = p.X;
                     p_btn.Y += (btnRoom.Height + d.Y);
                 }
+                btnRoom.Click += new EventHandler(DatPhong_Click);
             }
         }
 
@@ -187,6 +188,10 @@ namespace GUI
                 {
                     btnRoom.BackColor = lbPlaced.BackColor;
                 }
+                else
+                {
+                    btnRoom.Click += new EventHandler(DatPhong_Click);
+                }
                 btnRoom.Text = pair.Key.Trim();
                 picDisplay.Controls.Add(btnRoom);
                 if (p_btn.X + btnRoom.Width < picDisplay.Width - p.X * 2)
@@ -201,22 +206,19 @@ namespace GUI
             }
         }
 
+        private void DatPhong_Click(object sender, EventArgs e)
+        {
+            frmDatPhong f = new frmDatPhong();
+            f.str_MaPhong = ((Button)sender).Text;
+            f.Auto_Value();
+            f.ShowDialog();
+        }
+
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmNhanVien frmNV = new frmNhanVien();
             frmNV.Show();
-        }
-     
-        private void inHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("chưa làm");
-        }
-
-        private void xuấtBáoCáoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("chưa làm");
-        }
-
+        } 
         private void thựcPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThucPham frmTP = new frmThucPham();
@@ -247,16 +249,15 @@ namespace GUI
         }
 
         private void thanhToánThuêXeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("chưa làm");
+        {   
             frmThueXe frmTTXe = new frmThueXe();
             frmTTXe.Show();
         }
 
         private void thanhToánDVHướngDẫnViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThanhToanDichVuHDV frmTThdv = new frmThanhToanDichVuHDV();
-            frmTThdv.Show();
+            frmDichVuHDV frmHDV = new frmDichVuHDV();
+            frmHDV.Show();
         }
 
         private void loạiPhòngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -264,13 +265,6 @@ namespace GUI
             frmLoaiPhong frmLP = new frmLoaiPhong();
             frmLP.Show();
         }
-
-        private void phòngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmPhong frmP = new frmPhong();
-            frmP.Show();
-        }
-
         private void thôngTinKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmKhachHang frmKH = new frmKhachHang();
@@ -329,9 +323,6 @@ namespace GUI
 
         private void thuêXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(" chưa có ");
-            //frmThueXe frmXe =new  frmThueXe();
-            //frmXe.Show();
             frmChiTietXe frmCTXe = new frmChiTietXe();
             frmCTXe.Show();
         }
@@ -365,7 +356,5 @@ namespace GUI
             frm_ThongKe frmTK = new frm_ThongKe();
             frmTK.Show();
         }
-
-
     }
 }

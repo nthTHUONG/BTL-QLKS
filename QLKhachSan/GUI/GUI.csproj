@@ -124,12 +124,6 @@
     <Compile Include="frmHH.designer.cs">
       <DependentUpon>frmHH.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPhong.designer.cs">
-      <DependentUpon>frmPhong.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmReportKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,9 +240,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHH.resx">
       <DependentUpon>frmHH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPhong.resx">
-      <DependentUpon>frmPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportKH.resx">
       <DependentUpon>frmReportKH.cs</DependentUpon>

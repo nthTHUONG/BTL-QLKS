@@ -22,16 +22,46 @@ namespace GUI
             InitializeComponent();
         }
 
+        public string str_MaPhong;
+
+        public void Auto_Value()
+        {
+            cbbMaNV.Text = frmDangNhap.MaNV;
+            Business B = new Business();
+            cbbMaPhong.Text = str_MaPhong;
+            cbbMaKH.DataSource = B.GetDataKH();
+            cbbMaKH.DisplayMember = "IDKhachHang";
+            txtMaDP.Text = "DP" + (B.GetDataDP().Rows.Count + 1).ToString();
+            DataTable dt = B.GetDataLP_fromIDPhong(cbbMaPhong.Text);
+            if (dt.Rows.Count > 0)
+            {
+                txtTenLP.Text = dt.Rows[0]["TenLP"].ToString();
+                giaPhong = Convert.ToDecimal(dt.Rows[0]["GiaLP"]);
+            }
+            txtNgayDat.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            txtTraTruoc.Text = "0";
+            TimeSpan duration = dtpNgayTra.Value.Subtract(dtpNgayNhan.Value);
+            int time = Convert.ToInt32(duration.ToString("%d"));
+            txtThanhTien.Text = (time == 0) ? giaPhong.ToString() : (giaPhong * time).ToString();
+        }
+
         private void frmDatPhong_Load(object sender, EventArgs e)
         {
             BUS = new Business();
-            LoadCombobox();
-            Init();
+            if (cbbMaKH.DataSource == null)
+            {
+                LoadCombobox();
+                Init();
+            }
         }
 
         private void LoadCombobox()
         {
             cbbMaNV.Text = frmDangNhap.MaNV;
+            cbbMaKH.DataSource = BUS.GetDataKH();
+            cbbMaKH.DisplayMember = "IDKhachHang";
+            cbbMaPhong.DataSource = BUS.GetDataPhong();
+            cbbMaPhong.DisplayMember = "IDPhong";
         }
 
         private void Init()

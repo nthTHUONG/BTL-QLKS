@@ -43,7 +43,7 @@ namespace DAL
             ConnectDB.Open(conn);
             try
             {
-                string sql = "SELECT * FROM NhanVien where IDNhanVien = '"+ maNV +"'";
+                string sql = "SELECT * FROM NhanVien where IDNhanVien = '" + maNV + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 IDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())

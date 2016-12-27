@@ -73,7 +73,7 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReportThongTinTP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmReportThongTinDP";
+            this.Text = "Thông tin đặt phòng";
             this.Load += new System.EventHandler(this.frmReportThongTinDP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ThucPhamBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TTTP)).EndInit();

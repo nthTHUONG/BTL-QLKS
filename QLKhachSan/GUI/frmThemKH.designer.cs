@@ -67,15 +67,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.btHuyBo);
             this.groupBox1.Controls.Add(this.btXacNhan);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(-1, 67);
             this.groupBox1.Name = "groupBox1";
@@ -156,7 +156,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(91, 223);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(352, 26);
-            this.txtDiaChi.TabIndex = 4;
+            this.txtDiaChi.TabIndex = 6;
             // 
             // label7
             // 
@@ -210,7 +210,7 @@
             this.txtSDT.Location = new System.Drawing.Point(91, 136);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(352, 26);
-            this.txtSDT.TabIndex = 5;
+            this.txtSDT.TabIndex = 4;
             // 
             // label6
             // 
@@ -240,7 +240,7 @@
             this.txtEmail.Location = new System.Drawing.Point(91, 179);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(352, 26);
-            this.txtEmail.TabIndex = 6;
+            this.txtEmail.TabIndex = 5;
             // 
             // label2
             // 
@@ -271,7 +271,7 @@
             this.btHuyBo.Location = new System.Drawing.Point(356, 353);
             this.btHuyBo.Name = "btHuyBo";
             this.btHuyBo.Size = new System.Drawing.Size(98, 47);
-            this.btHuyBo.TabIndex = 0;
+            this.btHuyBo.TabIndex = 1;
             this.btHuyBo.Text = "Hủy Bỏ";
             this.btHuyBo.UseVisualStyleBackColor = false;
             this.btHuyBo.Click += new System.EventHandler(this.btHuyBo_Click);

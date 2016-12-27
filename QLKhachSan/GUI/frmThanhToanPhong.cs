@@ -32,14 +32,13 @@ namespace GUI
             cbbMaKH.DataSource = BUS.GetDataKH();
             cbbMaKH.DisplayMember = "IDKhachHang";
             cbbMaNV.Text = frmDangNhap.MaNV;
-            
         }
 
         private void Init()
         {
             cbbMaKH.Text = "Chọn mã khách hàng";
             txtTenKH.Text = "";
-            txtMaPhong.Text = "";
+            cbbMaPhong.Text = "";
             txtLoaiPhong.Text = "";
             txtDonGia.Text = "";
             txtTraTruoc.Text = "";
@@ -57,11 +56,12 @@ namespace GUI
         private void AutoValue()
         {
             DataTable dt = BUS.GetDataDP_fromMaKH(cbbMaKH.Text);
-
+            cbbMaPhong.DataSource = null;
             if (dt.Rows.Count > 0)
             {
                 DataRow row = dt.Rows[0];
-                txtMaPhong.Text = row["MaPhong"].ToString();
+                cbbMaPhong.DataSource = dt;
+                cbbMaPhong.DisplayMember = "MaPhong";
                 DataTable dtKH = BUS.GetDataKH();
                 if (dtKH.Rows.Count > 0)
                 {
@@ -101,17 +101,6 @@ namespace GUI
             }
         }
 
-        private void txtMaPhong_TextChanged(object sender, EventArgs e)
-        {
-            DataTable dt = BUS.GetDataLP_fromIDPhong(txtMaPhong.Text);
-            if (dt.Rows.Count > 0)
-            {
-
-                txtLoaiPhong.Text = dt.Rows[0]["TenLP"].ToString();
-                donGia = Convert.ToDecimal(dt.Rows[0]["GiaLP"]);
-            }
-        }
-
         private void cbbMaKH_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Tự động điền dữ liệu
@@ -141,7 +130,7 @@ namespace GUI
                 
                 if (MessageBox.Show("Thanh toán ?", "Chú ý!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    BUS.ThanhToan(cbbMaKH.Text, txtMaPhong.Text, txtNhanPhong.Text);
+                    BUS.ThanhToan(cbbMaKH.Text, cbbMaPhong.Text, txtNhanPhong.Text);
                    
                     MessageBox.Show("Thanh toán thành công!");
                     LoadComBoBox();
@@ -156,6 +145,17 @@ namespace GUI
         private void timerP_Tick(object sender, EventArgs e)
         {
             txtTime.Text = DateTime.Now.ToString("dd/MM/yyyy   hh:mm:ss tt");
+        }
+
+        private void cbbMaPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = BUS.GetDataLP_fromIDPhong(cbbMaPhong.Text);
+            if (dt.Rows.Count > 0)
+            {
+
+                txtLoaiPhong.Text = dt.Rows[0]["TenLP"].ToString();
+                donGia = Convert.ToDecimal(dt.Rows[0]["GiaLP"]);
+            }
         }
     } 
 }

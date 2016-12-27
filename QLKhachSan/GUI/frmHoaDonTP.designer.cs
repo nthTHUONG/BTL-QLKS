@@ -96,7 +96,7 @@
             this.cbbMaTP.Location = new System.Drawing.Point(72, 165);
             this.cbbMaTP.Name = "cbbMaTP";
             this.cbbMaTP.Size = new System.Drawing.Size(121, 28);
-            this.cbbMaTP.TabIndex = 102;
+            this.cbbMaTP.TabIndex = 0;
             this.cbbMaTP.SelectedIndexChanged += new System.EventHandler(this.cbbMaTP_SelectedIndexChanged);
             this.cbbMaTP.Click += new System.EventHandler(this.cbbMaTP_Click);
             // 
@@ -119,7 +119,7 @@
             this.lbDonGia.Location = new System.Drawing.Point(420, 169);
             this.lbDonGia.Name = "lbDonGia";
             this.lbDonGia.Size = new System.Drawing.Size(146, 28);
-            this.lbDonGia.TabIndex = 101;
+            this.lbDonGia.TabIndex = 2;
             this.lbDonGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -177,7 +177,7 @@
             this.txtSoLuong.Location = new System.Drawing.Point(281, 169);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(54, 26);
-            this.txtSoLuong.TabIndex = 104;
+            this.txtSoLuong.TabIndex = 1;
             this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
             // label6

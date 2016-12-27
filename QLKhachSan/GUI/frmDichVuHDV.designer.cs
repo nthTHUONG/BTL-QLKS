@@ -63,8 +63,8 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+                            | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 415);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 27);
@@ -180,7 +180,7 @@
             this.dtpNgayThue.Location = new System.Drawing.Point(132, 108);
             this.dtpNgayThue.Name = "dtpNgayThue";
             this.dtpNgayThue.Size = new System.Drawing.Size(293, 27);
-            this.dtpNgayThue.TabIndex = 4;
+            this.dtpNgayThue.TabIndex = 3;
             // 
             // label7
             // 
@@ -198,7 +198,7 @@
             this.txtGhiChu.Location = new System.Drawing.Point(132, 236);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(293, 27);
-            this.txtGhiChu.TabIndex = 6;
+            this.txtGhiChu.TabIndex = 7;
             // 
             // txtIDDVhdv
             // 
@@ -214,7 +214,7 @@
             this.txtSoNgayThue.Location = new System.Drawing.Point(132, 140);
             this.txtSoNgayThue.Name = "txtSoNgayThue";
             this.txtSoNgayThue.Size = new System.Drawing.Size(293, 27);
-            this.txtSoNgayThue.TabIndex = 3;
+            this.txtSoNgayThue.TabIndex = 4;
             // 
             // txtTraTruoc
             // 
@@ -222,7 +222,7 @@
             this.txtTraTruoc.Location = new System.Drawing.Point(132, 204);
             this.txtTraTruoc.Name = "txtTraTruoc";
             this.txtTraTruoc.Size = new System.Drawing.Size(293, 27);
-            this.txtTraTruoc.TabIndex = 5;
+            this.txtTraTruoc.TabIndex = 6;
             // 
             // txtGiaThue
             // 
@@ -230,7 +230,7 @@
             this.txtGiaThue.Location = new System.Drawing.Point(132, 172);
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(293, 27);
-            this.txtGiaThue.TabIndex = 4;
+            this.txtGiaThue.TabIndex = 5;
             // 
             // label9
             // 
@@ -366,7 +366,7 @@
             this.Controls.Add(this.txtTimKiem);
             this.Name = "frmDichVuHDV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDichVuHDV";
+            this.Text = "Dịch vụ hướng dẫn viên";
             this.Load += new System.EventHandler(this.frmDichVuHDV_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
