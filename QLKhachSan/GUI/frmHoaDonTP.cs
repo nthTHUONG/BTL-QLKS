@@ -157,10 +157,15 @@ namespace GUI
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            //dtTP.Rows.Clear();
+
             frmThanhToanHDTP frmTP = new frmThanhToanHDTP();
             frmTP.str = lbTongTien.Text;
             frmTP.str1 = cbbMaNV.Text;
             frmTP.ShowDialog();
+            int count = dgvThucPham.Rows.Count;
+            for (int i = 0; i < count; i++)
+                dgvThucPham.Rows.RemoveAt(0);
         }
     }
 }

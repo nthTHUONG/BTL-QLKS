@@ -95,7 +95,7 @@ namespace GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            
+            Init();
         }
 
         private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
