@@ -57,7 +57,6 @@
       <DependentUpon>DanhSachKH.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataVisualization.cs" />
-    <Compile Include="ExecuteDB.cs" />
     <Compile Include="frmChiTietXe.cs">
       <SubType>Form</SubType>
     </Compile>

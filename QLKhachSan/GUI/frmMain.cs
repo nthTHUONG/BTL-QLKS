@@ -40,7 +40,7 @@ namespace GUI
 
             p = new Point(69, 79);      // Điểm đặt btnRoom đầu tiên.
             d = new Point(39, 39);      // Khoảng cách giữa 2 btnRoom.
-            n = new Size(8, 4);         // Số btnRoom hiển thị (ngang, dọc).
+            n = new Size(8, 4);         // Số btnRoom toi da hiển thị (ngang, dọc).
             size = new Size(((picDisplay.Width - p.X * 2) + d.X) / n.Width - d.X,
                 ((picDisplay.Height - p.Y - d.Y / 2) + d.Y) / n.Height - d.Y);
             rdTrong.Checked = true;

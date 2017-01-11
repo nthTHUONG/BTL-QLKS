@@ -92,5 +92,10 @@ namespace GUI
         {
             MessageBox.Show("Thanh toán thành công!");
         }
+
+        private void cbbMaNV_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

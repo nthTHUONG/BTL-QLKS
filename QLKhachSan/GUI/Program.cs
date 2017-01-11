@@ -20,7 +20,7 @@ namespace GUI
             {
                 Application.Run(new frmMain());
             }
-            //Application.Run(new frmMain());
+            //Application.Run(new frmHoaDonTP());
         }
     }
 }

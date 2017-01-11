@@ -263,6 +263,7 @@
             this.cbbMaNV.ReadOnly = true;
             this.cbbMaNV.Size = new System.Drawing.Size(178, 26);
             this.cbbMaNV.TabIndex = 1;
+            this.cbbMaNV.TextChanged += new System.EventHandler(this.cbbMaNV_TextChanged);
             // 
             // txtMaKH
             // 
